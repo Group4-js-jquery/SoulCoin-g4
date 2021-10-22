@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 1500px;
+  width: 100vw;
+}
