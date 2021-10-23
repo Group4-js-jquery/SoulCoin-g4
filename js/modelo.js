@@ -1,3 +1,4 @@
+/*******************************************CPF****************************************************/
 function VerificaCPF() {
     if (vercpf(document.frmcpf.cpf.value)) { document.frmcpf.submit(); } else {
         errors = "1"; if (errors) alert('CPF NÃO VÁLIDO');
@@ -24,4 +25,33 @@ function vercpf(cpf) {
     if (rev != parseInt(cpf.charAt(10)))
         return false;
     alert('O CPF INFORMADO É VÁLIDO.'); return true;
+}
+
+/*******************************************CEP****************************************************/
+
+const apresentaDados = (resultado) => {
+    for(let campo in resultado){
+        if(document.querySelector("#" + campo)){
+            console.log(campo);
+            document.querySelector("#" + campo).value = resultado[campo];
+        }
+    }
+}
+
+function consultaCep() {
+    let cepDigitado = document.getElementById("cep");
+
+    if (cepDigitado.value == "") {
+        cepDigitado.style.border = "1px solid red";
+    } else {
+        let cepProcurado = cepDigitado.value.replace("-", "");
+        console.log(cepProcurado);
+
+        fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
+            .then(response => {
+                response.json()
+                .then(data => console.log(apresentaDados(data)))
+            })
+            .catch(x => console.log ("CEP não localizado!"))
+    }
 }

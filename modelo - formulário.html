@@ -8,6 +8,7 @@
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
+    <link rel="stylesheet" href="css/modelo_id.css" />
     <title>Modelo SoulCoin - Formulário</title>
 </head>
 
@@ -32,15 +33,48 @@
     <main>
         <!-- conteúdo principal -->
         <fieldset>
-            <label for="nome">Nome:</label>
+            <label  for="nome">Nome:
             <input type="text" class="dadosForm">
-            <form name="frmcpf" method="post" onsubmit="VerificaCPF();">
+        </label>
+<!-- ************CPF******** -->
+            <form id="cepform" name="frmcpf" method="post" onsubmit="VerificaCPF();">
                 <div>Informe o CPF:
                     <input type="text" name="cpf" size="12" maxlength="11">
-
                     <input type="button" name="Submit" value="Checar" onclick="VerificaCPF();">
                 </div>
             </form>
+<!-- ***************escolha de gênero************************** -->
+            <label for="genero">Qual sua opção de Gênero:</label>
+            <select name="opcaoGenero">
+                <option> Escolha sua opção de Gênero:</option>
+                <option value="homem">Masculino</option>
+                <option value="mulher">Feminino</option>
+                <option value="outros">Outros</option>
+            </select>
+<!-- **************************Endereço **************************-->
+        <p id="endereco"> Endereço:
+            <div>
+                <p><label for="cep">CEP:</label><input type="text" maxlength="9" id="cep" onblur="consultaCep()">
+                </p>
+                <p><label for="logradouro">Logradouro:</label><input type="text" id="logradouro" disabled></p>
+                <p><label for="numero">Número</label><input type="text" id="numero"></p>
+                <p><label for="complemento">Complemento</label><input type="text" id="complemento"></p>
+                <p><label for="bairro">Bairro:</label><input type="text" id="bairro" disabled></p>
+                <p><label for="localidade">Cidade:</label><input type="text" id="localidade" disabled></p>
+                <p><label for="uf">Estado:</label><input type="text" id="uf" disabled></p>
+            </div>
+        </p>
+            <div> Telefone:
+                <input name="cpf" size="12" maxlength="11">
+            </div>
+            <div for="e-mail">
+                E-mail:
+                <input type="email" id="email">
+            </div>
+            <div>Menssagem:<textarea name="mensagem" cols="35" rows="8"></textarea><span style="color: red;">*</span>
+            </div>
+            <Button type="text" name="enviar" onclick="Alert()" value="Exibir Alert">Enviar</Button>
+            <Button type="reset" name="limpar">Limpar</button>
         </fieldset>
     </main>
     <footer>
