@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,9 +8,13 @@
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
+
     <link rel="stylesheet" href="css/modelo_id.css">
     <!-- ICONES -->
     <link rel="stylesheet" href="assets/style.css" />
+
+    <link rel="stylesheet" href="css/modelo_id.css" />
+
     <title>Modelo SoulCoin - Formulário</title>
 </head>
 
@@ -35,17 +40,22 @@
         <!-- conteúdo principal -->
         <fieldset>
             <label for="nome">Nome:
+
                 <input type="text" class="dadosForm" placeholder="Digite seu Nome">
+               
             </label>
             <!-- ************CPF******** -->
             <form id="cepform" name="frmcpf" method="post" onsubmit="VerificaCPF();">
                 <div>Informe o CPF:
+
                     <input type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
                         width="250em">
+                 
                     <button name="Submit" value="Checar" onclick="VerificaCPF();">Checar</button>
                 </div>
             </form>
             <!-- ****************************Data de Nascimento****************************** -->
+
             <label for="dataNasc">Data de nascimento:</label>
 
             <input type="date" class="form-control" id="dataNasc" maxlength="10" name="dataNasc" min="1891-03-16"
@@ -60,6 +70,7 @@
                     <option value="outros">Outros</option>
                 </select>
             </div>
+          
             <!-- **************************Endereço **************************-->
             <p id="endereco"> Endereço:
             <div id="dadosEndereco">
@@ -88,6 +99,7 @@
         </fieldset>
     </main>
     <footer>
+
         <div>
             <nav>
                 <!-- linka pra própia página principal -->
@@ -102,6 +114,7 @@
                 <a class="icon-instagram" href="instagram"></a>
                 <a class="icon-linkedin2" href="#linkedin"></a>
             </section>
+
         </div>
         <address>
             Encontrou algum problema?
@@ -109,6 +122,7 @@
         </address>
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
+
     <script type="text/javascript" src="./js/modelo.js"></script>
 </body>
 

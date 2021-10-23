@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 /*******************************************CPF****************************************************/
 function VerificaCPF() {
     if (vercpf(document.frmcpf.cpf.value)) { document.frmcpf.submit(); } else {
@@ -56,7 +54,9 @@ function consultaCep() {
             })
             .catch(x => console.log ("CEP não localizado!"))
     }
+
 }
+
 /*******************************************dataNascimento****************************************************/
 $("#btn1").click(function(){
     let valorDigitado = $("#dataNasc").val();
@@ -104,4 +104,3 @@ $("#btn1").click(function(){
     }
     console.log(idade(anoDigitado, mesDigitado, diaDigitado)); 
 })            
->>>>>>> Stashed changes
