@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/modelo.js" defer></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/modelo.css" />
+    <title>Modelo SoulCoin - Formulário</title>
+</head>
+
+<body>
+    <header>
+        <a href="#home">
+            <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+        </a>
+        <nav>
+            <ul>
+                <!-- simulação do investimento -->
+                <li><a href="#calculadora">Calculadora</a></li>
+                <!-- investimento -->
+                <li><a href="#classe">Classe</a></li>
+                <!-- formulário para cadastro -->
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#minhaConta">Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr />
+    <main>
+        <!-- conteúdo principal -->
+        <fieldset>
+            <label for="nome">Nome:</label>
+            <input type="text" class="dadosForm">
+            <form name="frmcpf" method="post" onsubmit="VerificaCPF();">
+                <div>Informe o CPF:
+                    <input type="text" name="cpf" size="12" maxlength="11">
+
+                    <input type="button" name="Submit" value="Checar" onclick="VerificaCPF();">
+                </div>
+            </form>
+        </fieldset>
+    </main>
+    <footer>
+        <nav>
+            <!-- linka pra própia página principal -->
+            <a href="#quemSomos">Quem somos nós</a>
+            <!-- linka pra explicação na página das classes -->
+            <a href="#primeirosPassos">Primeiros passos</a>
+            <!-- pop-up -->
+            <a href="#faleConosco">Atendimento</a>
+        </nav>
+        <div>
+            <a href="#facebook">F</a>
+            <a href="instagram">I</a>
+            <a href="#linkedin">L</a>
+        </div>
+        <address>
+            Encontrou algum problema?
+            <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+        </address>
+        <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
