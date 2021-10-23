@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/script.js" defer></script>
+    <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Modelo SoulCoin</title>
   </head>
   <body>
@@ -29,7 +31,8 @@
     <hr />
     <main>
       <!-- conteúdo principal -->
-      <section id="apresentacao">
+      <section class="mainSection" id="apresentacao">
+        <div id="roundH1"></div>
         <h1>A Moeda que Valoriza a sua Vida!</h1>
         <figure>
           <img
@@ -38,8 +41,21 @@
           />
         </figure>
       </section>
-      <section>
+      <section class="mainSection" id="meta">
         <h2>Objetivo/Meta</h2>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt
+          ducimus amet doloremque quis similique quam ea ut tempore possimus,
+          repudiandae magnam itaque rem voluptatibus perspiciatis aliquam vero.
+          Ipsam, aliquid?Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Eius nam qui neque assumenda, magnam voluptates ab fugiat, quae
+          ex tempora natus iste officia amet quo temporibus accusamus corporis
+          enim rem. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Deserunt vitae incidunt repudiandae aut facere, ipsum omnis cupiditate
+          reiciendis commodi rerum at consequatur, quidem molestias laborum
+          aspernatur, porro explicabo. Dignissimos, quo!
+        </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt
           ducimus amet doloremque quis similique quam ea ut tempore possimus,
@@ -53,101 +69,119 @@
           aspernatur, porro explicabo. Dignissimos, quo!
         </p>
       </section>
-      <section>
+
+      <section class="mainSection" id="sobre">
         <h2>Quem somos nós?</h2>
-        <div class="card">
-          <figure>
-            <img src="#fotinhaAlice" alt="" />
-          </figure>
-          <h3>Alice</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            expedita quod porro similique molestiae eveniet unde modi reiciendis
-            libero pariatur quaerat saepe, quisquam ipsam. Ipsa sint amet
-            exercitationem laboriosam est!
-          </p>
-        </div>
-        <div class="card">
-          <figure>
-            <img src="#fotinhaCarol" alt="" />
-          </figure>
-          <h3>Carol</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            expedita quod porro similique molestiae eveniet unde modi reiciendis
-            libero pariatur quaerat saepe, quisquam ipsam. Ipsa sint amet
-            exercitationem laboriosam est!
-          </p>
-        </div>
-        <div class="card">
-          <figure>
-            <img src="#fotinhaEinsten" alt="" />
-          </figure>
-          <h3>Einsten</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            expedita quod porro similique molestiae eveniet unde modi reiciendis
-            libero pariatur quaerat saepe, quisquam ipsam. Ipsa sint amet
-            exercitationem laboriosam est!
-          </p>
-        </div>
-        <div class="card">
-          <figure>
-            <img src="#fotinhaRauny" alt="" />
-          </figure>
-          <h3>Rauny</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            expedita quod porro similique molestiae eveniet unde modi reiciendis
-            libero pariatur quaerat saepe, quisquam ipsam. Ipsa sint amet
-            exercitationem laboriosam est!
-          </p>
+        <hr />
+        <div id="sobreDiv">
+          <div class="card">
+            <div>
+              <span id="fotinhaAlice"></span>
+            </div>
+            <h3>Alice Braga da Silva, 24</h3>
+            <p>
+              Diretora de Tecnoloia em Processamento de Dados, formada em
+              Engenharia de Controle e Automação e Desenvolvedora Well Full
+              Stack. Nas horas vagas contribui com Juventude Apostólica de
+              Schoenstatt.
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <span id="fotinhaCarol"></span>
+            </div>
+            <h3>Caroline Korndorfer, 39</h3>
+            <p>
+              Diretora de Investimentos Financeiros, formada em Administração de
+              empresas e Gestão Financeira, além de ser Desenvolvedora Web Full
+              Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <span id="fotinhaEinsten"></span>
+            </div>
+            <h3>Einsten Hellmeister Soares, 31</h3>
+            <p>
+              Diretor de Tecnologia da Informação, formada em Marketing e
+              Desenvolvimento Web Full Stack. Professor de Música no Projeto
+              Social Acorde Música.
+            </p>
+          </div>
+          <div class="card">
+            <div>
+              <span id="fotinhaRauny"></span>
+            </div>
+            <h3>Rauny Lima, 34</h3>
+            <p>
+              Diretor de Criação, formado em Publicidade e Cinema e
+              Desenvolvimento Web Full Stack. Professor de criação e roteiros em
+              Oficias Culturais na periferia de São Paulo.
+            </p>
+          </div>
         </div>
       </section>
-      <section>
+
+      <section class="mainSection" id="institucional">
         <h2>Institucional</h2>
-        <div class="institucional">
-          <h3>Missão</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            neque fugit eaque atque amet? Quis, sed quia rerum magnam doloremque
-            quam aperiam, vitae dolores commodi magni eaque ducimus? Veritatis,
-            repellat!
-          </p>
-        </div>
-        <div class="institucional">
-          <h3>Visão</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            neque fugit eaque atque amet? Quis, sed quia rerum magnam doloremque
-            quam aperiam, vitae dolores commodi magni eaque ducimus? Veritatis,
-            repellat!
-          </p>
-        </div>
-        <div class="institucional">
-          <h3>Valores</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            neque fugit eaque atque amet? Quis, sed quia rerum magnam doloremque
-            quam aperiam, vitae dolores commodi magni eaque ducimus? Veritatis,
-            repellat!
-          </p>
+        <hr />
+        <div id="institucionalDiv">
+          <div class="card" id="missao">
+            <div>
+              <div class="icon-assistant_photo_black_24dp"></div>
+            </div>
+            <h3>Missão</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              neque fugit eaque atque amet? Quis, sed quia rerum magnam
+              doloremque quam aperiam, vitae dolores commodi magni eaque
+              ducimus? Veritatis, repellat!
+            </p>
+          </div>
+          <div class="card" id="visao">
+            <div>
+              <div class="icon-travel_explore_black_24dp"></div>
+            </div>
+            <h3>Visão</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              neque fugit eaque atque amet? Quis, sed quia rerum magnam
+              doloremque quam aperiam, vitae dolores commodi magni eaque
+              ducimus? Veritatis, repellat!
+            </p>
+          </div>
+          <div class="card" id="valores">
+            <div>
+              <div class="icon-auto_awesome_black_24dp"></div>
+            </div>
+            <h3>Valores</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              neque fugit eaque atque amet? Quis, sed quia rerum magnam
+              doloremque quam aperiam, vitae dolores commodi magni eaque
+              ducimus? Veritatis, repellat!
+            </p>
+          </div>
         </div>
       </section>
     </main>
+    <hr />
+
     <footer>
-      <nav>
-        <!-- linka pra própia página principal -->
-        <a href="#quemSomos">Quem somos nós</a>
-        <!-- linka pra explicação na página das classes -->
-        <a href="#primeirosPassos">Primeiros passos</a>
-        <!-- pop-up -->
-        <a href="#faleConosco">Atendimento</a>
-      </nav>
       <div>
-        <a href="#facebook">F</a>
-        <a href="instagram">I</a>
-        <a href="#linkedin">L</a>
+        <nav>
+          <!-- linka pra própia página principal -->
+          <a href="#quemSomos">Quem somos nós</a>
+          <!-- linka pra explicação na página das classes -->
+          <a href="#primeirosPassos">Primeiros passos</a>
+          <!-- pop-up -->
+          <a href="#faleConosco">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
       </div>
       <address>
         Encontrou algum problema?
