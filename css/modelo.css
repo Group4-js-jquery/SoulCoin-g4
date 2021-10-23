@@ -1,13 +1,93 @@
 * {
   margin: 0;
-
   padding: 0;
   box-sizing: border-box;
+
+  /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
+  font-size: 62.5%;
+}
+
+:root {
+  /* paleta de cores */
+  --colorOrange: #ff8c00;
+  --colorGrey: #707070;
 }
 
 body {
+  margin: 0 auto;
   padding-left: 100px;
   padding-right: 100px;
-  max-width: 1500px;
+  max-width: 1700px;
   width: 100vw;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 100vh; */
+  font-size: 1.6rem;
+  background-color: var(--colorGrey);
 }
+
+#logotipo {
+  width: 200px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-row: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 160px;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 5rem;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+hr {
+  border: 3px solid var(--colorOrange);
+}
+
+#apresentacao {
+  height: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: 100%;
+  text-align: center;
+  margin-top: 200px;
+}
+
+#apresentacao h1 {
+  font-size: 9rem;
+  /* coloquei uma cor clara aleatoria */
+  color: aliceblue;
+  text-align: left;
+  background-color: var(--colorOrange);
+  border-radius: 50%;
+}
+
+#apresentacao figure img {
+  width: 85%;
+  box-shadow: 25px 25px 10px var(--colorOrange);
+}
+
+/* @media screen and (max-width: 750px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row: 100%;
+  }
+} */
