@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 
   /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
   font-size: 62.5%;
@@ -79,6 +80,12 @@ hr {
   width: 85%;
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
+fieldset{
+  font-size: 4em;
+  margin-top: 2.5%;
+  padding: 2%;
+}
+
 
 /* @media screen and (max-width: 750px) {
   nav ul {
