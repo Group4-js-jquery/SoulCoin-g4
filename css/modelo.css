@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
   /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
   font-size: 62.5%;
 }
@@ -25,6 +25,20 @@ body {
   min-height: 100vh; */
   font-size: 1.6rem;
   background-color: var(--colorGrey);
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorOrange);
+  cursor: pointer;
+  transition: 1s;
+}
+
+a:hover {
+  color: aliceblue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #logotipo {
@@ -48,13 +62,13 @@ nav ul li {
   list-style: none;
   font-size: 5rem;
 }
-nav ul li a {
-  text-decoration: none;
-  color: var(--colorOrange);
-}
 
 hr {
   border: 3px solid var(--colorOrange);
+}
+
+.mainSection {
+  margin-top: 10rem;
 }
 
 #apresentacao {
@@ -71,15 +85,157 @@ hr {
   /* coloquei uma cor clara aleatoria */
   color: aliceblue;
   text-align: left;
-  background-color: var(--colorOrange);
-  border-radius: 50%;
 }
+
+/* BOLOTA */
+/* #roundH1 {
+  width: 475px;
+  height: 475px;
+  border-radius: 50%;
+  background-color: var(--colorOrange);
+  position: absolute;
+  bottom: 150px;
+  left: 270px;
+  z-index: -1;
+} */
 
 #apresentacao figure img {
   width: 85%;
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
+fieldset{
+  font-size: 4em;
+  margin-top: 2.5%;
+  padding: 2%;
+}
 
+
+#meta p {
+  padding: 1.5rem;
+  text-align: justify;
+  text-indent: 3rem;
+}
+
+#sobre h2 {
+  text-align: right;
+}
+
+#sobreDiv {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: 100% 100%;
+}
+
+section h2 {
+  width: 100%;
+  font-size: 4rem;
+}
+section p {
+  font-size: 2.4rem;
+}
+
+.card {
+  padding: 2%;
+}
+.card div {
+  margin: 1.5rem 0 1.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card p {
+  padding: 1.5rem;
+  text-align: justify;
+}
+
+section .card h3 {
+  font-size: 3rem;
+}
+
+section .card #fotinhaAlice {
+  background-image: url('../img/nickCarol.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaCarol {
+  background-image: url('../img/nickCarol.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaEinsten {
+  background-image: url('../img/nickCarol.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaRauny {
+  background-image: url('../img/nickCarol.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+
+#institucionalDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-assistant_photo_black_24dp,
+.icon-travel_explore_black_24dp,
+.icon-auto_awesome_black_24dp {
+  font-size: 8rem;
+  color: var(--colorOrange);
+}
+
+footer {
+  text-align: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+}
+footer div nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+footer div section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+footer a,
+address,
+p {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+footer section a:hover {
+  text-decoration: none;
+}
+
+/* section .card p {
+  font-size: 2.4rem;
+} */
 /* @media screen and (max-width: 750px) {
   nav ul {
     display: flex;
