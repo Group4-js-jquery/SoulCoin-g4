@@ -104,7 +104,7 @@ hr {
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
 fieldset{
-  font-size: 4em;
+  font-size: 4rem;
   margin-top: 2.5%;
   padding: 2%;
 }

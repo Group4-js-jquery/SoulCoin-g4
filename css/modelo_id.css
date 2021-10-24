@@ -1,14 +1,11 @@
 #nomeInput{
     color:#70707065;
 }
-
 #endereco{
-    font-size: 1em;
-    padding-top: 0.5em;
+    padding-top: 0.5rem;
 }
 #cepform{
-    font-size: 1em;
-    padding-top: 0.4em;
+    padding-top: 0.4rem;
 }
 #nascData{
     padding-top: 0.5em;
@@ -16,4 +13,10 @@
 #genero{
     padding-top: 0.5em;
 }
+<<<<<<< Updated upstream
 
+=======
+.dadosEndereco{
+    padding: 0;
+}
+>>>>>>> Stashed changes
