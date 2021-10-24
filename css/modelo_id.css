@@ -1,22 +1,19 @@
-#nomeInput{
-    color:#70707065;
+#nomeInput {
+  color: #70707065;
 }
-#endereco{
-    padding-top: 0.5rem;
+#endereco {
+  padding-top: 0.5rem;
 }
-#cepform{
-    padding-top: 0.4rem;
+#cepform {
+  padding-top: 0.4rem;
 }
-#nascData{
-    padding-top: 0.5em;
+#nascData {
+  padding-top: 0.5em;
 }
-#genero{
-    padding-top: 0.5em;
+#genero {
+  padding-top: 0.5em;
 }
-<<<<<<< Updated upstream
 
-=======
-.dadosEndereco{
-    padding: 0;
+.dadosEndereco {
+  padding: 0;
 }
->>>>>>> Stashed changes

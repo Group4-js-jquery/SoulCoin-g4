@@ -13,147 +13,164 @@
   </head>
   <body>
     <header>
-<<<<<<< HEAD:modelo-formulario.html
       <a href="#home">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
       </a>
       <nav>
         <ul>
           <!-- simulação do investimento -->
-          <li><a href="modelo-calculadora.html">Câmbio</a></li>
+          <li><a href="#calculadora">Câmbio</a></li>
           <!-- investimento -->
-          <li><a href="modelo-calculadora.html">Simulação</a></li>
+          <li><a href="#classe">Classe</a></li>
           <!-- formulário para cadastro -->
-          <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <li><a href="#cadastro">Cadastro</a></li>
           <li><a href="#minhaConta">Conta</a></li>
         </ul>
       </nav>
-=======
-        <a href="#home">
-            <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
-        </a>
-        <nav>
-            <ul>
-                <!-- simulação do investimento -->
-                <li><a href="#calculadora">Câmbio</a></li>
-                <!-- investimento -->
-                <li><a href="#classe">Classe</a></li>
-                <!-- formulário para cadastro -->
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#minhaConta">Conta</a></li>
-            </ul>
-        </nav>
->>>>>>> 3088868649dbedeb965d8594ca83a1c17767c9ad:modelo - formulário.html
     </header>
     <hr />
     <main>
-        <!-- conteúdo principal -->
-        <fieldset>
-<<<<<<< HEAD:modelo-formulario.html
-            <label for="nome">Nome:
-                <input id="nome" type="text" class="dadosForm" placeholder="Digite seu Nome">
+      <!-- conteúdo principal -->
+      <fieldset>
+        <form name="frmcpf" method="post" onsubmit="VerificaCPF();">
+          <label for="nome"
+            >Nome:
+            <input
+              id="nome"
+              type="text"
+              class="dadosForm"
+              placeholder="Digite seu Nome"
+            />
+          </label>
+          <!-- **********************CPF************************ -->
+          <label id="cpfform"
+            >Informe o CPF:
+            <input
+              type="text"
+              name="cpf"
+              size="12"
+              maxlength="11"
+              placeholder="Digite seu CPF (apenas números"
+              width="250em"
+            />
+            <button name="Submit" value="Checar" onclick="VerificaCPF();">
+              Checar
+            </button>
+          </label>
 
-            </label>
-            <!-- ************CPF******** -->
-            <form id="cepform" name="frmcpf" method="post" onsubmit="VerificaCPF();">
-                <label for="cpf">Informe o CPF:
+          <!-- ****************************Data de Nascimento****************************** -->
+          <label for="dataNasc"
+            >Data de nascimento:
 
-                    <input id="cpf" type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
-=======
-            <form name="frmcpf" method="post" onsubmit="VerificaCPF();">
-                <label for="nome">Nome:
-                    <input id="nome" type="text" class="dadosForm" placeholder="Digite seu Nome">
-                </label>
-                <!-- **********************CPF************************ -->
-                <label id="cpfform">Informe o CPF:
-                    <input type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
->>>>>>> 3088868649dbedeb965d8594ca83a1c17767c9ad:modelo - formulário.html
-                        width="250em">
-                    <button name="Submit" value="Checar" onclick="VerificaCPF();">Checar</button>
-                </label>
-<<<<<<< HEAD:modelo-formulario.html
-            </form>
-            <!-- ****************************Data de Nascimento****************************** -->
-=======
->>>>>>> 3088868649dbedeb965d8594ca83a1c17767c9ad:modelo - formulário.html
+            <input
+              type="date"
+              class="form-control"
+              id="dataNasc"
+              maxlength="10"
+              name="dataNasc"
+              min="1891-03-16"
+              max="2021-03-16"
+              required />
+            <input id="btn1" type="button" value="validarData"
+          /></label>
 
-                <!-- ****************************Data de Nascimento****************************** -->
-                <label for="dataNasc">Data de nascimento:
+          <!-- ***************Escolha de gênero************************** -->
+          <label for="genero"
+            >Qual sua opção de Gênero:
+            <select id="genero" name="opcaoGenero">
+              <option>Escolha sua opção de Gênero:</option>
+              <option value="homem">Masculino</option>
+              <option value="mulher">Feminino</option>
+              <option value="outros">Outros</option>
+            </select>
+          </label>
+          <!-- **************************Fone*************** -->
+          <label for="fone">
+            Telefone:
+            <input id="fone" name="fone" size="12" maxlength="11" />
+          </label>
+          <!-- *******************E-mail********************** -->
+          <label for="email">
+            E-mail:
+            <input type="email" id="email" />
+          </label>
+          <!-- **************************Endereço **************************-->
+          <div>
+            <p class="dadosEndereco">
+              <label for="cep">CEP:</label
+              ><input
+                type="text"
+                maxlength="9"
+                id="cep"
+                onblur="consultaCep()"
+              />
+            </p>
+            <p class="dadosEndereco">
+              <label for="logradouro">Logradouro:</label
+              ><input type="text" id="logradouro" />
+            </p>
+            <p class="dadosEndereco">
+              <label for="numero">Número</label
+              ><input type="text" id="numero" />
+            </p>
+            <p class="dadosEndereco">
+              <label for="complemento">Complemento</label
+              ><input type="text" id="complemento" />
+            </p>
+            <p class="dadosEndereco">
+              <label for="bairro">Bairro:</label
+              ><input type="text" id="bairro" />
+            </p>
+            <p class="dadosEndereco">
+              <label for="localidade">Cidade:</label
+              ><input type="text" id="localidade" />
+            </p>
+            <p class="dadosEndereco">
+              <label for="uf">Estado:</label><input type="text" id="uf" />
+            </p>
+          </div>
 
-                    <input type="date" class="form-control" id="dataNasc" maxlength="10" name="dataNasc"
-                        min="1891-03-16" max="2021-03-16" required>
-                    <input id="btn1" type="button" value="validarData"></label>
+          <!-- ***************************Fone******************************** -->
 
-                <!-- ***************Escolha de gênero************************** -->
-                <label for="genero">Qual sua opção de Gênero:
-                    <select id="genero" name="opcaoGenero">
-                        <option> Escolha sua opção de Gênero:</option>
-                        <option value="homem">Masculino</option>
-                        <option value="mulher">Feminino</option>
-                        <option value="outros">Outros</option>
-                    </select>
-                </label>
-                <!-- **************************Fone*************** -->
-                <label for="fone"> Telefone:
-                    <input id="fone" name="fone" size="12" maxlength="11">
-                </label>
-                <!-- *******************E-mail********************** -->
-                <label for="e-mail">
-                    E-mail:
-                    <input type="email" id="email">
-                </label>
-                <!-- **************************Endereço **************************-->
-                <div>
-                    <p class="dadosEndereco"><label for="cep">CEP:</label><input type="text" maxlength="9" id="cep"
-                            onblur="consultaCep()">
-                    </p>
-                    <p class="dadosEndereco"><label for="logradouro">Logradouro:</label><input type="text"
-                            id="logradouro"></p>
-                    <p class="dadosEndereco"><label for="numero">Número</label><input type="text" id="numero"></p>
-                    <p class="dadosEndereco"><label for="complemento">Complemento</label><input type="text"
-                            id="complemento"></p>
-                    <p class="dadosEndereco"><label for="bairro">Bairro:</label><input type="text" id="bairro"></p>
-                    <p class="dadosEndereco"><label for="localidade">Cidade:</label><input type="text" id="localidade">
-                    </p>
-                    <p class="dadosEndereco"><label for="uf">Estado:</label><input type="text" id="uf"></p>
-                </div>
-
-                <!-- ***************************Fone******************************** -->
-
-                <div>Menssagem:<textarea name="mensagem" cols="35" rows="8"></textarea><span
-                        style="color: red;">*</span>
-                </div>
-                <Button type="text" name="enviar" onclick="Alert()" value="Exibir Alert">Enviar</Button>
-                <Button type="reset" name="limpar">Limpar</button>
-            </form>
-        </fieldset>
+          <label>
+            Menssagem:<textarea name="mensagem" cols="35" rows="8"></textarea
+            ><span style="color: red">*</span>
+          </label>
+          <button
+            type="text"
+            name="enviar"
+            onclick="Alert()"
+            value="Exibir Alert"
+          >
+            Enviar
+          </button>
+          <button type="reset" name="limpar">Limpar</button>
+        </form>
+      </fieldset>
     </main>
     <footer>
-
-        <div>
-            <nav>
-                <!-- linka pra própia página principal -->
-                <a href="#quemSomos">Quem somos nós</a>
-                <!-- linka pra explicação na página das classes -->
-                <a href="#primeirosPassos">Primeiros passos</a>
-                <!-- pop-up -->
-                <a href="#faleConosco">Atendimento</a>
-            </nav>
-            <section>
-                <a class="icon-facebook" href="#facebook"></a>
-                <a class="icon-instagram" href="instagram"></a>
-                <a class="icon-linkedin2" href="#linkedin"></a>
-            </section>
-
-        </div>
-        <address>
-            Encontrou algum problema?
-            <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
-        </address>
-        <p>&copy; Todos os direitos reservados.</p>
+      <div>
+        <nav>
+          <!-- linka pra própia página principal -->
+          <a href="#quemSomos">Quem somos nós</a>
+          <!-- linka pra explicação na página das classes -->
+          <a href="#primeirosPassos">Primeiros passos</a>
+          <!-- pop-up -->
+          <a href="#faleConosco">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
     </footer>
 
     <script type="text/javascript" src="./js/modelo.js"></script>
-</body>
-
+  </body>
 </html>
