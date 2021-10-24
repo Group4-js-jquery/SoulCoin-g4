@@ -1,58 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
-
-    <link rel="stylesheet" href="css/modelo_id.css">
     <!-- ICONES -->
     <link rel="stylesheet" href="assets/style.css" />
-
-    <link rel="stylesheet" href="css/modelo_id.css" />
-
-    <title>Modelo SoulCoin - Formulário</title>
-</head>
-
-<body>
+    <title>Modelo SoulCoin</title>
+  </head>
+  <body>
     <header>
-        <a href="#home">
-            <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
-        </a>
-        <nav>
-            <ul>
-                <!-- simulação do investimento -->
-                <li><a href="#calculadora">Calculadora</a></li>
-                <!-- investimento -->
-                <li><a href="#classe">Classe</a></li>
-                <!-- formulário para cadastro -->
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#minhaConta">Conta</a></li>
-            </ul>
-        </nav>
+      <a href="#home">
+        <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+      </a>
+      <nav>
+        <ul>
+          <!-- simulação do investimento -->
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
+          <!-- investimento -->
+          <li><a href="modelo-calculadora.html">Simulação</a></li>
+          <!-- formulário para cadastro -->
+          <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <li><a href="#minhaConta">Conta</a></li>
+        </ul>
+      </nav>
     </header>
     <hr />
     <main>
         <!-- conteúdo principal -->
         <fieldset>
             <label for="nome">Nome:
+                <input id="nome" type="text" class="dadosForm" placeholder="Digite seu Nome">
 
-                <input type="text" class="dadosForm" placeholder="Digite seu Nome">
-               
             </label>
             <!-- ************CPF******** -->
             <form id="cepform" name="frmcpf" method="post" onsubmit="VerificaCPF();">
-                <div>Informe o CPF:
+                <label for="cpf">Informe o CPF:
 
-                    <input type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
+                    <input id="cpf" type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
                         width="250em">
                  
                     <button name="Submit" value="Checar" onclick="VerificaCPF();">Checar</button>
-                </div>
+                </label>
             </form>
             <!-- ****************************Data de Nascimento****************************** -->
 
