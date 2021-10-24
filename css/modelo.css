@@ -28,6 +28,20 @@ body {
   color: aliceblue;
 }
 
+@media (max-width: 1024px) {
+  body {
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--colorOrange);
@@ -103,12 +117,20 @@ hr {
   width: 85%;
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
+<<<<<<< Updated upstream
 fieldset{
   font-size: 4em;
   margin-top: 2.5%;
   padding: 2%;
 }
 
+=======
+fieldset {
+  font-size: 4rem;
+  margin-top: 2.5%;
+  padding: 2%;
+}
+>>>>>>> Stashed changes
 
 #meta p {
   padding: 1.5rem;
