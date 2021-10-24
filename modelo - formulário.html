@@ -8,7 +8,13 @@
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
+
+    <link rel="stylesheet" href="css/modelo_id.css">
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/style.css" />
+
     <link rel="stylesheet" href="css/modelo_id.css" />
+
     <title>Modelo SoulCoin - Formulário</title>
 </head>
 
@@ -33,27 +39,41 @@
     <main>
         <!-- conteúdo principal -->
         <fieldset>
-            <label  for="nome">Nome:
-            <input type="text" class="dadosForm">
-        </label>
-<!-- ************CPF******** -->
+            <label for="nome">Nome:
+
+                <input type="text" class="dadosForm" placeholder="Digite seu Nome">
+               
+            </label>
+            <!-- ************CPF******** -->
             <form id="cepform" name="frmcpf" method="post" onsubmit="VerificaCPF();">
                 <div>Informe o CPF:
-                    <input type="text" name="cpf" size="12" maxlength="11">
-                    <input type="button" name="Submit" value="Checar" onclick="VerificaCPF();">
+
+                    <input type="text" name="cpf" size="12" maxlength="11" placeholder="Digite seu CPF (apenas números"
+                        width="250em">
+                 
+                    <button name="Submit" value="Checar" onclick="VerificaCPF();">Checar</button>
                 </div>
             </form>
-<!-- ***************escolha de gênero************************** -->
-            <label for="genero">Qual sua opção de Gênero:</label>
-            <select name="opcaoGenero">
-                <option> Escolha sua opção de Gênero:</option>
-                <option value="homem">Masculino</option>
-                <option value="mulher">Feminino</option>
-                <option value="outros">Outros</option>
-            </select>
-<!-- **************************Endereço **************************-->
-        <p id="endereco"> Endereço:
-            <div>
+            <!-- ****************************Data de Nascimento****************************** -->
+
+            <label for="dataNasc">Data de nascimento:</label>
+
+            <input type="date" class="form-control" id="dataNasc" maxlength="10" name="dataNasc" min="1891-03-16"
+                max="2021-03-16" required>
+            <input id="btn1" type="button" value="validarData">
+            <!-- ***************Escolha de gênero************************** -->
+            <div id="genero" for="genero">Qual sua opção de Gênero:
+                <select name="opcaoGenero">
+                    <option> Escolha sua opção de Gênero:</option>
+                    <option value="homem">Masculino</option>
+                    <option value="mulher">Feminino</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+          
+            <!-- **************************Endereço **************************-->
+            <p id="endereco"> Endereço:
+            <div id="dadosEndereco">
                 <p><label for="cep">CEP:</label><input type="text" maxlength="9" id="cep" onblur="consultaCep()">
                 </p>
                 <p><label for="logradouro">Logradouro:</label><input type="text" id="logradouro" disabled></p>
@@ -63,7 +83,8 @@
                 <p><label for="localidade">Cidade:</label><input type="text" id="localidade" disabled></p>
                 <p><label for="uf">Estado:</label><input type="text" id="uf" disabled></p>
             </div>
-        </p>
+            </p>
+
             <div> Telefone:
                 <input name="cpf" size="12" maxlength="11">
             </div>
@@ -78,18 +99,22 @@
         </fieldset>
     </main>
     <footer>
-        <nav>
-            <!-- linka pra própia página principal -->
-            <a href="#quemSomos">Quem somos nós</a>
-            <!-- linka pra explicação na página das classes -->
-            <a href="#primeirosPassos">Primeiros passos</a>
-            <!-- pop-up -->
-            <a href="#faleConosco">Atendimento</a>
-        </nav>
+
         <div>
-            <a href="#facebook">F</a>
-            <a href="instagram">I</a>
-            <a href="#linkedin">L</a>
+            <nav>
+                <!-- linka pra própia página principal -->
+                <a href="#quemSomos">Quem somos nós</a>
+                <!-- linka pra explicação na página das classes -->
+                <a href="#primeirosPassos">Primeiros passos</a>
+                <!-- pop-up -->
+                <a href="#faleConosco">Atendimento</a>
+            </nav>
+            <section>
+                <a class="icon-facebook" href="#facebook"></a>
+                <a class="icon-instagram" href="instagram"></a>
+                <a class="icon-linkedin2" href="#linkedin"></a>
+            </section>
+
         </div>
         <address>
             Encontrou algum problema?
@@ -97,6 +122,8 @@
         </address>
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
+
+    <script type="text/javascript" src="./js/modelo.js"></script>
 </body>
 
 </html>
