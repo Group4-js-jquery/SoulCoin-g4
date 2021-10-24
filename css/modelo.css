@@ -104,11 +104,15 @@ hr {
   width: 85%;
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
+<<<<<<< Updated upstream
 fieldset {
   font-size: 4rem;
   margin-top: 2.5%;
   padding: 2%;
 }
+=======
+
+>>>>>>> Stashed changes
 
 #meta p {
   padding: 1.5rem;
