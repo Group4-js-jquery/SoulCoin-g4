@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/modelo.js" defer></script>
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/modelo_simulador.css" />
+  <link rel="stylesheet" href="css/modelo.css" />
+  <!-- ICONES -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Câmbio</title>
+</head>
+
+<body>
+  <header>
+    <a href="#home">
+      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+    </a>
+    <nav>
+      <ul>
+        <!-- simulação do investimento -->
+        <li><a href="modelo-simulador.html">Câmbio</a></li>
+        <!-- investimento -->
+        <li><a href="modelo-calculadora.html">Simulação</a></li>
+        <!-- formulário para cadastro -->
+        <li><a href="modelo-formulario.html">Cadastro</a></li>
+        <li><a href="#minhaConta">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr />
+  <main>
+    <div id="bodyFake">
+      <section>
+        <h2 class="titulo">Minhas SoulCoins</h2>
+      </section>
+      <section class="card">
+        <div class="linhaDeInput">
+          <label>Operação</label>
+          <select type="text" id="tipoOperação" placeholder="Escolha Uma Opção" required>
+            <option value="Escolha Uma Opção">Escolha Uma Opção</option>
+            <option value="Compra">Compra</option>
+            <option value="Venda">Venda</option>
+          </select>
+        </div>
+        <div class="linhaDeInput">
+          <label>Quantidade</label>
+          <input type="text" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
+        </div>
+        <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
+        <button onclick="novaOperacao.cancelar()">Cancelar</button>
+      </section>
+      <section class="conteudo">
+        <table border=1>
+          <thead>
+            <th>ID</th>
+            <th>Operação</th>
+            <th>Qtde.</th>
+            <th>Vlr. R$</th>
+            <th>SLCN Hoje</th>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+  </main>
+  <hr />
+
+  <footer>
+    <div>
+      <nav>
+        <!-- linka pra própia página principal -->
+        <a href="#quemSomos">Quem somos nós</a>
+        <!-- linka pra explicação na página das classes -->
+        <a href="#primeirosPassos">Primeiros passos</a>
+        <!-- pop-up -->
+        <a href="#faleConosco">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/js_simulador.js"></script>
+</body>
+
+</html>

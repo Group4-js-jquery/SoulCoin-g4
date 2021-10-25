@@ -103,4 +103,75 @@ $("#btn1").click(function(){
         alert("seu cadastro foi aprovado")
     }
     console.log(idade(anoDigitado, mesDigitado, diaDigitado)); 
-})            
+})   
+
+// *****************Validação**************************
+function enviardados3() {
+    //If para verificar se o campo nome do formulário fale está vazio ou com menos de dois caracteres.
+    if (document.fale.nome.value.length < 3) {
+        //Caixa trazendo a informação de que o campo não foi preenchido corretamente
+        alert("Preencha campo nome corretamente!");
+        //Focus para setar para a caica de texto que não foi preenchida corretamente
+        document.frmcpf.nome.focus();
+        //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.
+        return false;
+    }
+
+    if (document.fale.email.value == "" || document.fale.email.value.length < 3) {
+        alert("Preencha campo e-mail corretamente!");
+        document.fale.email.focus();
+        return false;
+    }
+
+    if (document.fale.assunto.value == "" || document.fale.assunto.value.length < 3) {
+        alert("Preencha campo assunto corretamente!");
+        document.fale.assunto.focus();
+        return false;
+    }
+
+    if (document.fale.mensagem.value =="" || document.fale.mensagem.value.length < 10){
+        alert("Prencha campo menssagem corrtamente! Use caracteres com bom senso. Excesso de espaços em branco não serão permitidos.");
+        document.fale.mensagem.focus();
+        return false;
+    }
+
+    {
+        alert("Cadastro enviado com sucesso!");
+    }
+}
+
+
+let vtBanner = ["img/b1.jpg", "img/b2.jpg", "img/b3.jpg", "img/b4.jpg"];
+let max = vtBanner.length - 1;
+let i = 0;
+
+$("#btnAnte").text("<");
+$("#btnProx").text(">");
+$("#banner").css("backgroundImage", "url(" + vtBanner[0] + ")");
+
+$("#btnAnte").click(function () {
+    troca(-1);
+
+})
+$("#btnProx").click(function () {
+    troca(1);
+})
+
+
+function troca(opr) {
+    $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeOut(1000,
+        function () {
+            i += opr;
+            if (i > max) {
+                i = 0;
+            } else if (i < 0) {
+                i = max;
+            }
+    $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeIn(1000);
+});
+}
+setInterval(() => troca(1), 5000)
+
+
+
+

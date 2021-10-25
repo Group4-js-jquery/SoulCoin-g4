@@ -1,7 +1,6 @@
-<<<<<<< Updated upstream
 #nomeInput{
     color:#70707065;
-=======
+
 .inputsForm {
   color: #707070;
   margin-top: 2rem;
@@ -9,20 +8,90 @@
   height: 70%;
   width: 25rem;
   align-items:flex-end;
->>>>>>> Stashed changes
 }
 
-#endereco{
-    font-size: 1em;
-    padding-top: 0.5em;
+#genero {
+  margin-top: 2rem;
+  border-radius: 2rem;
+  height: 35%;
 }
-#cepform{
-    font-size: 1em;
-    padding-top: 0.4em;
+
+fieldset {
+   font-size: 5rem;
+  margin-top: 2.5%;
+  padding: 2%;
+  border-style: double;
+  border-width: medium;
+  border-color: #ff8c00;
 }
-#nascData{
-    padding-top: 0.5em;
+
+form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  margin-bottom: 2rem;
 }
-#genero{
-    padding-top: 0.5em;
+
+#mensagem {
+  text-align: center;
+}
+
+.btn {
+  color: #707070;
+  background: #ff8c00;
+  border-radius: 3rem;
+  font-size: 2rem;
+  width: 11rem;
+}
+
+#botoesForm {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#msg {
+  border-radius: 3rem;
+}
+
+#dataNasc {
+  height: 35%;
+}
+
+#btn1 {
+  height: 35%;
+  width: 8rem;
+}
+
+#banner {
+  margin: auto;
+  margin-top: 3rem;
+  width: 100%;
+  height: 330px;
+  border: 1px solid black;
+  background-size: cover;
+}
+
+#btnAnte, #btnProx {
+  line-height: 200px;
+  font-size: 30px;
+  color: rgb(0, 0, 0, 5);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnAnte {
+  float: left;
+  margin-top:6rem;
+}
+
+#btnProx {
+  float: right;
+  margin-top:6rem;
+}
+
+#botoes {
+  position: absolute;
+  top: 250px;
+  left: 50%;
 }
