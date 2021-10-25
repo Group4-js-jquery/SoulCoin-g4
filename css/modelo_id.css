@@ -1,4 +1,7 @@
-input {
+#nomeInput{
+    color:#70707065;
+
+.inputsForm {
   color: #707070;
   margin-top: 2rem;
   border-radius: 2rem;
