@@ -7,54 +7,67 @@
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
-    <title>Modelo SoulCoin - Calculadora</title>
+    <link rel="stylesheet" href="css/modelo_id.css" />
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Modelo SoulCoin</title>
   </head>
   <body>
     <header>
-      <a href="#home">
+      <a href="modelo.html">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
       </a>
       <nav>
         <ul>
           <!-- simulação do investimento -->
-          <li><a href="#calculadora">Calculadora</a></li>
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
           <!-- investimento -->
-          <li><a href="#classe">Classe</a></li>
+          <li><a href="modelo-calculadora.html">Classe</a></li>
           <!-- formulário para cadastro -->
-          <li><a href="#cadastro">Cadastro</a></li>
+          <li><a href="modelo - formulário.html">Cadastro</a></li>
           <li><a href="#minhaConta">Conta</a></li>
         </ul>
       </nav>
     </header>
     <hr />
     <main>
-      <section class="mainSection" id="simulacaoCalc">
-        <h2>Explicar simulação calculadora</h2>
-        <hr />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt
-          ducimus amet doloremque quis similique quam ea ut tempore possimus,
-          repudiandae magnam itaque rem voluptatibus perspiciatis aliquam vero.
-          Ipsam, aliquid?Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eius nam qui neque assumenda, magnam voluptates ab fugiat, quae
-          ex tempora natus iste officia amet quo temporibus accusamus corporis
-          enim rem. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Deserunt vitae incidunt repudiandae aut facere, ipsum omnis cupiditate
-          reiciendis commodi rerum at consequatur, quidem molestias laborum
-          aspernatur, porro explicabo. Dignissimos, quo!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nesciunt
-          ducimus amet doloremque quis similique quam ea ut tempore possimus,
-          repudiandae magnam itaque rem voluptatibus perspiciatis aliquam vero.
-          Ipsam, aliquid?Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eius nam qui neque assumenda, magnam voluptates ab fugiat, quae
-          ex tempora natus iste officia amet quo temporibus accusamus corporis
-          enim rem. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Deserunt vitae incidunt repudiandae aut facere, ipsum omnis cupiditate
-          reiciendis commodi rerum at consequatur, quidem molestias laborum
-          aspernatur, porro explicabo. Dignissimos, quo!
-        </p>
+      <section class="mainSection" id="calculadora">
+        <span type="text" id="mostrarResultados">MOSTRAR</span>
+        <div id="digitos">
+          <input
+            id="calcNormal"
+            class="cientifica"
+            type="button"
+            value="normal"
+          />
+          <input id="potencia2" class="cientifica" type="button" value="x²" />
+          <input id="potencia3" class="cientifica" type="button" value="x³" />
+          <input id="raiz" class="cientifica" type="button" value="raiz" />
+          <input
+            id="calcCientifica"
+            class="normal"
+            type="button"
+            value="cientifica"
+          />
+          <input id="limpar" class="normal" type="button" value="C" />
+          <input id="porcentagem" class="normal" type="button" value="%" />
+          <input id="divisao" class="normal" type="button" value="/" />
+          <input id="sete" class="normal" type="button" value="7" />
+          <input id="oito" class="normal" type="button" value="8" />
+          <input id="nove" class="normal" type="button" value="9" />
+          <input id="multiplicacao" class="normal" type="button" value="x" />
+          <input id="quatro" class="normal" type="button" value="4" />
+          <input id="cinco" class="normal" type="button" value="5" />
+          <input id="seis" class="normal" type="button" value="6" />
+          <input id="menos" class="normal" type="button" value="-" />
+          <input id="um" class="normal" type="button" value="1" />
+          <input id="dois" class="normal" type="button" value="2" />
+          <input id="tres" class="normal" type="button" value="3" />
+          <input id="mais" class="normal" type="button" value="+" />
+          <input id="zero" class="normal" type="button" value="0" />
+          <input id="ponto" class="normal" type="button" value="." />
+          <input id="igual" class="normal" type="button" value="=" />
+        </div>
       </section>
     </main>
     <hr />
