@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/modelo.js" defer></script>
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/modelo.css" />
+  <link rel="stylesheet" href="css/modelo_id.css" />
+  <!-- ICONES -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Modelo SoulCoin</title>
+</head>
+
+<body>
+  <header>
+    <a href="modelo.html">
+      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+    </a>
+    <nav>
+      <ul>
+        <!-- simulação do investimento -->
+        <li><a href="modelo-calculadora.html">Câmbio</a></li>
+        <!-- investimento -->
+        <li><a href="modelo-calculadora.html">Classe</a></li>
+        <!-- formulário para cadastro -->
+        <li><a href="modelo-formulario.html">Cadastro</a></li>
+        <li><a href="#minhaConta">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <hr />
+  <main>
+    <!-- **********************Carrocel de imagens*************************** -->
+    <section id="banner">
+      <div id="btnAnte"></div>
+      <div id="btnProx"></div>
+      <div id="botoes">
+          <input type="radio" id="b1" name="banners">
+          <input type="radio" id="b2" name="banners">
+          <input type="radio" id="b3" name="banners">
+          <input type="radio" id="b4" name="banners">
+      </div>
+  </section>
+    <!-- conteúdo principal -->
+    <fieldset>
+      <form id="formulario" name="frmcpf;" method="post" onsubmit="VerificaCPF();">
+       
+        <label for="nome">Nome:
+          <input id="nome" type="text" name="nome"class="dadosForm, inputsForm" placeholder="Digite seu Nome" />
+        </label>
+        <!-- **********************CPF************************ -->
+        <label id="cpfform">Informe o CPF:
+          <input type="text" name="cpf" size="12" maxlength="11"  class="inputsForm" placeholder="Digite os números do seu CPF" />
+          <!-- <button name="Submit" value="Checar" onclick="VerificaCPF();">
+            Checar
+          </button> -->
+        </label>
+
+        <!-- ****************************Data de Nascimento****************************** -->
+        <label for="dataNasc">Data de nascimento:
+          <input type="date" id="dataNasc" maxlength="10" class="inputsForm" name="dataNasc" min="1891-03-16"
+            max="2021-03-16" required />
+          <input id="btn1" value="validarData" />
+        </label>
+
+        <!-- ***************Escolha de gênero************************** -->
+        <label for="genero">Qual sua opção de Gênero:
+          <select id="genero" name="opcaoGenero" class="inputsForm">
+            <option>Escolha sua opção de Gênero:</option>
+            <option value="homem">Masculino</option>
+            <option value="mulher">Feminino</option>
+            <option value="outros">Outros</option>
+          </select>
+        </label>
+
+        <!-- **************************Fone*************** -->
+        <label for="fone">
+          Telefone:
+          <input id="fone" name="fone" class="inputsForm" size="12" maxlength="11" />
+        </label>
+        <!-- **************************Celular*************** -->
+        <label for="fone">
+          Celular:
+          <input id="fone" name="fone" class="inputsForm" size="12" maxlength="11" />
+        </label>
+
+        <!-- *******************E-mail********************** -->
+        <label for="email">
+          E-mail:
+          <input type="email" id="email" class="inputsForm"/>
+        </label>
+
+        <!-- **************************Endereço **************************-->
+        <label for="cep">CEP:
+          <input type="text" maxlength="9" id="cep" class="inputsForm" onblur="consultaCep()" /></label>
+
+        <label for="logradouro">Logradouro:<input type="text" id="logradouro" class="inputsForm"/></label>
+
+        <label for="numero">Número<input type="text" id="numero" class="inputsForm"/></label>
+
+        <label for="complemento">Complemento<input type="text" id="complemento" class="inputsForm"/> </label>
+
+        <label for="bairro">Bairro:<input type="text" id="bairro" class="inputsForm"/></label>
+
+        <label for="localidade">Cidade:<input type="text" id="localidade" class="inputsForm"/></label>
+
+        <label for="uf">Estado:<input type="text" id="uf" class="inputsForm"></label>
+      </form>
+
+      <div id="mensagem">
+        <p>Mensagem:</p><textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
+      </div>
+<!-- *********************************Botões***************************** -->
+      <div id="botoesForm">
+
+      <button  class="btn" type="text" name="Submit" onclick="VerificaCPF();" value="Checar"> Enviar </button>
+     
+      <button class="btn" type="reset" name="limpar">Limpar</button>
+    </div>
+
+    <div id="caixaMaior">
+      <div id="faixaCinza">
+          <p id="cabecalhoCaixa">Aviso</p>
+      </div>
+
+      <p id="mensagemCaixa">Texto da caixa de aviso</p>
+      <button id="botaoOk" onclick="fecharJanela()">Ok</button>
+  </div>
+
+    </fieldset>
+  </main>
+  <footer>
+    <div>
+      <nav>
+
+        <ul>
+          <!-- simulação do investimento -->
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
+          <!-- investimento -->
+          <li><a href="modelo-calculadora.html">Simulação</a></li>
+          <!-- formulário para cadastro -->
+          <li><a href="modelo - formulário.html">Cadastro</a></li>
+          <li><a href="#minhaConta">Conta</a></li>
+        </ul>
+        <!-- linka pra própia página principal -->
+        <a href="#quemSomos">Quem somos nós</a>
+        <!-- linka pra explicação na página das classes -->
+        <a href="#primeirosPassos">Primeiros passos</a>
+        <!-- pop-up -->
+        <a href="#faleConosco">Atendimento</a>
+
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="text/javascript" src="./js/modelo.js"></script>
+</body>
+
+</html>

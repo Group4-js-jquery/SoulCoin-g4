@@ -1,5 +1,15 @@
+<<<<<<< Updated upstream
 #nomeInput{
     color:#70707065;
+=======
+.inputsForm {
+  color: #707070;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  height: 70%;
+  width: 25rem;
+  align-items:flex-end;
+>>>>>>> Stashed changes
 }
 
 #endereco{
