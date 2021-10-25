@@ -1,14 +1,12 @@
-#nomeInput{
-    color:#70707065;
-
 .inputsForm {
+
   color: #707070;
   margin-top: 2rem;
   border-radius: 2rem;
   height: 70%;
   width: 25rem;
-  align-items:flex-end;
-}
+  align-items: flex-end;
+} 
 
 #genero {
   margin-top: 2rem;
@@ -17,7 +15,7 @@
 }
 
 fieldset {
-   font-size: 5rem;
+  font-size: 5rem;
   margin-top: 2.5%;
   padding: 2%;
   border-style: double;
@@ -72,7 +70,8 @@ form {
   background-size: cover;
 }
 
-#btnAnte, #btnProx {
+#btnAnte,
+#btnProx {
   line-height: 200px;
   font-size: 30px;
   color: rgb(0, 0, 0, 5);
@@ -82,12 +81,12 @@ form {
 
 #btnAnte {
   float: left;
-  margin-top:6rem;
+  margin-top: 6rem;
 }
 
 #btnProx {
   float: right;
-  margin-top:6rem;
+  margin-top: 6rem;
 }
 
 #botoes {
