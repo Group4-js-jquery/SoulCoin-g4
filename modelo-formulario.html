@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="js/modelo.js" defer></script>
+  <!-- <script src="js/modelo.js" defer></script> -->
   <script src="js/jquery.js"></script>
+
   <link rel="stylesheet" href="css/modelo.css" />
   <link rel="stylesheet" href="css/modelo_id.css" />
   <!-- ICONES -->
@@ -44,10 +45,10 @@
           <input type="radio" id="b3" name="banners">
           <input type="radio" id="b4" name="banners">
       </div>
-  </section>
+    </section>
     <!-- conteúdo principal -->
     <fieldset>
-      <form id="formulario" name="frmcpf;" method="post" onsubmit="VerificaCPF();">
+      <form id="formulario" name="frmcpf;" method="post" onsubmit="validacaoCompleta();">
        
         <label for="nome">Nome:
           <input id="nome" type="text" name="nome"class="dadosForm" placeholder="Digite seu Nome" />
@@ -63,8 +64,7 @@
         <!-- ****************************Data de Nascimento****************************** -->
         <label for="dataNasc">Data de nascimento:
           <input type="date" id="dataNasc" maxlength="10" name="dataNasc" min="1891-03-16"
-            max="2021-03-16" required />
-          <input id="btn1" value="validarData" />
+            max="2021-03-16" required />          
         </label>
 
         <!-- ***************Escolha de gênero************************** -->
@@ -109,67 +109,52 @@
         <label for="localidade">Cidade:<input type="text" id="localidade" /></label>
 
         <label for="uf">Estado:<input type="text" id="uf"></label>
-      </form>
+      
 
-      <div id="mensagem">
-        <p>Mensagem:</p><textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
-      </div>
-<!-- *********************************Botões***************************** -->
-      <div id="botoesForm">
+        <div id="mensagem">
+          <p>Mensagem:</p><textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
+        </div>
+        <!-- *********************************Botões***************************** -->
+        <div id="botoesForm">
 
-      <button  class="btn" type="text" name="Submit" onclick="VerificaCPF();" value="Checar"> Enviar </button>
-     
-      <button class="btn" type="reset" name="limpar">Limpar</button>
-    </div>
+          <button  class="btn" type="submit" name="Enviar" onclick="validacaoCompleta()" > Enviar </button>
+           
+          <button class="btn" type="reset" name="limpar">Limpar</button>
+        </div>
 
-    <div id="caixaMaior">
+      <div id="caixaMaior">
       <div id="faixaCinza">
           <p id="cabecalhoCaixa">Aviso</p>
       </div>
 
       <p id="mensagemCaixa">Texto da caixa de aviso</p>
       <button id="botaoOk" onclick="fecharJanela()">Ok</button>
-  </div>
-
+    </div>
+      </form>
     </fieldset>
     
   </main>
   <footer>
-    <div>
-      <nav>
-<<<<<<< Updated upstream
-        <ul>
-          <!-- simulação do investimento -->
-          <li><a href="modelo-calculadora.html">Câmbio</a></li>
-          <!-- investimento -->
-          <li><a href="modelo-calculadora.html">Simulação</a></li>
-          <!-- formulário para cadastro -->
-          <li><a href="modelo - formulário.html">Cadastro</a></li>
-          <li><a href="#minhaConta">Conta</a></li>
-        </ul>
-=======
-        <!-- linka pra própia página principal -->
-        <a href="#quemSomos">Quem somos nós</a>
-        <!-- linka pra explicação na página das classes -->
-        <a href="#primeirosPassos">Primeiros passos</a>
-        <!-- pop-up -->
-        <a href="#faleConosco">Atendimento</a>
->>>>>>> Stashed changes
-      </nav>
-      <section>
-        <a class="icon-facebook" href="#facebook"></a>
-        <a class="icon-instagram" href="instagram"></a>
-        <a class="icon-linkedin2" href="#linkedin"></a>
-      </section>
-    </div>
-    <address>
-      Encontrou algum problema?
-      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
-    </address>
-    <p>&copy; Todos os direitos reservados.</p>
-  </footer>
-
-  <script type="text/javascript" src="./js/modelo.js"></script>
-</body>
-
+      <div>
+        <nav>
+          <!-- linka pra própia página principal -->
+          <a href="#quemSomos">Quem somos nós</a>
+          <!-- linka pra explicação na página das classes -->
+          <a href="#primeirosPassos">Primeiros passos</a>
+          <!-- pop-up -->
+          <a href="#faleConosco">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
