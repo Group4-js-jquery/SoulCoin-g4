@@ -1,0 +1,141 @@
+.titulo {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 4rem;
+}
+
+#bodyFake{
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.card{
+    background-color: #C0C0C0;
+    border: 1px solid #C0C0C0;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.linhaDeInput{
+    display:grid; /* para colocar um abaixo do outro*/
+    margin-bottom: 10px;
+    font-size: 3.5rem;
+    color: black;
+    font-weight: bolder;
+}
+
+select, input{
+    width: 80%;
+    padding-left: 1rem;
+    margin-left: 1.5rem;
+    font-size: 2rem;
+    /* padding: 10px; */
+    border: 1px solid #707070;
+    border-radius: 5px;
+    outline: 0; /* para tirar a bordar quando recebe o focus*/
+}
+
+select {
+    margin-left: 4rem;
+}
+
+button{
+    width: 120px;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    border:0;
+    background-color:  #ff8c00;;
+    color: aliceblue;
+    border-radius: 5px;
+    font-weight: bolder;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #707070;
+}
+.conteudo{
+    margin-top: 15px;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid #707070;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+table th{
+    background-color: #ff8c00;
+}
+
+table th, td{
+    padding: 1px 5px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#tbody {
+    background-color: #C0C0C0;
+    color: black;
+    font-weight: bolder;
+}
+
+@media (max-width: 1440px) {
+    #bodyFake{
+    width: 800px;
+    }
+    table th, td{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    #bodyFake{
+    width: 580px;
+    }
+    .titulo {
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+    .linhaDeInput{
+        font-size: 2.7rem;
+    }
+    select, input{
+        font-size: 1.5rem;
+    }
+    table th, td{
+        font-size: 1.5rem;
+    }
+    button{
+        width: 100px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #bodyFake{
+    width: 300px;
+    }
+    .titulo {
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .linhaDeInput{
+        font-size: 2rem;
+    }
+    select, input{
+        font-size: 1rem;
+    }
+    table th, td{
+        font-size: 1rem;
+    }
+    button{
+        width: 75px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
