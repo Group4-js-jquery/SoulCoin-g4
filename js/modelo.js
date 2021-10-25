@@ -58,7 +58,7 @@ function consultaCep() {
 }
 
 /*******************************************dataNascimento****************************************************/
-$("#btn1").click(function(){
+function verificaNasc(){
     let valorDigitado = $("#dataNasc").val();
 
     // **************************************************************
@@ -103,12 +103,14 @@ $("#btn1").click(function(){
         alert("seu cadastro foi aprovado")
     }
     console.log(idade(anoDigitado, mesDigitado, diaDigitado)); 
-})   
+}  
 
 // *****************Validação**************************
-function enviardados3() {
+function validacaoCompleta(){
+    verificaNasc();
+
     //If para verificar se o campo nome do formulário fale está vazio ou com menos de dois caracteres.
-    if (document.fale.nome.value.length < 3) {
+    if (document.frmcpf.nome.value.length < 3) {
         //Caixa trazendo a informação de que o campo não foi preenchido corretamente
         alert("Preencha campo nome corretamente!");
         //Focus para setar para a caica de texto que não foi preenchida corretamente
@@ -117,21 +119,21 @@ function enviardados3() {
         return false;
     }
 
-    if (document.fale.email.value == "" || document.fale.email.value.length < 3) {
+    if (document.frmcpf.email.value == "" || document.frmcpf.email.value.length < 3) {
         alert("Preencha campo e-mail corretamente!");
-        document.fale.email.focus();
+        document.frmcpf.email.focus();
         return false;
     }
 
-    if (document.fale.assunto.value == "" || document.fale.assunto.value.length < 3) {
+    if (document.frmcpf.assunto.value == "" || document.frmcpf.assunto.value.length < 3) {
         alert("Preencha campo assunto corretamente!");
-        document.fale.assunto.focus();
+        document.frmcpf.assunto.focus();
         return false;
     }
 
-    if (document.fale.mensagem.value =="" || document.fale.mensagem.value.length < 10){
+    if (document.frmcpf.mensagem.value =="" || document.frmcpf.mensagem.value.length < 10){
         alert("Prencha campo menssagem corrtamente! Use caracteres com bom senso. Excesso de espaços em branco não serão permitidos.");
-        document.fale.mensagem.focus();
+        document.frmcpf.mensagem.focus();
         return false;
     }
 
@@ -140,6 +142,8 @@ function enviardados3() {
     }
 }
 
+
+// *****************Banner de Imagens**************************
 
 let vtBanner = ["img/b1.jpg", "img/b2.jpg", "img/b3.jpg", "img/b4.jpg"];
 let max = vtBanner.length - 1;
