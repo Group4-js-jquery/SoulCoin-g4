@@ -94,3 +94,32 @@ form {
   top: 250px;
   left: 50%;
 }
+
+#login{
+  /* display: none; */
+  height: 20rem;
+  width:50rem;
+  background-color: #ff8c00;
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 1rem;
+  opacity: 0.6;
+ 
+}
+#apareceLogin{
+  display:none;
+  margin-top: 2rem;
+}
+#fecharLogin{
+  color: white;
+  background-color: #707070;
+  border-radius: 2rem;
+  height: 5rem;
+  width: 30rem;
+}
+
+

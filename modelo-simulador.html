@@ -10,6 +10,7 @@
   <script src="js/jquery.js" defer></script>
   <link rel="stylesheet" href="css/modelo_simulador.css" />
   <link rel="stylesheet" href="css/modelo.css" />
+  <link rel="stylesheet" href="css/modelo_id.css" />
   <!-- ICONES -->
   <link rel="stylesheet" href="assets/style.css" />
   <title>Câmbio</title>
@@ -25,15 +26,61 @@
         <!-- simulação do investimento -->
         <li><a href="modelo-simulador.html">Câmbio</a></li>
         <!-- investimento -->
-        <li><a href="modelo-calculadora.html">Simulação</a></li>
+        <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
         <li><a href="modelo-formulario.html">Cadastro</a></li>
-        <li><a href="#minhaConta">Conta</a></li>
+        <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
   </header>
   <hr />
+  <!-- Caixa do Login -->
+  <section id="apareceLogin">
+    <form id="login">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+      <input id="fecharLogin" type="submit" value="Acessar Conta">
+    </form>
+  </section>
   <main>
+    <div class="tradingView" style="margin: 3rem 0;">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+          "symbols": [
+            {
+              "description": "EUR / BRL",
+              "proName": "FX_IDC:EURBRL"
+            },
+            {
+              "description": "GBP / BRL",
+              "proName": "FX_IDC:GBPBRL"
+            },
+            {
+              "description": "CAD / BRL",
+              "proName": "FX_IDC:CADBRL"
+            },
+            {
+              "description": "AUD / BRL",
+              "proName": "FX_IDC:AUDBRL"
+            },
+            {
+              "description": "USD / BRL",
+              "proName": "FX_IDC:USDBRL"
+            }
+          ],
+            "colorTheme": "dark",
+              "isTransparent": false,
+                "showSymbolLogo": true,
+                  "locale": "br"
+        }
+      </script>
+    </div>
     <div id="bodyFake">
       <section>
         <h2 class="titulo">Minhas SoulCoins</h2>
@@ -41,7 +88,7 @@
       <section class="card">
         <div class="linhaDeInput">
           <label>Operação</label>
-          <select type="text" id="tipoOperação" placeholder="Escolha Uma Opção" required>
+          <select type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
             <option value="Escolha Uma Opção">Escolha Uma Opção</option>
             <option value="Compra">Compra</option>
             <option value="Venda">Venda</option>
@@ -49,10 +96,12 @@
         </div>
         <div class="linhaDeInput">
           <label>Quantidade</label>
-          <input type="text" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
+          <input type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
         </div>
-        <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
-        <button onclick="novaOperacao.cancelar()">Cancelar</button>
+        <div id="btnCenter">
+          <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
+          <button onclick="novaOperacao.cancelar()">Cancelar</button>
+        </div>
       </section>
       <section class="conteudo">
         <table border=1>
@@ -61,7 +110,8 @@
             <th>Operação</th>
             <th>Qtde.</th>
             <th>Vlr. R$</th>
-            <th>SLCN Hoje</th>
+            <th>Cotação Hoje</th>
+            <th>Alterações</th>
           </thead>
           <tbody id="tbody">
           </tbody>
@@ -75,12 +125,12 @@
   <footer>
     <div>
       <nav>
-        <!-- linka pra própia página principal -->
-        <a href="#quemSomos">Quem somos nós</a>
-        <!-- linka pra explicação na página das classes -->
-        <a href="#primeirosPassos">Primeiros passos</a>
-        <!-- pop-up -->
-        <a href="#faleConosco">Atendimento</a>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
       </nav>
       <section>
         <a class="icon-facebook" href="#facebook"></a>

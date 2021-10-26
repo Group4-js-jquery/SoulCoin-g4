@@ -2,149 +2,168 @@
 
 // criar a classe com letra maiscula para diferenciar dos atribuitos
 // declaração da classe - ela engloba tudo, nossos dados, eventos e funções necessárias para conseguirmos montar nosso banco de dados/listas/base de produtos.
-var dataId = Date.now();
+
 
 class SoulCoin {
-  // definição dos atributos da classe
-  constructor() {
-    // "this" condições dos atributos, normalmente se começa com "id=1", mas podemos deixar aberto para o usuário digitar ou inciarmos a partir de outro número.
-    // o "id" será a nosso ponto inicial e de indexização com o nosso cadastro.
-    this.id = dataId;
 
-    // aqui estamos fazendo um array dos nossos dados, neste exemplo estamos puxando o "id" que será sequencial (a partir de 1) e jea está declarado, após isso temos o dado nome e depois o dado valor.
-    this.arrayMoeda = [];
+    constructor() {
 
-    // propriedade para testa qual método deve ser executado pelo botão "btn1"
-    // esta propriedade está aqui para validar quando iremos adicionar dados e ele deixa de ser 0 sendo atribuido um novo valor, ou quando precisamos corrigir um dado digitado e ele não crie novos dados e só atualize.
-    // esta propriedade está aqui para validar quando iremos adicionar dados e ele deixa de ser 0 sendo atribuido um novo valor, ou quando precisamos corrigir um dado digitado e ele não crie novos dados e só atualize.
-    // esta propriedade está aqui para validar quando iremos adicionar dados e ele deixa de ser 0 sendo atribuido um novo valor, ou quando precisamos corrigir um dado digitado e ele não crie novos dados e só atualize.
-    this.testeBtn = 0;
-  }
+        this.id = 1
 
-  // salvar o produto digitado pelo usuário no objeto produto.
-  salvar() {
-    // alert("Salvando");
-    // criando uma varieavel local que irá adicionar novos ou atualizar os dados da lista.
-    let novaOperacao = this.lerDados();
+        this.arrayMoeda = [];
 
-    // essa validação serve para definir se iremos adicionar dados ou atualizá-lo ou se há dados a serem adicionados. há uma validação abaixo com o detalhamento desse evento.
-    if (this.validarCampos(novaOperacao)) {
-      // alert("Podemos Salvar?");
-      // se o campo estiver vazio vamos adicionar
-      if (this.testeBtn == 0) {
-        this.adicionar(novaOperacao);
-      }
-      // se o campo tiver dados vamos atualizá-lo
-      else {
-        this.atualizar(this.testeBtn);
-      }
-      // aqui temos o retorno dos eventos de listarDados com todos os itens da nossa lista jea digitado ou o cancelar onde limpar os campos digitados antes de salvar.
-      this.listarDados();
-      this.cancelar();
+        this.testeBtn = 0;
     }
-    // imprimir na tela o item novo ou atualizado.
-    console.log(this.arrayMoeda);
-  }
 
-  // método para alimentar a tabela com os arrayMoedas.
-  listarDados() {
-    // delcaracnao de uma variável para referenciar o tbody da tabela dos arrayMoedas.
-    let tbody = document.getElementById('tbody');
+    salvar() {
 
-    tbody.innerText = '';
+        let novaOperacao = this.lerDados();
 
-    // loop para pecorrer o array de arrayMoedas.
-    for (let i = 0; i < this.arrayMoeda.length; i++) {
-      // inserir uma nova linha no tbody.
-      let novaLinha = tbody.insertRow();
+        if (this.validarCampos(novaOperacao)) {
 
-      // criar cada coluna (célula) de cada linha.
-      let td_id = novaLinha.insertCell();
-      let td_operacao = novaLinha.insertCell();
-      let td_quantidade = novaLinha.insertCell();
-      let td_valor = novaLinha.insertCell();
-      let td_cotacao = novaLinha.insertCell();
+            if (this.testeBtn == 0) {
+                this.adicionar(novaOperacao);
+            }
+            
+            else {
+                this.atualizar(this.testeBtn);
+            }
+            
+            this.listarDados();
 
-      // alimentar as células.
-      td_id.innerText = this.arrayMoeda[i].id;
-      td_operacao.innerText = this.arrayMoeda[i].operacao;
-      td_quantidade.innerText = this.arrayMoeda[i].quantidade;
-      td_valor.innerText = this.arrayMoeda[i].valor;
-      td_cotacao.innerText = this.arrayMoeda[i].cotacao;
+            this.cancelar();
+        }
+        // console.log(this.arrayMoeda);
     }
-  }
 
-  adicionar(novaOperacao) {
-    this.arrayMoeda.push(novaOperacao);
+    listarDados() {
 
-    this.id = dataId;
-  }
+        let tbody = document.getElementById("tbody");
 
-  // metodo para limpar os inputs
-  cancelar() {
-    document.getElementById('tipoOperação').value = '';
-    document.getElementById('quantidadeMoeda').value = '';
-    this.testeBtn = 0;
-  }
+        tbody.innerText = "";
 
-  // capturar o que foi digitado pelo usuários nos inputs.
-  lerDados() {
-    // as chaves vazias segue a mesma ideia do que se fazia em Array, deixando uma lista vazia a ser preenchida. Poderia seguir o mesmo esquema padrão, colocando as chaves antes e depois dos valores (depois do let e antes do return). Quando se colaca as {} ela é uma variável do tipo objeto.
-    // as chaves vazias segue a mesma ideia do que se fazia em Array, deixando uma lista vazia a ser preenchida. Poderia seguir o mesmo esquema padrão, colocando as chaves antes e depois dos valores (depois do let e antes do return). Quando se colaca as {} ela é uma variável do tipo objeto.
-    // as chaves vazias segue a mesma ideia do que se fazia em Array, deixando uma lista vazia a ser preenchida. Poderia seguir o mesmo esquema padrão, colocando as chaves antes e depois dos valores (depois do let e antes do return). Quando se colaca as {} ela é uma variável do tipo objeto.
-    let novaOperacao = {};
+        for (let m = 0; m < this.arrayMoeda.length; m++) {
 
-    novaOperacao.operacao = document.getElementById('tipoOperação').value;
-    //COLOCAR A FUNÇÃO DE CONVERSÃO AQUI
-    const converte =
-      Number(document.getElementById('quantidadeMoeda').value) * 3;
-    novaOperacao.quantidade = converte;
+            let novaLinha = tbody.insertRow();
 
-    novaOperacao.id = this.id;
+            let td_id = novaLinha.insertCell();
+            let td_operacao = novaLinha.insertCell();
+            let td_quantidade = novaLinha.insertCell();
+            let td_valor = novaLinha.insertCell();
+            let td_cotacao = novaLinha.insertCell();
+            let td_acoes = novaLinha.insertCell();
 
-    return novaOperacao;
-  }
+            td_id.innerText = this.arrayMoeda[m].id;
+            td_operacao.innerText = this.arrayMoeda[m].operacao;
+            td_quantidade.innerText = this.arrayMoeda[m].quantidade;
+            td_valor.innerText = this.arrayMoeda[m].valor;
+            td_cotacao.innerText = this.arrayMoeda[m].cotacao;
 
-  // validação dos conteúdos dos inputs
-  validarCampos(novaOperacao) {
-    let msg = '';
-    if (novaOperacao.operacao == '') {
-      msg += '- informe o tipo de operação\n';
+            let imgEdit = document.createElement("img");
+            imgEdit.src = "img/edit.png";
+            td_acoes.appendChild(imgEdit);
+
+            let imgDelete = document.createElement("img");
+            imgDelete.src = "img/del.png";
+            td_acoes.appendChild(imgDelete);
+
+            imgDelete.setAttribute("onclick", "novaOperacao.deletar(" + this.arrayMoeda[m].id + ")");
+
+            imgEdit.setAttribute("onclick", "novaOperacao.mostrarDados(" + JSON.stringify(this.arrayMoeda[m]) + ")");
+        }
     }
-    if (novaOperacao.quantidade == '') {
-      msg += '- informe o quantidade de Moedas \n';
+
+    adicionar(novaOperacao) {
+        this.arrayMoeda.push(novaOperacao);
+        this.id++;
     }
-    if (msg != '') {
-      alert(msg);
-      return false;
+
+    cancelar() {
+        document.getElementById("tipoOperacao").value = "";
+        document.getElementById("quantidadeMoeda").value = "";
+        document.getElementById("btn1").innerText = "Salvar"
+        this.testeBtn = 0;
     }
-    return true;
-  }
 
-  mostrarDados(dados) {
-    // alert("Vamos Editar o ID: " + dados.id);
+    lerDados() {
 
-    // mostrar as propriedades dos produtos nos inputs.
-    document.getElementById('tipoOperação').value = dados.operacao;
-    document.getElementById('quantidadeMoeda').value = dados.quantidade;
+        let novaOperacao = {};
 
-    // modificar o texto do botão Salvar e atribuindo a propriedade "testeBtn"para o id do produto selecionado.
-    document.getElementById('btn1').innerText = 'Atualizar';
-    this.testeBtn = dados.id;
-  }
+        novaOperacao.operacao = document.getElementById("tipoOperacao").value;
 
-  atualizar(id) {
-    //alert("Agora Vamos Atualizar?")
 
-    // procurando pelo produto que será atualizado.
-    for (let i = 0; i < this.arrayMoeda.length; i++) {
-      if (id == this.arrayMoeda[i].id) {
-        // atualizando o nome e valor do produto.
-        this.arrayMoeda[i].operacao =
-          document.getElementById('tipoOperação').value;
-        this.arrayMoeda[i].quantidade =
-          document.getElementById('quantidadeMoeda').value;
-      }
+        // var converte = (function(){
+        //     if (novaOperacao.operacao == "Compra") {
+        //        const vlrCompra = Math.sqrt(Math.sqrt(Math.pow(Number(document.getElementById("quantidadeMoeda").value), 3)))*7;
+        //        console.log(vlrCompra);
+        //     } 
+        // });
+        
+        var cotacaoHoje = (Math.random()+7).toFixed(4)
+
+        var cotacaoCompra = (Math.sqrt(Math.sqrt(Math.pow((document.getElementById("quantidadeMoeda").value), 3)))+(document.getElementById("quantidadeMoeda").value*cotacaoHoje))
+
+        var cotacaoVenda = ((cotacaoCompra)-((Math.random()*(cotacaoCompra*0.1))+(cotacaoCompra*0.08)));
+
+        novaOperacao.quantidade = document.getElementById("quantidadeMoeda").value;
+        if (novaOperacao.operacao == "Compra") {
+        novaOperacao.valor = cotacaoCompra.toFixed(4)}
+        else if (novaOperacao.operacao == "Venda") {
+            novaOperacao.valor = cotacaoVenda.toFixed(4)}
+
+        novaOperacao.cotacao = cotacaoHoje
+        
+        novaOperacao.id = this.id;
+
+        return novaOperacao;
+    }
+
+    validarCampos(novaOperacao) {
+        let msg = "";
+        if (novaOperacao.operacao == "") {
+            msg += "- informe o tipo de operação\n";
+        }
+        if (novaOperacao.quantidade == "") {
+            msg += "- informe o quantidade de Moedas \n";
+        }
+        if (msg != "") {
+            alert(msg);
+            return false;
+        }
+        return true;
+    }
+
+    deletar(buscaId) {
+
+        if (confirm("Deseja Realmente Deletar o Câmbio de ID: " + buscaId)) {
+            for (let m = 0; m < this.arrayMoeda.length; m++) {
+                if (this.arrayMoeda[m].id == buscaId) {
+                    this.arrayMoeda.splice(m, 1);
+                    tbody.deleteRow(m);
+                }
+            }
+        }
+    }
+
+    mostrarDados(dados) {
+
+        document.getElementById("tipoOperacao").value = dados.operacao;
+        document.getElementById("quantidadeMoeda").value = dados.quantidade;
+
+        document.getElementById("btn1").innerText = "Atualizar";
+        this.testeBtn = dados.id;
+    }
+
+    atualizar(id) {
+
+        for (let m = 0; m < this.arrayMoeda.length; m++) {
+            if (id == this.arrayMoeda[m].id) {
+                this.arrayMoeda[m].operacao = document.getElementById("tipoOperação").value;
+                this.arrayMoeda[m].quantidade = document.getElementById("quantidadeMoeda").value
+            }
+        }
+        document.getElementById("btn1").innerText = "Salvar"
+        this.testeBtn = 0;
     }
     // voltando a escritado do botão para salvar e voltando também a propriedade "testeBtn" para 0 para o modo adicionar
     document.getElementById('btn1').innerText = 'Salvar';
