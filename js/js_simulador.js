@@ -156,7 +156,13 @@ class SoulCoin {
         document.getElementById("btn1").innerText = "Salvar"
         this.testeBtn = 0;
     }
+<<<<<<< Updated upstream
 }
+=======
+    
+  }
+
+>>>>>>> Stashed changes
 
 // com a "var produto" temos a criação de uma nova varáviavel tendo como estrutura os atributos da "class Produto".
 var novaOperacao = new SoulCoin();

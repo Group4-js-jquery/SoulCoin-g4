@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--************************** Links para arquivos JS *************************-->
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
+    <!--************************** Lilnk para arquivo CSS *************************-->
     <link rel="stylesheet" href="css/modelo.css" />
-    <!-- ICONES -->
+    <!--**************************** Link para  ICONES ****************************-->
     <link rel="stylesheet" href="assets/style.css" />
     <title>Modelo SoulCoin</title>
   </head>
+
   <body>
+    <!-- ******************************HEADER PADRÃO*******************************-->
     <header>
       <a href="#home">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
@@ -29,8 +34,11 @@
       </nav>
     </header>
     <hr />
+
+    <!--**************** CONTEÚDO PRINCIPAL ***********************-->
     <main>
-      <!-- conteúdo principal -->
+
+      <!-- Seção contendo Apresentação do slogan da Marca e imagens relacionadas -->
       <section class="mainSection" id="apresentacao">
         <!-- <div id="roundH1"></div> -->
         <h1>A Moeda que Valoriza a sua Vida!</h1>
@@ -41,6 +49,8 @@
           />
         </figure>
       </section>
+
+      <!-- Seção onde apresentamos o objetivo/meta da marcas -->
       <section class="mainSection" id="meta">
         <h2>Objetivo/Meta</h2>
         <hr />
@@ -65,6 +75,7 @@
         </p>
 
         <p>Abra a sua conta conosco.</p>
+<<<<<<< Updated upstream
       </section>
 
       <section class="mainSection" id="sobre">
@@ -115,10 +126,61 @@
               Desenvolvimento Web Full Stack. Professor de criação e roteiros em
               Oficias Culturais na periferia de São Paulo.
             </p>
+=======
+    </section>
+    <!-- Nesta seção apresentamos informações sobre os fundadores, dispondo-os em div para cada componente-->
+    <section class="mainSection" id="sobre">
+      <p id=p1></p>
+      <h2>Quem somos nós?</h2>
+      <hr />
+      <div id="sobreDiv">
+        <!-- div com informações da componente Alice -->
+        <div class="card">
+          <div>
+            <span id="fotinhaAlice"></span>
+          </div>
+          <h3>Alice Braga da Silva, 24</h3>
+          <p>
+            Diretora de Tecnoloia em Processamento de Dados, formada em
+            Engenharia de Controle e Automação e Desenvolvedora Well Full
+            Stack. Nas horas vagas contribui com Juventude Apostólica de
+            Schoenstatt.
+          </p>
+        </div>
+        <!-- div com informações da componente Carol -->
+        <div class="card">
+          <div>
+            <span id="fotinhaCarol"></span>
+          </div>
+          <h3>Caroline Korndorfer, 39</h3>
+          <p>
+            Diretora de Investimentos Financeiros, formada em Administração de
+            empresas e Gestão Financeira, além de ser Desenvolvedora Web Full
+            Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
+          </p>
+        </div>
+        <!-- div com informações do componente Einstein -->
+        <div class="card">
+          <div>
+            <span id="fotinhaEinsten"></span>
+          </div>
+          <h3>Einsten Hellmeister Soares, 31</h3>
+          <p>
+            Diretor de Tecnologia da Informação, formada em Marketing e
+            Desenvolvimento Web Full Stack. Professor de Música no Projeto
+            Social Acorde Música.
+          </p>
+        </div>
+        <!-- div com informações do componente Rauny -->
+        <div class="card">
+          <div>
+            <span id="fotinhaRauny"></span>
+>>>>>>> Stashed changes
           </div>
         </div>
       </section>
 
+<<<<<<< Updated upstream
       <section class="mainSection" id="institucional">
         <h2>Institucional</h2>
         <hr />
@@ -158,8 +220,67 @@
               clientes, para que eles possam investir e ter os melhores lucros,
               realizar seus sonhos e ter uma vida ainda melhor.
             </p>
+=======
+    <!-- Seção onde apresentamos as informações Institucionais da Marca, como Missão,Visão e Valores, dispondo-os em divs individuais, e dentro das divs contendo os textos -->
+    <section class="mainSection" id="institucional">
+      <h2>Institucional</h2>
+      <hr />
+      <div id="institucionalDiv">
+        <!-- div com informações da Missão -->
+        <div class="card" id="missao">
+          <div>
+            <div class="icon-assistant_photo_black_24dp"></div>
+          </div>
+          <h3>Missão</h3>
+          <p>
+            Nosso compromisso é com as pessoas e seus objetivos na vida.
+            Ajudamos nossos clientes a tomar melhores decisões para seu
+            dinheiro e investimentos, de forma clara e objetiva, analisando
+            sempre o seu perfil de investidor.
+          </p>
+        </div>
+        <!-- div com informações da Visão -->
+        <div class="card" id="visao">
+          <div>
+            <div class="icon-travel_explore_black_24dp"></div>
+          </div>
+          <h3>Visão</h3>
+          <p>
+            Ser reconhecida no internacionalmente como a empresa de
+            investimentos que mais valoriza as pessoas, através do nosso
+            atendimento, produtos e serviços personalizados focados nas
+            necessidades dos nossos clientes.
+          </p>
+        </div>
+        <!-- div com informações da Valores -->
+        <div class="card" id="valores">
+          <div>
+            <div class="icon-auto_awesome_black_24dp"></div>
+>>>>>>> Stashed changes
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+      </div>
+    </section>
+  </main>
+  <hr />
+  <!-- ******************************FOOTER PADRÃO*******************************-->
+  <footer>
+    <div>
+      <nav>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+>>>>>>> Stashed changes
       </section>
     </main>
     <hr />
