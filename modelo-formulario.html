@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <script src="js/modelo.js" defer></script> -->
+  <script src="js/modelo.js" defer></script>
   <script src="js/jquery.js"></script>
-
   <link rel="stylesheet" href="css/modelo.css" />
   <link rel="stylesheet" href="css/modelo_id.css" />
   <!-- ICONES -->
@@ -23,35 +22,42 @@
     <nav>
       <ul>
         <!-- simulação do investimento -->
-        <li><a href="modelo-calculadora.html">Câmbio</a></li>
+        <li><a href="modelo-simulador.html">Câmbio</a></li>
         <!-- investimento -->
-        <li><a href="modelo-calculadora.html">Classe</a></li>
+        <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
         <li><a href="modelo-formulario.html">Cadastro</a></li>
-        <li><a href="#minhaConta">Conta</a></li>
+        <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
   </header>
-
   <hr />
+  <!-- Caixa do Login -->
+  <section id="apareceLogin">
+    <form id="login">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+      <input id="fecharLogin" type="submit" value="Acessar Conta">
+    </form>
+  </section>
   <main>
     <!-- **********************Carrocel de imagens*************************** -->
     <section id="banner">
       <div id="btnAnte"></div>
       <div id="btnProx"></div>
-      <div id="botoes">
-          <input type="radio" id="b1" name="banners">
-          <input type="radio" id="b2" name="banners">
-          <input type="radio" id="b3" name="banners">
-          <input type="radio" id="b4" name="banners">
       </div>
     </section>
     <!-- conteúdo principal -->
     <fieldset>
-      <form id="formulario" name="frmcpf;" method="post" onsubmit="validacaoCompleta();">
-       
+      <form id="formulario" name="formCadastro;" onsubmit="return(validacaoCompleta());">
         <label for="nome">Nome:
-          <input id="nome" type="text" name="nome"class="dadosForm" placeholder="Digite seu Nome" />
+          <input id="nome" type="text" name="nome" class="dadosForm" placeholder="Digite seu Nome" />
         </label>
         <!-- **********************CPF************************ -->
         <label id="cpfform">Informe o CPF:
@@ -63,8 +69,8 @@
 
         <!-- ****************************Data de Nascimento****************************** -->
         <label for="dataNasc">Data de nascimento:
-          <input type="date" id="dataNasc" maxlength="10" name="dataNasc" min="1891-03-16"
-            max="2021-03-16" required />          
+          <input type="date" id="dataNasc" maxlength="10" name="dataNasc" min="1891-03-16" max="2021-03-16" />
+          <input id="btn1" value="validarData" />
         </label>
 
         <!-- ***************Escolha de gênero************************** -->
@@ -85,17 +91,17 @@
         <!-- **************************Celular*************** -->
         <label for="fone">
           Celular:
-          <input id="fone" name="fone" size="12" maxlength="11" />
+          <input id="fone" name="celular" size="12" maxlength="11" />
         </label>
 
         <!-- *******************E-mail********************** -->
-        <label for="email">
+        <label for="email" name="mail"> 
           E-mail:
           <input type="email" id="email" />
         </label>
 
         <!-- **************************Endereço **************************-->
-        <label for="cep">CEP:
+        <label for="cep" name="codCep">CEP:
           <input type="text" maxlength="9" id="cep" onblur="consultaCep()" /></label>
 
         <label for="logradouro">Logradouro:<input type="text" id="logradouro" /></label>
@@ -109,7 +115,7 @@
         <label for="localidade">Cidade:<input type="text" id="localidade" /></label>
 
         <label for="uf">Estado:<input type="text" id="uf"></label>
-      
+
 
         <div id="mensagem">
           <p>Mensagem:</p><textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
@@ -117,53 +123,39 @@
         <!-- *********************************Botões***************************** -->
         <div id="botoesForm">
 
-<<<<<<< Updated upstream
-          <button  class="btn" type="submit" name="Enviar" onclick="validacaoCompleta()" > Enviar </button>
-           
+          <button type="text" class="btn" id="cadastro" name="enviar" onclick="Alert()" value="Exibir Alert">Cadastrar</button>
+
           <button class="btn" type="reset" name="limpar">Limpar</button>
         </div>
-
-      <div id="caixaMaior">
-=======
-      <button  class="btn" type="text" name="Submit" onclick="VerificaCPF();" value="Checar"> Enviar </button>
-     
-      <button class="btn" type="reset" name="limpar">Limpar</button>
-    </div>
-<!-- *************Caixa de avisos********** -->
-    <div id="caixaMaior">
->>>>>>> Stashed changes
-      <div id="faixaCinza">
-          <p id="cabecalhoCaixa">Aviso</p>
-      </div>
-
-      <p id="mensagemCaixa">Texto da caixa de aviso</p>
-      <button id="botaoOk" onclick="fecharJanela()">Ok</button>
-    </div>
+    
       </form>
     </fieldset>
-    
+
   </main>
   <footer>
-      <div>
-        <nav>
-          <!-- linka pra própia página principal -->
-          <a href="#quemSomos">Quem somos nós</a>
-          <!-- linka pra explicação na página das classes -->
-          <a href="#primeirosPassos">Primeiros passos</a>
-          <!-- pop-up -->
-          <a href="#faleConosco">Atendimento</a>
-        </nav>
-        <section>
-          <a class="icon-facebook" href="#facebook"></a>
-          <a class="icon-instagram" href="instagram"></a>
-          <a class="icon-linkedin2" href="#linkedin"></a>
-        </section>
-      </div>
-      <address>
-        Encontrou algum problema?
-        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
-      </address>
-      <p>&copy; Todos os direitos reservados.</p>
-    </footer>
-  </body>
+    <div>
+      <nav>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="text/javascript" src="./js/modelo.js"></script>
+</body>
+
 </html>

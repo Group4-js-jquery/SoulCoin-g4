@@ -10,6 +10,7 @@
   <script src="js/jquery.js" defer></script>
   <link rel="stylesheet" href="css/modelo_simulador.css" />
   <link rel="stylesheet" href="css/modelo.css" />
+  <link rel="stylesheet" href="css/modelo_id.css" />
   <!-- ICONES -->
   <link rel="stylesheet" href="assets/style.css" />
   <title>Câmbio</title>
@@ -25,14 +26,28 @@
         <!-- simulação do investimento -->
         <li><a href="modelo-simulador.html">Câmbio</a></li>
         <!-- investimento -->
-        <li><a href="modelo-calculadora.html">Simulação</a></li>
+        <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
         <li><a href="modelo-formulario.html">Cadastro</a></li>
-        <li><a href="#minhaConta">Conta</a></li>
+        <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
   </header>
   <hr />
+  <!-- Caixa do Login -->
+  <section id="apareceLogin">
+    <form id="login">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+      </div>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+      <input id="fecharLogin" type="submit" value="Acessar Conta">
+    </form>
+  </section>
   <main>
     <div id="bodyFake">
       <section>
@@ -75,12 +90,12 @@
   <footer>
     <div>
       <nav>
-        <!-- linka pra própia página principal -->
-        <a href="#quemSomos">Quem somos nós</a>
-        <!-- linka pra explicação na página das classes -->
-        <a href="#primeirosPassos">Primeiros passos</a>
-        <!-- pop-up -->
-        <a href="#faleConosco">Atendimento</a>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
       </nav>
       <section>
         <a class="icon-facebook" href="#facebook"></a>

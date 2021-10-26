@@ -30,8 +30,8 @@ function vercpf(cpf) {
 /*******************************************CEP****************************************************/
 
 const apresentaDados = (resultado) => {
-    for(let campo in resultado){
-        if(document.querySelector("#" + campo)){
+    for (let campo in resultado) {
+        if (document.querySelector("#" + campo)) {
             console.log(campo);
             document.querySelector("#" + campo).value = resultado[campo];
         }
@@ -50,29 +50,29 @@ function consultaCep() {
         fetch(`http://viacep.com.br/ws/${cepProcurado}/json/`)
             .then(response => {
                 response.json()
-                .then(data => console.log(apresentaDados(data)))
+                    .then(data => console.log(apresentaDados(data)))
             })
-            .catch(x => console.log ("CEP não localizado!"))
+            .catch(x => console.log("CEP não localizado!"))
     }
 
 }
 
 /*******************************************dataNascimento****************************************************/
-function verificaNasc(){
+function verificaNasc() {
     let valorDigitado = $("#dataNasc").val();
 
     // **************************************************************
     // *********Criando Substrings da string valordigitao************
     let anoDigitado = "";
-    anoDigitado = valorDigitado.substr(0,4);
-    
-    let mesDigitado = "";
-    mesDigitado = valorDigitado.substr(5,2);
-    
-    let diaDigitado = "";
-    diaDigitado = valorDigitado.substr(8,2);
+    anoDigitado = valorDigitado.substr(0, 4);
 
-    let valorAtual=[anoDigitado,mesDigitado,diaDigitado];
+    let mesDigitado = "";
+    mesDigitado = valorDigitado.substr(5, 2);
+
+    let diaDigitado = "";
+    diaDigitado = valorDigitado.substr(8, 2);
+
+    let valorAtual = [anoDigitado, mesDigitado, diaDigitado];
     console.log(valorAtual)
 
     // **************************************************************
@@ -96,52 +96,14 @@ function verificaNasc(){
     }
     // **************************************************************
     // *****************Verificador de idade*************************
-    let extrair=(idade(anoDigitado, mesDigitado, diaDigitado))
-    if(extrair<18 || extrair>130){
+    let extrair = (idade(anoDigitado, mesDigitado, diaDigitado))
+    if (extrair < 18 || extrair > 130) {
         alert("você não está apto a realizar o cadastro")
-    }else{
+    } else {
         alert("seu cadastro foi aprovado")
     }
-    console.log(idade(anoDigitado, mesDigitado, diaDigitado)); 
-}  
-
-// *****************Validação**************************
-function validacaoCompleta(){
-    verificaNasc();
-
-    //If para verificar se o campo nome do formulário fale está vazio ou com menos de dois caracteres.
-    if (document.frmcpf.nome.value.length < 3) {
-        //Caixa trazendo a informação de que o campo não foi preenchido corretamente
-        alert("Preencha campo nome corretamente!");
-        //Focus para setar para a caica de texto que não foi preenchida corretamente
-        document.frmcpf.nome.focus();
-        //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.
-        return false;
-    }
-
-    if (document.frmcpf.email.value == "" || document.frmcpf.email.value.length < 3) {
-        alert("Preencha campo e-mail corretamente!");
-        document.frmcpf.email.focus();
-        return false;
-    }
-
-    if (document.frmcpf.assunto.value == "" || document.frmcpf.assunto.value.length < 3) {
-        alert("Preencha campo assunto corretamente!");
-        document.frmcpf.assunto.focus();
-        return false;
-    }
-
-    if (document.frmcpf.mensagem.value =="" || document.frmcpf.mensagem.value.length < 10){
-        alert("Prencha campo menssagem corrtamente! Use caracteres com bom senso. Excesso de espaços em branco não serão permitidos.");
-        document.frmcpf.mensagem.focus();
-        return false;
-    }
-
-    {
-        alert("Cadastro enviado com sucesso!");
-    }
+    console.log(idade(anoDigitado, mesDigitado, diaDigitado));
 }
-
 
 // *****************Banner de Imagens**************************
 
@@ -171,11 +133,53 @@ function troca(opr) {
             } else if (i < 0) {
                 i = max;
             }
-    $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeIn(1000);
-});
+            $("#banner").css("backgroundImage", "url(" + vtBanner[i] + ")").fadeIn(1000);
+        });
 }
-setInterval(() => troca(1), 5000)
+setInterval(() => troca(1), 3000)
 
 
+// ********************Conta*************************
+$(document).ready(function () {
+    $("#botaoConta").click(function () {
+        // no seletor p, de parágrafo... mostre e esconda o texto com o toggle.
+        $("#apareceLogin").toggle();
+    });
+});
+
+$("#fecharLogin").click(function () {
+    $("#apareceLogin").hide(3000);
+});
 
 
+// *****************Validação**************************
+function validacaoCompleta() {
+
+        if (document.formCadastro.nome.value.length < 3) {
+        alert("Preencha campo nome corretamente!");
+        document.formCadastro.nome.focus();
+        return false;
+    // }
+    // verificaNasc();
+    // if (document.formCadastro.email.value == "" || document.formCadastro.email.value.length < 3) {
+    //     alert("Preencha campo e-mail corretamente!");
+    //     document.formCadastro.email.focus();
+    //     return false;
+    // }
+
+    // if (document.formCadastro.assunto.value == "" || document.formCadastro.assunto.value.length < 3) {
+    //     alert("Preencha campo assunto corretamente!");
+    //     document.formCadastro.assunto.focus();
+    //     return false;
+    // }
+
+    // if (document.formCadastro.mensagem.value == "" || document.formCadastro.mensagem.value.length < 10) {
+    //     alert("Prencha campo menssagem corrtamente! Use caracteres com bom senso. Excesso de espaços em branco não serão permitidos.");
+    //     document.formCadastro.mensagem.focus();
+    //     return false;
+    }
+
+    {
+        alert("Cadastro enviado com sucesso!");
+    }
+};

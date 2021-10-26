@@ -1,190 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/modelo.js" defer></script>
-    <script src="js/jquery.js"></script>
-    <link rel="stylesheet" href="css/modelo.css" />
-    <!-- ICONES -->
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Modelo SoulCoin</title>
-  </head>
-  <body>
-    <header>
-      <a href="#home">
-        <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
-      </a>
-      <nav>
-        <ul>
-          <!-- simulação do investimento -->
-          <li><a href="modelo-simulador.html">Câmbio</a></li>
-          <!-- investimento -->
-          <li><a href="modelo-calculadora.html">Simulação</a></li>
-          <!-- formulário para cadastro -->
-          <li><a href="modelo-formulario.html">Cadastro</a></li>
-          <li><a href="#minhaConta">Conta</a></li>
-        </ul>
-      </nav>
-    </header>
-    <hr />
-    <main>
-      <!-- conteúdo principal -->
-      <section class="mainSection" id="apresentacao">
-        <!-- <div id="roundH1"></div> -->
-        <h1>A Moeda que Valoriza a sua Vida!</h1>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80"
-            alt="imagem aleatória"
-          />
-        </figure>
-      </section>
-      <section class="mainSection" id="meta">
-        <h2>Objetivo/Meta</h2>
-        <hr />
-        <p>
-          Fundada em Outubro de 2020, a SoulCoin tem como seu objetivo principal
-          valorizar a vida das pessoas e não só o seu dinheiro. Queremos que
-          nossos clientes se sintam seguros e confiantes na hora de investir
-          conosco e que possam obter tudo aquilo que desejam e sonham.
-        </p>
 
-        <p>
-          Queriamos criar uma moeda que tivesse alta valorização no mercado
-          financeiro, com um excelente atendimento e que não focasse só no nosso
-          lucro da empresa. Com isso conseguimos criar a primeira moeda digital
-          que repassa seus lucros aos seus clientes.
-        </p>
-        <p>
-          A SoulCoin é um moeda digital de valorização cresecente no mercado
-          financeiro e temos o orgulho de ter a menor taxa cambial com as
-          principais moedas em circulação mundial. Nossa meta não é só lucrar
-          mais, mas sim trazer significado na vida das pessoas.
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="js/modelo.js" defer></script>
+  <script src="js/jquery.js"></script>
+  <link rel="stylesheet" href="css/modelo.css" />
+  <link rel="stylesheet" href="css/modelo_id.css" />
+  <!-- ICONES -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Modelo SoulCoin</title>
+</head>
 
-        <p>Abra a sua conta conosco.</p>
-      </section>
+<body>
+  <header>
+    <a href="#home">
+      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+    </a>
+    <nav>
+      <ul>
+        <!-- simulação do investimento -->
+        <li><a href="modelo-simulador.html">Câmbio</a></li>
+        <!-- investimento -->
+        <li><a href="modelo-calculadora.html">Simulação</a></li>
+        <!-- formulário para cadastro -->
+        <li><a href="modelo-formulario.html">Cadastro</a></li>
+        <li><a id="botaoConta">Conta</a></li>
 
-      <section class="mainSection" id="sobre">
-        <h2>Quem somos nós?</h2>
-        <hr />
-        <div id="sobreDiv">
-          <div class="card">
-            <div>
-              <span id="fotinhaAlice"></span>
-            </div>
-            <h3>Alice Braga da Silva, 24</h3>
-            <p>
-              Diretora de Tecnoloia em Processamento de Dados, formada em
-              Engenharia de Controle e Automação e Desenvolvedora Well Full
-              Stack. Nas horas vagas contribui com Juventude Apostólica de
-              Schoenstatt.
-            </p>
-          </div>
-          <div class="card">
-            <div>
-              <span id="fotinhaCarol"></span>
-            </div>
-            <h3>Caroline Korndorfer, 39</h3>
-            <p>
-              Diretora de Investimentos Financeiros, formada em Administração de
-              empresas e Gestão Financeira, além de ser Desenvolvedora Web Full
-              Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
-            </p>
-          </div>
-          <div class="card">
-            <div>
-              <span id="fotinhaEinsten"></span>
-            </div>
-            <h3>Einsten Hellmeister Soares, 31</h3>
-            <p>
-              Diretor de Tecnologia da Informação, formada em Marketing e
-              Desenvolvimento Web Full Stack. Professor de Música no Projeto
-              Social Acorde Música.
-            </p>
-          </div>
-          <div class="card">
-            <div>
-              <span id="fotinhaRauny"></span>
-            </div>
-            <h3>Rauny Lima, 34</h3>
-            <p>
-              Diretor de Criação, formado em Publicidade e Cinema e
-              Desenvolvimento Web Full Stack. Professor de criação e roteiros em
-              Oficias Culturais na periferia de São Paulo.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="mainSection" id="institucional">
-        <h2>Institucional</h2>
-        <hr />
-        <div id="institucionalDiv">
-          <div class="card" id="missao">
-            <div>
-              <div class="icon-assistant_photo_black_24dp"></div>
-            </div>
-            <h3>Missão</h3>
-            <p>
-              Nosso compromisso é com as pessoas e seus objetivos na vida.
-              Ajudamos nossos clientes a tomar melhores decisões para seu
-              dinheiro e investimentos, de forma clara e objetiva, analisando
-              sempre o seu perfil de investidor.
-            </p>
-          </div>
-          <div class="card" id="visao">
-            <div>
-              <div class="icon-travel_explore_black_24dp"></div>
-            </div>
-            <h3>Visão</h3>
-            <p>
-              Ser reconhecida no internacionalmente como a empresa de
-              investimentos que mais valoriza as pessoas, através do nosso
-              atendimento, produtos e serviços personalizados focados nas
-              necessidades dos nossos clientes.
-            </p>
-          </div>
-          <div class="card" id="valores">
-            <div>
-              <div class="icon-auto_awesome_black_24dp"></div>
-            </div>
-            <h3>Valores</h3>
-            <p>
-              Queremos garantir transparência e eficiência da nossa assessoria e
-              com isso oferecer serviços financeiros a favor dos nossos
-              clientes, para que eles possam investir e ter os melhores lucros,
-              realizar seus sonhos e ter uma vida ainda melhor.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <hr />
-
-    <footer>
+      </ul>
+    </nav>
+  </header>
+  <hr />
+   <!-- Caixa do Login -->
+   <section id="apareceLogin">
+    <form id="login">
       <div>
-        <nav>
-          <!-- linka pra própia página principal -->
-          <a href="#quemSomos">Quem somos nós</a>
-          <!-- linka pra explicação na página das classes -->
-          <a href="#primeirosPassos">Primeiros passos</a>
-          <!-- pop-up -->
-          <a href="#faleConosco">Atendimento</a>
-        </nav>
-        <section>
-          <a class="icon-facebook" href="#facebook"></a>
-          <a class="icon-instagram" href="instagram"></a>
-          <a class="icon-linkedin2" href="#linkedin"></a>
-        </section>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
       </div>
-      <address>
-        Encontrou algum problema?
-        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
-      </address>
-      <p>&copy; Todos os direitos reservados.</p>
-    </footer>
-  </body>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" minlength="8" required>
+      </div>
+      <input id="fecharLogin" type="submit" value="Acessar Conta">
+    </form>
+  </section>
+  <main>
+    <!-- conteúdo principal -->
+    <section class="mainSection" id="apresentacao">
+      <!-- <div id="roundH1"></div> -->
+      <h1>A Moeda que Valoriza a sua Vida!</h1>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80"
+          alt="imagem aleatória" />
+      </figure>
+    </section>
+    <section class="mainSection" id="meta">
+      <P id=p2></P>
+      <h2>Objetivo e Meta</h2>
+      <hr />
+      <p>
+        Fundada em Outubro de 2020, a SoulCoin tem como seu objetivo principal
+        valorizar a vida das pessoas e não só o seu dinheiro. Queremos que
+        nossos clientes se sintam seguros e confiantes na hora de investir
+        conosco e que possam obter tudo aquilo que desejam e sonham.
+      </p>
+
+      <p>
+        Queriamos criar uma moeda que tivesse alta valorização no mercado
+        financeiro, com um excelente atendimento e que não focasse só no nosso
+        lucro da empresa. Com isso conseguimos criar a primeira moeda digital
+        que repassa seus lucros aos seus clientes.
+      </p>
+      <p>
+        A SoulCoin é um moeda digital de valorização crescente no mercado
+        financeiro e temos o orgulho de ter a menor taxa cambial com as
+        principais moedas em circulação mundial. Nossa meta não é só lucrar
+        mais, mas sim trazer significado na vida das pessoas.
+      </p>
+
+      <p>Abra a sua conta conosco.</p>
+    </section>
+
+    <section class="mainSection" id="sobre">
+      <p id=p1></p>
+      <h2>Quem somos nós?</h2>
+      <hr />
+      <div id="sobreDiv">
+        <div class="card">
+          <div>
+            <span id="fotinhaAlice"></span>
+          </div>
+          <h3>Alice Braga da Silva, 24</h3>
+          <p>
+            Diretora de Tecnoloia em Processamento de Dados, formada em
+            Engenharia de Controle e Automação e Desenvolvedora Well Full
+            Stack. Nas horas vagas contribui com Juventude Apostólica de
+            Schoenstatt.
+          </p>
+        </div>
+        <div class="card">
+          <div>
+            <span id="fotinhaCarol"></span>
+          </div>
+          <h3>Caroline Korndorfer, 39</h3>
+          <p>
+            Diretora de Investimentos Financeiros, formada em Administração de
+            empresas e Gestão Financeira, além de ser Desenvolvedora Web Full
+            Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
+          </p>
+        </div>
+        <div class="card">
+          <div>
+            <span id="fotinhaEinsten"></span>
+          </div>
+          <h3>Einsten Hellmeister Soares, 31</h3>
+          <p>
+            Diretor de Tecnologia da Informação, formada em Marketing e
+            Desenvolvimento Web Full Stack. Professor de Música no Projeto
+            Social Acorde Música.
+          </p>
+        </div>
+        <div class="card">
+          <div>
+            <span id="fotinhaRauny"></span>
+          </div>
+          <h3>Rauny Lima, 34</h3>
+          <p>
+            Diretor de Criação, formado em Publicidade e Cinema e
+            Desenvolvimento Web Full Stack. Professor de criação e roteiros em
+            Oficias Culturais na periferia de São Paulo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mainSection" id="institucional">
+      <h2>Institucional</h2>
+      <hr />
+      <div id="institucionalDiv">
+        <div class="card" id="missao">
+          <div>
+            <div class="icon-assistant_photo_black_24dp"></div>
+          </div>
+          <h3>Missão</h3>
+          <p>
+            Nosso compromisso é com as pessoas e seus objetivos na vida.
+            Ajudamos nossos clientes a tomar melhores decisões para seu
+            dinheiro e investimentos, de forma clara e objetiva, analisando
+            sempre o seu perfil de investidor.
+          </p>
+        </div>
+        <div class="card" id="visao">
+          <div>
+            <div class="icon-travel_explore_black_24dp"></div>
+          </div>
+          <h3>Visão</h3>
+          <p>
+            Ser reconhecida no internacionalmente como a empresa de
+            investimentos que mais valoriza as pessoas, através do nosso
+            atendimento, produtos e serviços personalizados focados nas
+            necessidades dos nossos clientes.
+          </p>
+        </div>
+        <div class="card" id="valores">
+          <div>
+            <div class="icon-auto_awesome_black_24dp"></div>
+          </div>
+          <h3>Valores</h3>
+          <p>
+            Queremos garantir transparência e eficiência da nossa assessoria e
+            com isso oferecer serviços financeiros a favor dos nossos
+            clientes, para que eles possam investir e ter os melhores lucros,
+            realizar seus sonhos e ter uma vida ainda melhor.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <hr />
+
+  <footer>
+    <div>
+      <nav>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+</body>
+
 </html>
