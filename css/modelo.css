@@ -115,6 +115,8 @@ fieldset {
   font-size: 4rem;
   margin-top: 2.5%;
   padding: 2%;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
 }
 
 #meta p {
