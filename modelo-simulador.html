@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="css/modelo_id.css" />
   <!--**************************** Link para  ICONES ****************************-->
   <link rel="stylesheet" href="assets/style.css" />
+  <!--**************************** Link para Libras ****************************-->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <title>Câmbio</title>
 </head>
 
@@ -37,6 +39,13 @@
     </nav>
   </header>
   <hr />
+  <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
    <!-- ******************************CAIXA DE LOGIN*******************************-->
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
