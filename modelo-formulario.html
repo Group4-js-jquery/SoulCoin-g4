@@ -47,12 +47,7 @@
       </section>
       <!-- conteúdo principal -->
       <fieldset>
-        <form
-          id="formulario"
-          name="frmcpf;"
-          method="post"
-          onsubmit="VerificaCPF();"
-        >
+        <form id="formulario" name="frmcpf;" onsubmit="VerificaCPF();">
           <label for="nome"
             >Nome:
             <input
@@ -144,35 +139,36 @@
           /></label>
 
           <label for="uf">Estado:<input type="text" id="uf" /></label>
-        </form>
 
-        <div id="mensagem">
-          <label for="msg">Mensagem:</label>
-          <textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
-        </div>
-        <!-- *********************************Botões***************************** -->
-        <div id="botoesForm">
-          <button
-            class="btn"
-            type="text"
-            name="Submit"
-            onclick="VerificaCPF();"
-            value="Checar"
-          >
-            Enviar
-          </button>
+          <div id="mensagem">
+            <label for="msg">Mensagem:</label>
+            <textarea id="msg" name="mensagem" cols="35" rows="8"></textarea>
+          </div>
+          <!-- *********************************Botões***************************** -->
+          <div id="botoesForm">
+            <button
+              id="cadastro"
+              class="btn"
+              type="text"
+              name="Submit"
+              onclick="VerificaCPF();"
+              value="Checar"
+            >
+              Enviar
+            </button>
 
-          <button class="btn" type="reset" name="limpar">Limpar</button>
-        </div>
-
-        <div id="caixaMaior">
-          <div id="faixaCinza">
-            <p id="cabecalhoCaixa">Aviso</p>
+            <button class="btn" type="reset" name="limpar">Limpar</button>
           </div>
 
-          <p id="mensagemCaixa">Texto da caixa de aviso</p>
-          <button id="botaoOk" onclick="fecharJanela()">Ok</button>
-        </div>
+          <div id="caixaMaior">
+            <div id="faixaCinza">
+              <p id="cabecalhoCaixa">Aviso</p>
+            </div>
+
+            <p id="mensagemCaixa">Texto da caixa de aviso</p>
+            <button id="botaoOk" onclick="fecharJanela()">Ok</button>
+          </div>
+        </form>
       </fieldset>
     </main>
     <footer>

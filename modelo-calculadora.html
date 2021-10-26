@@ -4,74 +4,151 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- chamando o script do js -->
     <script src="js/modelo.js" defer></script>
+    <!-- chamando o arquivo jQuery -->
     <script src="js/jquery.js"></script>
+    <!-- chamando as folhas de estilo -->
     <link rel="stylesheet" href="css/modelo.css" />
     <link rel="stylesheet" href="css/modelo_id.css" />
     <!-- ICONES -->
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Modelo SoulCoin</title>
+
+    <!-- título da página -->
+    <title>SoulCoin - Cambio</title>
   </head>
   <body>
+    <!-- cabeçalho -->
     <header>
+      <!-- logotipo da SoulCoin que faz link a página principal -->
       <a href="modelo.html">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
       </a>
+      <!-- menu de navegação -->
       <nav>
         <ul>
-          <!-- simulação do investimento -->
+          <!-- página da calculadora - calcular a conversão do câmbio -->
           <li><a href="modelo-calculadora.html">Câmbio</a></li>
-          <!-- investimento -->
+          <!-- página da classe - simular os investimentos -->
           <li><a href="modelo-calculadora.html">Classe</a></li>
-          <!-- formulário para cadastro -->
+          <!-- página de formulário para cadastro -->
           <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <!-- página para interface de login -->
           <li><a href="#minhaConta">Conta</a></li>
         </ul>
       </nav>
     </header>
     <hr />
+    <!-- conteúdo principal -->
     <main>
-      <section class="mainSection" id="calculadora">
-        <input type="text" id="mostrarResultados" />
-        <div id="digitos">
-          <input
-            id="calcNormal"
-            class="cientifica"
-            type="button"
-            value="normal"
-          />
-          <input class="cientifica" type="button" value="x²" id="potencia2" />
-          <input class="cientifica" type="button" value="x³" id="potencia3" />
-          <input class="cientifica" type="button" value="raiz" id="raiz" />
-          <input
-            class="normal"
-            type="button"
-            value="cientifica"
-            id="calcCientifica"
-          />
-          <input class="normal" type="button" value="%" id="porcentagem" />
-          <input class="normal" type="button" value="/" id="divisao" />
-          <input class="normal" type="button" value="x" id="multiplicacao" />
-          <input class="normal num7" type="button" value="7" id="sete" />
-          <input class="normal num8" type="button" value="8" id="oito" />
-          <input class="normal num9" type="button" value="9" id="nove" />
-          <input class="normal" type="button" value="-" id="menos" />
-          <input class="normal num4" type="button" value="4" id="quatro" />
-          <input class="normal num5" type="button" value="5" id="cinco" />
-          <input class="normal num6" type="button" value="6" id="seis" />
-          <input class="normal" type="button" value="+" id="mais" />
-          <input class="normal num1" type="button" value="1" id="um" />
-          <input class="normal num2" type="button" value="2" id="dois" />
-          <input class="normal num3" type="button" value="3" id="tres" />
-          <input class="normal" type="button" value="C" id="limpar" />
-          <input class="normal num0" type="button" value="0" id="zero" />
-          <input class="normal" type="button" value="." id="ponto" />
-          <input class="normal" type="button" value="=" id="igual" />
-        </div>
+      <section class="mainSection">
+        <!-- título da página -->
+        <h1>Faça sua simulação</h1>
+        <!-- breve resumo da história da moeda -->
+        <p>
+          O SoulCoin é uma criptomoeda descentralizada, sendo um dinheiro
+          eletrônico para transações ponto a ponto. Além disso, permite
+          transações financeiras sem intermediários.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis fuga
+          eligendi laudantium architecto itaque vitae velit eveniet deserunt.
+          Possimus corporis repellat in eius ab provident nam alias dolorem cum
+          quos?
+        </p>
+        <p>
+          Gostaria de você mesmo fazer os cálculos? Use nossa calculadora
+          <!-- chamada do botão como classe -->
+          <span
+            class="icon-add_circle_outline_black_24dp"
+            id="toggleCalculadora"
+          ></span>
+        </p>
+        <!-- section da calculadora que é inicializada com display none, ao apertar o botão #toggleCalculadora ele é apresentado ao cliente -->
+        <section id="apareceCalculadora">
+          <!-- div utilizada para aplicar o display flex e manter a estilização -->
+          <div id="calculadora">
+            <!-- input que será usado como visor da calculadora -->
+            <input type="text" id="mostrarResultados" disabled />
+            <!-- div utilizada para aplicar display grid nos digitos da calculadora, definidos como input type button -->
+            <!-- na calculadora tem-se botões númericos onde há entrada de valores, botões operadores onde é definido o tipo de cálculo que será feito -->
+            <!-- os digitos são divididos em duas classes: normal que irá aparecer no uso das duas calculadoras e cientifica que será habilitada apenas quando o usuário necessitar -->
+            <!-- os inputs foram declarados de acordo com a ordem de flow do grid -->
+            <div id="digitos">
+              <input
+                id="calcNormal"
+                class="cientifica"
+                type="button"
+                value="normal"
+              />
+              <input
+                class="cientifica"
+                type="button"
+                value="x²"
+                id="potencia2"
+              />
+              <input
+                class="cientifica"
+                type="button"
+                value="x³"
+                id="potencia3"
+              />
+              <input class="cientifica" type="button" value="raiz" id="raiz" />
+              <input
+                class="normal"
+                type="button"
+                value="cientifica"
+                id="calcCientifica"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="%"
+                id="porcentagem"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="/"
+                id="divisao"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="x"
+                id="multiplicacao"
+              />
+              <input class="normal" type="button" value="7" id="num7" />
+              <input class="normal" type="button" value="8" id="num8" />
+              <input class="normal" type="button" value="9" id="num9" />
+              <input
+                class="normal operador"
+                type="button"
+                value="-"
+                id="subtracao"
+              />
+              <input class="normal" type="button" value="4" id="num4" />
+              <input class="normal" type="button" value="5" id="num5" />
+              <input class="normal" type="button" value="6" id="num6" />
+              <input
+                class="normal operador"
+                type="button"
+                value="+"
+                id="soma"
+              />
+              <input class="normal" type="button" value="1" id="num1" />
+              <input class="normal" type="button" value="2" id="num2" />
+              <input class="normal" type="button" value="3" id="num3" />
+              <input class="normal" type="button" value="C" id="limpar" />
+              <input class="normal" type="button" value="0" id="num0" />
+              <input class="normal" type="button" value="." id="ponto" />
+              <input class="normal" type="button" value="=" id="igual" />
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <hr />
-
     <footer>
       <div>
         <nav>
@@ -82,12 +159,14 @@
           <!-- pop-up -->
           <a href="#faleConosco">Atendimento</a>
         </nav>
+        <!-- icones de facebook, instagram e linkedin -->
         <section>
           <a class="icon-facebook" href="#facebook"></a>
           <a class="icon-instagram" href="instagram"></a>
           <a class="icon-linkedin2" href="#linkedin"></a>
         </section>
       </div>
+      <!-- canal de contato caso tenha algum problema na página -->
       <address>
         Encontrou algum problema?
         <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
@@ -95,6 +174,20 @@
       <p>&copy; Todos os direitos reservados.</p>
     </footer>
     <script>
+      //////////////////////////////////////COMEÇO CALCULADORA///////////////////////////////////
+
+      //a calculadora aparece quando clica no botão toggle e desaparece após clicar no mesmo botão
+      $('#toggleCalculadora').click(function () {
+        $('#apareceCalculadora').toggle();
+      });
+      //setando a variável que é mostrada no visor como vazia, ela será concatenada conforme o usuário digite
+      //inicializando as variáveis
+      var numDigitado = '';
+      var numCorrente = 0;
+      var resultado = 0;
+      var operador = '';
+      //esconde os botões da classe cientifica
+      //e após isso, verifica o clique no botão "cientifica", então mostra os botões da calculadora cientifica e habilita o botão que volta para a calculadora normal
       $('.cientifica').hide();
       $('#calcCientifica').click(function () {
         if ($('#calcCientifica').val('cientifica')) {
@@ -107,17 +200,89 @@
           $('#calcCientifica').show();
         });
       });
-      $('limpa').click(function () {
-        $('mostrarResultados').val('');
+
+      //função será chamada para limpar o visor da calculadora ao clicar na tecla "C"
+      $('#limpar').click(function () {
+        numCorrente = 0;
+        numDigitado = '';
+        $('#mostrarResultados').val(numDigitado);
       });
-      $('mostrarResultados').val(function () {
-        for (let i = 0; i < 9; i++) {
-          $('num' + i).click(function () {
-            console.log(i);
-            $('mostraResultados').val($('mostraResultados').val() + i);
-          });
+
+      // for vai percorrer as teclas numéricas com o id numx, conforme forem clicados o número vai concatenando com os valores anterioes e sendo mostrado no visor
+      for (let i = 0; i <= 9; i++) {
+        $('#num' + i + '').click(function () {
+          numDigitado = numDigitado + '' + i + '';
+          $('#mostrarResultados').val(numDigitado);
+        });
+      }
+      // o ponto será concatenado ao numero que está sendo digitado
+      $('#ponto').click(function () {
+        numDigitado = numDigitado + '.';
+        $('#mostrarResultados').val(numDigitado);
+      });
+
+      $('.operador').click(function () {
+        operador = this.id;
+        numCorrente = parseFloat(numDigitado);
+        numDigitado = '';
+        $('#mostrarResultados').val(numDigitado);
+      });
+
+      $('#potencia2').click(function () {
+        resultado = Math.pow(numDigitado, 2);
+        $('#mostrarResultados').val(resultado);
+        numDigitado = '';
+      });
+      $('#potencia3').click(function () {
+        resultado = Math.pow(numDigitado, 3);
+        $('#mostrarResultados').val(resultado);
+        numDigitado = '';
+      });
+      $('#raiz').click(function () {
+        resultado = Math.sqrt(numDigitado);
+        $('#mostrarResultados').val(resultado);
+        numDigitado = '';
+      });
+
+      $('#igual').click(function () {
+        conta(numDigitado, numCorrente, operador);
+        numDigitado = '';
+        numCorrente = 0;
+        operador = '';
+      });
+
+      function conta(num1, num2, operacao) {
+        switch (operacao) {
+          case 'soma':
+            resultado = parseFloat(num1) + parseFloat(num2);
+            $('#mostrarResultados').val(resultado);
+            break;
+          case 'subtracao':
+            resultado = parseFloat(num1) - parseFloat(num2);
+            $('#mostrarResultados').val(resultado);
+            break;
+          case 'multiplicacao':
+            resultado = parseFloat(num1) * parseFloat(num2);
+
+            $('#mostrarResultados').val(resultado);
+            break;
+          case 'divisao':
+            resultado = parseFloat(num2) / parseFloat(num1);
+
+            $('#mostrarResultados').val(resultado);
+            break;
+          case 'porcentagem':
+            resultado = (parseFloat(num1) / 100) * parseFloat(num2);
+
+            $('#mostrarResultados').val(resultado);
+            break;
+
+          default:
+            $('#mostrarResultados').val('0');
+            break;
         }
-      });
+      }
+      //////////////////////////////////////FIM CALCULADORA///////////////////////////////////
     </script>
   </body>
 </html>

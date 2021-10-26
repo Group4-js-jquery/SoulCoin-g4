@@ -2,25 +2,7 @@
 
 // criar a classe com letra maiscula para diferenciar dos atribuitos
 // declaração da classe - ela engloba tudo, nossos dados, eventos e funções necessárias para conseguirmos montar nosso banco de dados/listas/base de produtos.
-var dataH = new Date();
-
-function addZero(numero) {
-  if (numero <= 9) return '0' + numero;
-  else return numero;
-}
-
-dataId =
-  addZero(dataH.getDate()) +
-  ' - ' +
-  addZero(dataH.getMonth() + 1) +
-  ' - ' +
-  dataH.getFullYear() +
-  ' - ' +
-  addZero(dataH.getHours()) +
-  'h:' +
-  addZero(dataH.getMinutes()) +
-  ':' +
-  addZero(dataH.getSeconds());
+var dataId = Date.now();
 
 class SoulCoin {
   // definição dos atributos da classe
