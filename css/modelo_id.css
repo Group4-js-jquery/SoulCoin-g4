@@ -1,12 +1,12 @@
-/* influencia no input */
-/* input {
+.inputsForm {
+
   color: #707070;
   margin-top: 2rem;
   border-radius: 2rem;
   height: 70%;
   width: 25rem;
   align-items: flex-end;
-} */
+} 
 
 #genero {
   margin-top: 2rem;

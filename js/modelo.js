@@ -66,6 +66,7 @@ function consultaCep() {
 }
 
 /*******************************************dataNascimento****************************************************/
+
 $('#btn1').click(function () {
   let valorDigitado = $('#dataNasc').val();
 
