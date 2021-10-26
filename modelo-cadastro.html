@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/modelo-cadastro.js" defer></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/modelo.css" />
+    <link rel="stylesheet" href="css/modelo_id.css" />
+    <link rel="stylesheet" href="css/modelo-cadastro.css" />
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Modelo SoulCoin</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="modelo.html">
+        <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+      </a>
+      <nav>
+        <ul>
+          <!-- simulação do investimento -->
+          <li><a href="modelo-simulador.html">Câmbio</a></li>
+          <!-- investimento -->
+          <li><a href="modelo-simulador.html">Simulação</a></li>
+          <!-- formulário para cadastro -->
+          <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <li><a id="botaoConta">Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <!-- Caixa do Login -->
+    <section id="apareceLogin">
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </section>
+    <main>
+          <!-- **********************Carrocel de imagens*************************** -->
+    <section id="banner">
+      <div id="btnAnte"></div>
+      <div id="btnProx"></div>
+      </div>
+    </section>
+    <!-- COMEÇO FORMULÁRIO -->
+    <section class="Cadastro">
+      <fieldset>
+        <legend><h2>Preencha com seus dados:</h2></legend>
+        <form
+          class="styleForm"
+          action=""
+          name="fale"
+          onsubmit="return validacaoCompleta();"
+        >
+          <!-- LINHA DE INPUT NOME -->
+          <label for="nome" class="linhaForm"
+            >Nome: <span class="required">* </span>
+            <input
+              class="inputForm"
+              id="nome"
+              type="text"
+              name="nome"
+              placeholder="Como quer ser chamado?"
+          /></label>
+          <!-- LINHA DE INPUT CPF -->
+
+          <label for="cpfform" class="linhaForm"
+            >Informe seu CPF: <span class="required">* </span
+            ><input
+              class="inputForm"
+              id="cpfform"
+              type="text"
+              name="cpf"
+              size="12"
+              maxlength="11"
+              placeholder="000.000.000-00"
+          /></label>
+          <!-- LINHA DE INPUT DATA DE NASCIMENTO -->
+          <label for="dataNasc" class="linhaForm"
+            >Data de nascimento: <span class="required">* </span
+            ><input
+              class="inputForm"
+              type="date"
+              id="dataNasc"
+              maxlength="10"
+              name="dataNasc"
+            />
+          </label>
+
+          <label for="genero" class="linhaForm"
+            >Qual sua opção de Gênero:
+            <select class="inputForm" id="genero" name="opcaoGenero">
+              <option>Escolha sua opção de Gênero:</option>
+              <option value="homem">Masculino</option>
+              <option value="mulher">Feminino</option>
+              <option value="outros">Outros</option>
+            </select>
+          </label>
+          <!-- **************************Fone*************** -->
+          <label for="fone" class="linhaForm"
+            >Telefone:<input
+              class="inputForm"
+              id="fone"
+              name="fone"
+              size="12"
+              maxlength="11"
+              placeholder="(__) xxxx-xxxx"
+          /></label>
+          <!-- **************************Celular*************** -->
+          <label for="celular" class="linhaForm"
+            >Celular:<input
+              class="inputForm"
+              id="celular"
+              name="celular"
+              size="12"
+              maxlength="11"
+              placeholder="(__) 9 xxxx-xxxx"
+          /></label>
+          <!-- LINHA DE INPUT - EMAIL -->
+          <label for="email" class="linhaForm"
+            >E-mail: <span class="required">* </span>
+            <input
+              class="inputForm"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Seu melhor email"
+          /></label>
+          <!-- **************************Endereço **************************-->
+          <label for="cep" class="linhaForm"
+            >CEP:<input
+              class="inputForm"
+              type="text"
+              maxlength="9"
+              id="cep"
+              placeholder="00000-000"
+              onblur="consultaCep()"
+          /></label>
+          <label for="logradouro" class="linhaForm"
+            >Logradouro:<input
+              class="inputForm"
+              type="text"
+              id="logradouro"
+              placeholder="Rua"
+          /></label>
+          <label for="numero" class="linhaForm"
+            >Número:<input
+              class="inputForm"
+              type="text"
+              id="numero"
+              placeholder="Número"
+          /></label>
+          <label for="complemento" class="linhaForm"
+            >Complemento:<input
+              class="inputForm"
+              type="text"
+              id="complemento"
+              placeholder="Complemento"
+          /></label>
+          <label for="bairro" class="linhaForm"
+            >Bairro:<input
+              class="inputForm"
+              type="text"
+              id="bairro"
+              placeholder="Bairro"
+          /></label>
+          <label for="localidade" class="linhaForm"
+            >Cidade:<input
+              class="inputForm"
+              type="text"
+              id="localidade"
+              placeholder="Cidade"
+          /></label>
+          <label for="uf" class="linhaForm"
+            >Estado:<input
+              class="inputForm"
+              type="text"
+              id="uf"
+              placeholder="UF"
+          /></label>
+
+          <label class="linhaForm"
+            >Menssagem: <span class="required">* </span>
+            <textarea
+              class="inputForm"
+              name="mensagem"
+              cols="35"
+              rows="8"
+              placeholder="Descreva suas expectativas, dúvidas ou sugestões"
+            ></textarea>
+          </label>
+          <button class="btnForm" type="text" name="enviar">Enviar</button>
+          <button class="btnForm" type="reset" name="limpar">Limpar</button>
+          <span class="required">* Campos de preenchimento obrigatório</span>
+        </form>
+      </fieldset>
+    </section>
+    <!-- FIM FORMULÁRIO -->
+
+    <!-- COMEÇO CAIXA DE ALERTA -->
+    <div id="caixaAlerta">
+      <div id="faixa">
+        <p class="caixaPop" id="cabecalhoCaixa">Aviso</p>
+      </div>
+      <div class="container" id="caixaMensagem">
+        <p class="caixaPop" id="mensagemCaixa">Aqui vai a mensagem!</p>
+        <button id="botaoOk">Fechar</button>
+      </div>
+    </div>
+    <!-- FIM CAIXA DE ALERTA -->
+
+    </main>
+  </body>
+</html>
