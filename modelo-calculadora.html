@@ -24,7 +24,7 @@
           <!-- investimento -->
           <li><a href="modelo-calculadora.html">Classe</a></li>
           <!-- formulário para cadastro -->
-          <li><a href="modelo - formulário.html">Cadastro</a></li>
+          <li><a href="modelo-formulario.html">Cadastro</a></li>
           <li><a href="#minhaConta">Conta</a></li>
         </ul>
       </nav>
@@ -32,7 +32,7 @@
     <hr />
     <main>
       <section class="mainSection" id="calculadora">
-        <span type="text" id="mostrarResultados">MOSTRAR</span>
+        <input type="text" id="mostrarResultados" />
         <div id="digitos">
           <input
             id="calcNormal"
@@ -40,33 +40,33 @@
             type="button"
             value="normal"
           />
-          <input id="potencia2" class="cientifica" type="button" value="x²" />
-          <input id="potencia3" class="cientifica" type="button" value="x³" />
-          <input id="raiz" class="cientifica" type="button" value="raiz" />
+          <input class="cientifica" type="button" value="x²" id="potencia2" />
+          <input class="cientifica" type="button" value="x³" id="potencia3" />
+          <input class="cientifica" type="button" value="raiz" id="raiz" />
           <input
-            id="calcCientifica"
             class="normal"
             type="button"
             value="cientifica"
+            id="calcCientifica"
           />
-          <input id="limpar" class="normal" type="button" value="C" />
-          <input id="porcentagem" class="normal" type="button" value="%" />
-          <input id="divisao" class="normal" type="button" value="/" />
-          <input id="sete" class="normal" type="button" value="7" />
-          <input id="oito" class="normal" type="button" value="8" />
-          <input id="nove" class="normal" type="button" value="9" />
-          <input id="multiplicacao" class="normal" type="button" value="x" />
-          <input id="quatro" class="normal" type="button" value="4" />
-          <input id="cinco" class="normal" type="button" value="5" />
-          <input id="seis" class="normal" type="button" value="6" />
-          <input id="menos" class="normal" type="button" value="-" />
-          <input id="um" class="normal" type="button" value="1" />
-          <input id="dois" class="normal" type="button" value="2" />
-          <input id="tres" class="normal" type="button" value="3" />
-          <input id="mais" class="normal" type="button" value="+" />
-          <input id="zero" class="normal" type="button" value="0" />
-          <input id="ponto" class="normal" type="button" value="." />
-          <input id="igual" class="normal" type="button" value="=" />
+          <input class="normal" type="button" value="%" id="porcentagem" />
+          <input class="normal" type="button" value="/" id="divisao" />
+          <input class="normal" type="button" value="x" id="multiplicacao" />
+          <input class="normal num7" type="button" value="7" id="sete" />
+          <input class="normal num8" type="button" value="8" id="oito" />
+          <input class="normal num9" type="button" value="9" id="nove" />
+          <input class="normal" type="button" value="-" id="menos" />
+          <input class="normal num4" type="button" value="4" id="quatro" />
+          <input class="normal num5" type="button" value="5" id="cinco" />
+          <input class="normal num6" type="button" value="6" id="seis" />
+          <input class="normal" type="button" value="+" id="mais" />
+          <input class="normal num1" type="button" value="1" id="um" />
+          <input class="normal num2" type="button" value="2" id="dois" />
+          <input class="normal num3" type="button" value="3" id="tres" />
+          <input class="normal" type="button" value="C" id="limpar" />
+          <input class="normal num0" type="button" value="0" id="zero" />
+          <input class="normal" type="button" value="." id="ponto" />
+          <input class="normal" type="button" value="=" id="igual" />
         </div>
       </section>
     </main>
@@ -94,5 +94,30 @@
       </address>
       <p>&copy; Todos os direitos reservados.</p>
     </footer>
+    <script>
+      $('.cientifica').hide();
+      $('#calcCientifica').click(function () {
+        if ($('#calcCientifica').val('cientifica')) {
+          $('#calcNormal').css('grid-row', '1/3');
+          $('.cientifica').show();
+          $('#calcCientifica').hide();
+        }
+        $('#calcNormal').click(function () {
+          $('.cientifica').hide();
+          $('#calcCientifica').show();
+        });
+      });
+      $('limpa').click(function () {
+        $('mostrarResultados').val('');
+      });
+      $('mostrarResultados').val(function () {
+        for (let i = 0; i < 9; i++) {
+          $('num' + i).click(function () {
+            console.log(i);
+            $('mostraResultados').val($('mostraResultados').val() + i);
+          });
+        }
+      });
+    </script>
   </body>
 </html>

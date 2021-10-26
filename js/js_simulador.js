@@ -2,6 +2,7 @@
 
 // criar a classe com letra maiscula para diferenciar dos atribuitos
 // declaração da classe - ela engloba tudo, nossos dados, eventos e funções necessárias para conseguirmos montar nosso banco de dados/listas/base de produtos.
+
 // const dataH = new Date ();
 
 // function addZero(numero) {
@@ -154,7 +155,6 @@ class SoulCoin {
         }
     }
 
-
     mostrarDados(dados) {
 
         document.getElementById("tipoOperacao").value = dados.operacao;
@@ -175,6 +175,11 @@ class SoulCoin {
         document.getElementById("btn1").innerText = "Salvar"
         this.testeBtn = 0;
     }
+    // voltando a escritado do botão para salvar e voltando também a propriedade "testeBtn" para 0 para o modo adicionar
+    document.getElementById('btn1').innerText = 'Salvar';
+    this.testeBtn = 0;
+  }
 }
 
+// com a "var produto" temos a criação de uma nova varáviavel tendo como estrutura os atributos da "class Produto".
 var novaOperacao = new SoulCoin();
