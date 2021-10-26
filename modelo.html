@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--************************** Links para arquivos JS *************************-->
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
+    <!--************************** Lilnk para arquivo CSS *************************-->
     <link rel="stylesheet" href="css/modelo.css" />
-    <!-- ICONES -->
+    <!--**************************** Link para  ICONES ****************************-->
     <link rel="stylesheet" href="assets/style.css" />
     <title>Modelo SoulCoin</title>
+    <!--**************************** Link para Libras ****************************-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   </head>
+
   <body>
+    <!-- ******************************HEADER PADRÃO*******************************-->
     <header>
       <a href="#home">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
@@ -29,8 +36,11 @@
       </nav>
     </header>
     <hr />
+
+    <!--**************** CONTEÚDO PRINCIPAL ***********************-->
     <main>
-      <!-- conteúdo principal -->
+
+      <!-- Seção contendo Apresentação do slogan da Marca e imagens relacionadas -->
       <section class="mainSection" id="apresentacao">
         <!-- <div id="roundH1"></div> -->
         <h1>A Moeda que <span>Valoriza </span>a sua Vida!</h1>
@@ -41,6 +51,15 @@
           />
         </figure>
       </section>
+      <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+      <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>    
+      
+      <!-- Seção onde apresentamos o objetivo/meta da marcas -->
       <section class="mainSection" id="meta">
         <h2>Objetivo/Meta</h2>
         <hr />
@@ -63,13 +82,14 @@
           mais, mas sim trazer significado na vida das pessoas.
         </p>
         <p>Abra a sua conta conosco.</p>
-    </section>
-
+      </section>
+    <!--Nesta seção apresentamos informações sobre os fundadores, dispondo-os em div para cada componente-->
     <section class="mainSection" id="sobre">
       <p id=p1></p>
       <h2>Quem somos nós?</h2>
       <hr />
       <div id="sobreDiv">
+        <!-- div com informações da componente Alice -->
         <div class="card">
           <div>
             <span id="fotinhaAlice"></span>
@@ -82,6 +102,7 @@
             Schoenstatt.
           </p>
         </div>
+          <!-- div com informações da componente Carol -->
         <div class="card">
           <div>
             <span id="fotinhaCarol"></span>
@@ -93,6 +114,7 @@
             Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
           </p>
         </div>
+        <!-- div com informações do componente Einstein -->
         <div class="card">
           <div>
             <span id="fotinhaEinsten"></span>
@@ -104,6 +126,7 @@
             Social Acorde Música.
           </p>
         </div>
+        <!-- div com informações do componente Rauny -->
         <div class="card">
           <div>
             <span id="fotinhaRauny"></span>
@@ -118,23 +141,26 @@
       </div>
     </section>
 
-    <section class="mainSection" id="institucional">
-      <h2>Institucional</h2>
-      <hr />
-      <div id="institucionalDiv">
-        <div class="card" id="missao">
-          <div>
-            <div class="icon-assistant_photo_black_24dp"></div>
+      <!-- Seção onde apresentamos as informações Institucionais da Marca, como Missão,Visão e Valores, dispondo-os em divs individuais, e dentro das divs contendo os textos -->
+      <section class="mainSection" id="institucional">
+        <h2>Institucional</h2>
+        <hr />
+        <div id="institucionalDiv">
+          <!-- div com informações da Missão -->
+          <div class="card" id="missao">
+            <div>
+              <div class="icon-assistant_photo_black_24dp"></div>
+            </div>
+            <h3>Missão</h3>
+            <p>
+              Nosso compromisso é com as pessoas e seus objetivos na vida.
+              Ajudamos nossos clientes a tomar melhores decisões para seu
+              dinheiro e investimentos, de forma clara e objetiva, analisando
+              sempre o seu perfil de investidor.
+            </p>
           </div>
-          <h3>Missão</h3>
-          <p>
-            Nosso compromisso é com as pessoas e seus objetivos na vida.
-            Ajudamos nossos clientes a tomar melhores decisões para seu
-            dinheiro e investimentos, de forma clara e objetiva, analisando
-            sempre o seu perfil de investidor.
-          </p>
-        </div>
-        <div class="card" id="visao">
+          <!-- div com informações da Visão -->
+          <div class="card" id="visao">
           <div>
             <div class="icon-travel_explore_black_24dp"></div>
           </div>
@@ -146,6 +172,7 @@
             necessidades dos nossos clientes.
           </p>
         </div>
+        <!-- div com informações da Valores -->
         <div class="card" id="valores">
           <div>
             <div class="icon-auto_awesome_black_24dp"></div>
@@ -162,7 +189,7 @@
     </section>
   </main>
   <hr />
-
+  <!-- ******************************FOOTER PADRÃO*******************************-->
   <footer>
     <div>
       <nav>

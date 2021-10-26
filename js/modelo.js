@@ -1,3 +1,5 @@
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+
 /*******************************************CPF****************************************************/
 function VerificaCPF() {
   if (vercpf(document.frmcpf.cpf.value)) {
