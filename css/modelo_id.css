@@ -1,23 +1,14 @@
-#nomeInput{
-    color:#70707065;
-
 .inputsForm {
   color: #707070;
   margin-top: 2rem;
   border-radius: 2rem;
   height: 70%;
   width: 25rem;
-  align-items:flex-end;
-}
-
-#genero {
-  margin-top: 2rem;
-  border-radius: 2rem;
-  height: 35%;
+  align-items: flex-end;
 }
 
 fieldset {
-   font-size: 5rem;
+  font-size: 5rem;
   margin-top: 2.5%;
   padding: 2%;
   border-style: double;
@@ -54,10 +45,6 @@ form {
   border-radius: 3rem;
 }
 
-#dataNasc {
-  height: 35%;
-}
-
 #btn1 {
   height: 35%;
   width: 8rem;
@@ -72,7 +59,8 @@ form {
   background-size: cover;
 }
 
-#btnAnte, #btnProx {
+#btnAnte,
+#btnProx {
   line-height: 200px;
   font-size: 30px;
   color: rgb(0, 0, 0, 5);
@@ -82,16 +70,42 @@ form {
 
 #btnAnte {
   float: left;
-  margin-top:6rem;
+  margin-top: 6rem;
 }
 
 #btnProx {
   float: right;
-  margin-top:6rem;
+  margin-top: 6rem;
 }
 
 #botoes {
   position: absolute;
   top: 250px;
   left: 50%;
+}
+
+#login {
+  /* display: none; */
+  height: 20rem;
+  width: 50rem;
+  background-color: #ff8c00;
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 1rem;
+  opacity: 0.6;
+}
+#apareceLogin {
+  display: none;
+  margin-top: 2rem;
+}
+#fecharLogin {
+  color: white;
+  background-color: #707070;
+  border-radius: 2rem;
+  height: 5rem;
+  width: 30rem;
 }

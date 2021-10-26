@@ -31,8 +31,8 @@ body {
 
 @media (max-width: 1024px) {
   body {
-  padding-left: 50px;
-  padding-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -83,7 +83,7 @@ hr {
 }
 
 .mainSection {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 #apresentacao {
@@ -95,24 +95,16 @@ hr {
   margin-top: 200px;
 }
 
-#apresentacao h1 {
+#apresentacao h1,
+span {
   font-size: 9rem;
   /* coloquei uma cor clara aleatoria */
   color: aliceblue;
   text-align: left;
 }
-
-/* BOLOTA */
-/* #roundH1 {
-  width: 475px;
-  height: 475px;
-  border-radius: 50%;
-  background-color: var(--colorOrange);
-  position: absolute;
-  bottom: 150px;
-  left: 270px;
-  z-index: -1;
-} */
+h1 {
+  font-size: 9rem;
+}
 
 #apresentacao figure img {
   width: 85%;
@@ -169,7 +161,7 @@ section .card h3 {
 }
 
 section .card #fotinhaAlice {
-  background-image: url('../img/nickCarol.jpeg');
+  background-image: url('../img/nickAlice.jpeg');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -187,7 +179,7 @@ section .card #fotinhaCarol {
   height: 250px;
 }
 section .card #fotinhaEinsten {
-  background-image: url('../img/nickCarol.jpeg');
+  background-image: url('../img/nickEinsten.jpeg');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -265,34 +257,58 @@ footer section a:hover {
 } */
 
 /* CALCULADORA */
+#apareceCalculadora {
+  display: none;
+  width: 100vw;
+  height: 50vh;
+  background-color: var(--colorGrey);
+  position: static;
+  margin: 10% 20% 10% 30%;
+}
 #calculadora {
-  margin: 100px;
-  font-size: 3rem;
+  /* margin: 10rem 45rem 10rem 45rem; */
+  width: 450px;
+  height: 430px;
+  font-size: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 2px solid orange;
   box-sizing: border-box;
+  background-color: #999898;
+  border: 5px groove #ff8c00;
+  border-radius: 3rem;
 }
 
-#mostrarResultados,
-#digitos {
-  margin: auto;
-  border: 2px solid black;
-}
 #mostrarResultados {
+  margin: auto;
   text-align: right;
-  width: 20rem;
-  height: 10rem;
+  width: 25rem;
+  height: 7rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 #digitos {
+  margin: auto;
   display: grid;
-  grid-template-columns: 5rem 5rem 5rem 5rem;
+  grid-template-columns: 10rem 10rem 10rem 10rem;
   grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem;
-  /* grid-area: ; */
+  font-size: 4rem;
 }
-#zero {
+#num0 {
   grid-column: 1/3;
+}
+
+.cientifica,
+.normal,
+#mostrarResultados {
+  color: aliceblue;
+  background-color: #707070;
+  border: 3px groove #ff8c00;
+  border-radius: 2rem;
+}
+
+.icon-add_circle_outline_black_24dp {
+  cursor: pointer;
+  font-size: 2.5rem;
 }

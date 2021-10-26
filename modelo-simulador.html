@@ -7,20 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--************************** Links para arquivos JS *************************-->
   <script src="js/modelo.js" defer></script>
-<<<<<<< Updated upstream
   <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/modelo_simulador.css" />
-  <link rel="stylesheet" href="css/modelo.css" />
-  <!-- ICONES -->
-=======
-  <script src="js/js_simulador.js" defer></script>
-  <script src="js/jquery.js" defer></script>
+  <script src="js/js_simulador.js" defer></script>   
   <!--************************** Lilnks para arquivos CSS ***********************-->
   <link rel="stylesheet" href="css/modelo_simulador.css" />
   <link rel="stylesheet" href="css/modelo.css" />
   <link rel="stylesheet" href="css/modelo_id.css" />
   <!--**************************** Link para  ICONES ****************************-->
->>>>>>> Stashed changes
   <link rel="stylesheet" href="assets/style.css" />
   <title>Câmbio</title>
 </head>
@@ -36,18 +29,15 @@
         <!-- simulação do investimento -->
         <li><a href="modelo-simulador.html">Câmbio</a></li>
         <!-- investimento -->
-        <li><a href="modelo-calculadora.html">Simulação</a></li>
+        <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
         <li><a href="modelo-formulario.html">Cadastro</a></li>
-        <li><a href="#minhaConta">Conta</a></li>
+        <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
   </header>
   <hr />
-<<<<<<< Updated upstream
-  <main>
-=======
-  <!-- ******************************CAIXA DE LOGIN*******************************-->
+   <!-- ******************************CAIXA DE LOGIN*******************************-->
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
@@ -106,7 +96,6 @@
     </div>
     <!-- Criado uma div com o id bodyFake onde contem as opções de inputs para Compra e Venda, como também o input de quantidadedeMoeda.
     Esta div permitirá ao usuário realizar as operações desejáveis -->
->>>>>>> Stashed changes
     <div id="bodyFake">
       <section>
         <h2 class="titulo">Minhas SoulCoins</h2>
@@ -115,13 +104,8 @@
         <!-- div contendo o input tipoOperacao, permitirá escolher entre Compra ou Venda da Moeda -->
         <div class="linhaDeInput">
           <label>Operação</label>
-<<<<<<< Updated upstream
           <select type="text" id="tipoOperação" placeholder="Escolha Uma Opção" required>
-            <option value="Escolha Uma Opção">Escolha Uma Opção</option>
-=======
-          <select type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
             <option value="">Escolha Uma Opção</option>
->>>>>>> Stashed changes
             <option value="Compra">Compra</option>
             <option value="Venda">Venda</option>
           </select>
@@ -129,19 +113,13 @@
         <!-- div contendo o input quantidadeMoeda, permitirá digitar a quantidade de moedas a comprar ou vender -->
         <div class="linhaDeInput">
           <label>Quantidade</label>
-<<<<<<< Updated upstream
-          <input type="text" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
-=======
           <input type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
         </div>
         <!-- div contendo os botões que poderá salvar ou cancelar as informações digitas e escolhidas nos inputs anteriores -->
         <div id="btnCenter">
           <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
           <button onclick="novaOperacao.cancelar()">Cancelar</button>
->>>>>>> Stashed changes
         </div>
-        <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
-        <button onclick="novaOperacao.cancelar()">Cancelar</button>
       </section>
 
       <!-- Esta Seção com a class conteúdo, desenvolvemos uma tabela onde serão inseridos os as operações escolhidas pelo usuário, ou seja receberá as informações de cada operação em formato de linha, completando sempre após o acionar do botão salvar -->
@@ -152,7 +130,8 @@
             <th>Operação</th>
             <th>Qtde.</th>
             <th>Vlr. R$</th>
-            <th>SLCN Hoje</th>
+            <th>Cotação Hoje</th>
+            <th>Alterações</th>
           </thead>
           <tbody id="tbody">
           </tbody>
@@ -166,12 +145,12 @@
   <footer>
     <div>
       <nav>
-        <!-- linka pra própia página principal -->
-        <a href="#quemSomos">Quem somos nós</a>
-        <!-- linka pra explicação na página das classes -->
-        <a href="#primeirosPassos">Primeiros passos</a>
-        <!-- pop-up -->
-        <a href="#faleConosco">Atendimento</a>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="modelo-formulario.html">Atendimento</a>
       </nav>
       <section>
         <a class="icon-facebook" href="#facebook"></a>
@@ -185,7 +164,6 @@
     </address>
     <p>&copy; Todos os direitos reservados.</p>
   </footer>
-  <script src="js/js_simulador.js"></script>
 </body>
 
 </html>
