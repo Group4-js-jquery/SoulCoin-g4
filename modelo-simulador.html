@@ -49,6 +49,38 @@
     </form>
   </section>
   <main>
+    <div class="tradingView" style="margin: 3rem 0;">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+          "symbols": [
+            {
+              "description": "EUR / BRL",
+              "proName": "FX_IDC:EURBRL"
+            },
+            {
+              "description": "GBP / BRL",
+              "proName": "FX_IDC:GBPBRL"
+            },
+            {
+              "description": "CAD / BRL",
+              "proName": "FX_IDC:CADBRL"
+            },
+            {
+              "description": "AUD / BRL",
+              "proName": "FX_IDC:AUDBRL"
+            },
+            {
+              "description": "USD / BRL",
+              "proName": "FX_IDC:USDBRL"
+            }
+          ],
+            "colorTheme": "dark",
+              "isTransparent": false,
+                "showSymbolLogo": true,
+                  "locale": "br"
+        }
+      </script>
+    </div>
     <div id="bodyFake">
       <section>
         <h2 class="titulo">Minhas SoulCoins</h2>
@@ -56,7 +88,7 @@
       <section class="card">
         <div class="linhaDeInput">
           <label>Operação</label>
-          <select type="text" id="tipoOperação" placeholder="Escolha Uma Opção" required>
+          <select type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
             <option value="Escolha Uma Opção">Escolha Uma Opção</option>
             <option value="Compra">Compra</option>
             <option value="Venda">Venda</option>
@@ -64,10 +96,12 @@
         </div>
         <div class="linhaDeInput">
           <label>Quantidade</label>
-          <input type="text" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
+          <input type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
         </div>
-        <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
-        <button onclick="novaOperacao.cancelar()">Cancelar</button>
+        <div id="btnCenter">
+          <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
+          <button onclick="novaOperacao.cancelar()">Cancelar</button>
+        </div>
       </section>
       <section class="conteudo">
         <table border=1>
@@ -76,7 +110,8 @@
             <th>Operação</th>
             <th>Qtde.</th>
             <th>Vlr. R$</th>
-            <th>SLCN Hoje</th>
+            <th>Cotação Hoje</th>
+            <th>Alterações</th>
           </thead>
           <tbody id="tbody">
           </tbody>
