@@ -1,88 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="js/modelo.js" defer></script>
-  <script src="js/jquery.js"></script>
-  <link rel="stylesheet" href="css/modelo.css" />
-  <link rel="stylesheet" href="css/modelo_id.css" />
-  <!-- ICONES -->
-  <link rel="stylesheet" href="assets/style.css" />
-  <title>Modelo SoulCoin</title>
-</head>
-
-<body>
-  <header>
-    <a href="#home">
-      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
-    </a>
-    <nav>
-      <ul>
-        <!-- simulação do investimento -->
-        <li><a href="modelo-simulador.html">Câmbio</a></li>
-        <!-- investimento -->
-        <li><a href="modelo-calculadora.html">Simulação</a></li>
-        <!-- formulário para cadastro -->
-        <li><a href="modelo-formulario.html">Cadastro</a></li>
-        <li><a id="botaoConta">Conta</a></li>
-
-      </ul>
-    </nav>
-  </header>
-  <hr />
-   <!-- Caixa do Login -->
-   <section id="apareceLogin">
-    <form id="login">
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username">
-      </div>
-      <div>
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="password" minlength="8" required>
-      </div>
-      <input id="fecharLogin" type="submit" value="Acessar Conta">
-    </form>
-  </section>
-  <main>
-    <!-- conteúdo principal -->
-    <section class="mainSection" id="apresentacao">
-      <!-- <div id="roundH1"></div> -->
-      <h1>A Moeda que Valoriza a sua Vida!</h1>
-      <figure>
-        <img
-          src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80"
-          alt="imagem aleatória" />
-      </figure>
-    </section>
-    <section class="mainSection" id="meta">
-      <P id=p2></P>
-      <h2>Objetivo e Meta</h2>
-      <hr />
-      <p>
-        Fundada em Outubro de 2020, a SoulCoin tem como seu objetivo principal
-        valorizar a vida das pessoas e não só o seu dinheiro. Queremos que
-        nossos clientes se sintam seguros e confiantes na hora de investir
-        conosco e que possam obter tudo aquilo que desejam e sonham.
-      </p>
-
-      <p>
-        Queriamos criar uma moeda que tivesse alta valorização no mercado
-        financeiro, com um excelente atendimento e que não focasse só no nosso
-        lucro da empresa. Com isso conseguimos criar a primeira moeda digital
-        que repassa seus lucros aos seus clientes.
-      </p>
-      <p>
-        A SoulCoin é um moeda digital de valorização crescente no mercado
-        financeiro e temos o orgulho de ter a menor taxa cambial com as
-        principais moedas em circulação mundial. Nossa meta não é só lucrar
-        mais, mas sim trazer significado na vida das pessoas.
-      </p>
-
-      <p>Abra a sua conta conosco.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/modelo.js" defer></script>
+    <script src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/modelo.css" />
+    <!-- ICONES -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Modelo SoulCoin</title>
+  </head>
+  <body>
+    <header>
+      <a href="#home">
+        <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+      </a>
+      <nav>
+        <ul>
+          <!-- simulação do investimento -->
+          <li><a href="modelo-simulador.html">Câmbio</a></li>
+          <!-- investimento -->
+          <li><a href="modelo-calculadora.html">Simulação</a></li>
+          <!-- formulário para cadastro -->
+          <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <li><a href="#minhaConta">Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <!-- conteúdo principal -->
+      <section class="mainSection" id="apresentacao">
+        <!-- <div id="roundH1"></div> -->
+        <h1>A Moeda que <span>Valoriza </span>a sua Vida!</h1>
+        <figure>
+          <img
+            src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80"
+            alt="imagem aleatória"
+          />
+        </figure>
+      </section>
+      <section class="mainSection" id="meta">
+        <h2>Objetivo/Meta</h2>
+        <hr />
+        <p>
+          Fundada em Outubro de 2020, a SoulCoin tem como seu objetivo principal
+          valorizar a vida das pessoas e não só o seu dinheiro. Queremos que
+          nossos clientes se sintam seguros e confiantes na hora de investir
+          conosco e que possam obter tudo aquilo que desejam e sonham.
+        </p>
+        <p>
+          Queriamos criar uma moeda que tivesse alta valorização no mercado
+          financeiro, com um excelente atendimento e que não focasse só no nosso
+          lucro da empresa. Com isso conseguimos criar a primeira moeda digital
+          que repassa seus lucros aos seus clientes.
+        </p>
+        <p>
+          A SoulCoin é um moeda digital de valorização crescente no mercado
+          financeiro e temos o orgulho de ter a menor taxa cambial com as
+          principais moedas em circulação mundial. Nossa meta não é só lucrar
+          mais, mas sim trazer significado na vida das pessoas.
+        </p>
+        <p>Abra a sua conta conosco.</p>
     </section>
 
     <section class="mainSection" id="sobre">
