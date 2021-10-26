@@ -33,7 +33,6 @@ class SoulCoin {
 
             this.cancelar();
         }
-        // console.log(this.arrayMoeda);
     }
 
     listarDados() {
@@ -90,14 +89,7 @@ class SoulCoin {
         let novaOperacao = {};
 
         novaOperacao.operacao = document.getElementById("tipoOperacao").value;
-
-
-        // var converte = (function(){
-        //     if (novaOperacao.operacao == "Compra") {
-        //        const vlrCompra = Math.sqrt(Math.sqrt(Math.pow(Number(document.getElementById("quantidadeMoeda").value), 3)))*7;
-        //        console.log(vlrCompra);
-        //     } 
-        // });
+        console.log(novaOperacao.operacao)
         
         var cotacaoHoje = (Math.random()+7).toFixed(4)
 
@@ -158,7 +150,7 @@ class SoulCoin {
 
         for (let m = 0; m < this.arrayMoeda.length; m++) {
             if (id == this.arrayMoeda[m].id) {
-                this.arrayMoeda[m].operacao = document.getElementById("tipoOperação").value;
+                this.arrayMoeda[m].operacao = document.getElementById("tipoOperacao").value;
                 this.arrayMoeda[m].quantidade = document.getElementById("quantidadeMoeda").value
             }
         }
@@ -166,6 +158,4 @@ class SoulCoin {
         this.testeBtn = 0;
     }
 }
-
-// com a "var produto" temos a criação de uma nova varáviavel tendo como estrutura os atributos da "class Produto".
 var novaOperacao = new SoulCoin();
