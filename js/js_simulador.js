@@ -165,10 +165,6 @@ class SoulCoin {
         document.getElementById("btn1").innerText = "Salvar"
         this.testeBtn = 0;
     }
-    // voltando a escritado do botão para salvar e voltando também a propriedade "testeBtn" para 0 para o modo adicionar
-    document.getElementById('btn1').innerText = 'Salvar';
-    this.testeBtn = 0;
-  }
 }
 
 // com a "var produto" temos a criação de uma nova varáviavel tendo como estrutura os atributos da "class Produto".
