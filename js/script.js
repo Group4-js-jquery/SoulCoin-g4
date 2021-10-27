@@ -603,6 +603,8 @@ $(document).ready(function () {
 });
 
 $('#fecharLogin').click(function () {
-  $('#apareceLogin').hide(3000);
+  if ($('#username').val() != '' && $('#pass').val() != '') {
+    $('#apareceLogin').fadeOut(2000);
+  }
 });
 // ********************FIM Conta*************************

@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="css/style.css" />
   <!--**************************** Link para  ICONES ****************************-->
   <link rel="stylesheet" href="assets/style.css" />
-  <!--**************************** Link para Libras ****************************-->
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <title>SoulCoin - Home</title>
 
 </head>
@@ -50,13 +48,18 @@
 
   <!-- conteúdo principal -->
   <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <!-- adicionando o botão que faz comunicação com o puglin do Vlibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
     </div>
-  </div>
-  <!-- ******************************CAIXA DE LOGIN*******************************-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- **************************CAIXA DE LOGIN*******************************--> 
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
@@ -120,9 +123,9 @@
         <div>
           <span id="fotinhaAlice"></span>
         </div>
-        <h3>Alice Braga da Silva, 24</h3>
+        <h3>Alice Braga da Silva, 25</h3>
         <p>
-          Diretora de Tecnoloia em Processamento de Dados, formada em
+          Diretora de Tecnologia em Processamento de Dados, formada em
           Engenharia de Controle e Automação e Desenvolvedora Well Full
           Stack. Nas horas vagas contribui com Juventude Apostólica de
           Schoenstatt.

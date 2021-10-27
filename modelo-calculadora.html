@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <!--**************************** Link para  ICONES ****************************-->
     <link rel="stylesheet" href="assets/style.css" />
-    <!--**************************** Link para Libras ****************************-->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <title>SoulCoin - Câmbio</title>
   </head>
 
@@ -43,12 +41,17 @@
     <hr />
 
     <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+    <!-- adicionando o botão que faz comunicação com o puglin do Vlibras -->
     <div vw class="enabled">
       <div vw-access-button class="active"></div>
       <div vw-plugin-wrapper>
         <div class="vw-plugin-top-wrapper"></div>
       </div>
     </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <!-- ******************************CAIXA DE LOGIN*******************************-->
     <section id="apareceLogin">
       <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
@@ -91,20 +94,23 @@
           perseverando os interesses do consumidor final.
         </p>
         <p>
-          Disponibilizamos em nosso site algumas funções do nosso sistema, como
-          nossa calculadora (funcional no modo normal e científico) e nosso
-          <a href="modelo-simulador.html">simulador dinâmico</a> de
-          investimentos. Gostaria de você mesmo fazer os cálculos? Use nossa
-          calculadora
-          <!-- chamada do botão como classe -->
+          Disponibilizamos em nosso site algumas funções para melhor atende-lo.
+          Utilize nossa calculadora
           <span
             class="icon-add_circle_outline_black_24dp"
             id="toggleCalculadora"
-          ></span>
+          ></span
+          >, ela está disponível no modelo tradicional ou científico. Além
+          disso, disponibilizamos um
+          <a href="modelo-simulador.html">simulador dinâmico</a> de
+          investimentos.
         </p>
-        <!-- section da calculadora que é inicializada com display none, ao apertar o botão #toggleCalculadora ele é apresentado ao cliente -->
-        <section id="apareceCalculadora">
-          <!-- div utilizada para aplicar o display flex e manter a estilização -->
+      </section>
+
+      <!-- section da calculadora que é inicializada com display none, ao apertar o botão #toggleCalculadora ele é apresentado ao cliente -->
+      <section id="apareceCalculadora">
+        <!-- div utilizada para aplicar o display flex e manter a estilização -->
+        <div class="centerCalculadora">
           <div id="calculadora">
             <!-- input que será usado como visor da calculadora -->
             <input type="text" id="mostrarResultados" disabled />
@@ -183,7 +189,7 @@
               <input class="normal" type="button" value="=" id="igual" />
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </main>
     <hr />

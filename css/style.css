@@ -39,15 +39,15 @@ body {
 }
 
 #acessibilidade {
-  height: 7vh;
+  height: 6vh;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .iconAcessibilidade {
-  font-size: 2.5rem;
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 0.5rem;
   box-sizing: border-box;
   cursor: pointer;
   background-color: black;
@@ -101,12 +101,13 @@ hr {
 /* PAGINA INDEX */
 
 #apresentacao {
-  height: 600px;
+  /* height: 600px; */
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row: 100%;
   text-align: center;
-  margin-top: 200px;
+  margin-bottom: 15rem;
+  /* margin-top: 200px; */
 }
 
 #apresentacao h1,
@@ -139,6 +140,7 @@ h1 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row: 100% 100%;
+  margin-top: 5rem;
 }
 
 section h2 {
@@ -207,6 +209,7 @@ section .card #fotinhaRauny {
 
 #institucionalDiv {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -225,6 +228,7 @@ footer {
 
 footer div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 footer div nav {
@@ -250,35 +254,24 @@ footer section a:hover {
   text-decoration: none;
 }
 
-/* section .card p {
-  font-size: 2.4rem;
-} */
-/* @media screen and (max-width: 750px) {
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  header {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-row: 100%;
-  }
-} */
-
 /* PÁGINA CALCULADORA */
 #apareceCalculadora {
   display: none;
-  /* width: 100vw; */
-  height: 50vh;
   background-color: var(--colorGrey);
-  position: static;
+  position: relative;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
   /* margin: 10% 20% 10% 20%; */
 }
+.centerCalculadora {
+  display: flex;
+  justify-content: center;
+}
+
 #calculadora {
   width: 600px;
   /* height: 430px; */
-  font-size: rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -312,7 +305,6 @@ footer section a:hover {
 .normal,
 #mostrarResultados {
   font-size: 2rem;
-
   color: aliceblue;
   background-color: #707070;
   border: 3px groove #ff8c00;
@@ -322,9 +314,11 @@ footer section a:hover {
 .icon-add_circle_outline_black_24dp {
   cursor: pointer;
   font-size: 2.5rem;
+  color: #ff8c00;
+  transition: 1s;
 }
 .icon-add_circle_outline_black_24dp:hover {
-  color: #ff8c00;
+  color: aliceblue;
 }
 
 /* FIM MODELO */
@@ -698,6 +692,36 @@ form {
 /* responsivo página simulação */
 
 @media (max-width: 1440px) {
+  .normalFont {
+    /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
+    font-size: 56%;
+  }
+  .largeFont {
+    /* conversão do font-size para 11.5px, para uso da acessibilidade */
+    font-size: 65.3%;
+  }
+  .largerFont {
+    /* conversão do font-size para 13px, para uso da acessibilidade */
+    font-size: 76.125%;
+  }
+  #apresentacao {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    padding: 2.5rem;
+  }
+
+  #apresentacao figure img {
+    margin-top: 5rem;
+    width: 70%;
+    box-shadow: 25px 25px 10px var(--colorOrange);
+  }
+
   #bodyFake {
     width: 80rem;
   }
@@ -710,7 +734,34 @@ form {
   }
 }
 
+@media (max-width: 1150px) {
+  .normalFont {
+    /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
+    font-size: 53.5%;
+  }
+  .largeFont {
+    /* conversão do font-size para 11.5px, para uso da acessibilidade */
+    font-size: 62%;
+  }
+  .largerFont {
+    /* conversão do font-size para 13px, para uso da acessibilidade */
+    font-size: 71.5%;
+  }
+}
+
 @media (max-width: 1024px) {
+  .normalFont {
+    /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
+    font-size: 50%;
+  }
+  .largeFont {
+    /* conversão do font-size para 11.5px, para uso da acessibilidade */
+    font-size: 58%;
+  }
+  .largerFont {
+    /* conversão do font-size para 13px, para uso da acessibilidade */
+    font-size: 69%;
+  }
   #bodyFake {
     width: 58rem;
   }
@@ -737,9 +788,58 @@ form {
     height: 4rem;
     font-size: 1.5rem;
   }
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #sobreDiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .styleForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #caixaMsg {
+    width: 30rem;
+    height: 10rem;
+    margin-top: 1rem;
+  }
+  header a {
+    align-self: center;
+    justify-self: center;
+  }
+  #logotipo {
+    width: 160px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  footer div {
+    flex-direction: column;
+  }
+
+  footer div section {
+    flex-direction: row;
+  }
 }
 
 @media (max-width: 700px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #bodyFake {
     width: 30rem;
   }
@@ -766,36 +866,80 @@ form {
     height: 3rem;
     font-size: 1rem;
   }
-}
-
-/* RESPONSIVO modelo*/
-
-@media (max-width: 1024px) {
-  html {
-    font-size: 60%;
+  header a {
+    align-self: center;
+    justify-self: center;
   }
-  body {
-    padding-left: 50px;
-    padding-right: 50px;
+  #logotipo {
+    width: 160px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #calculadora {
+    width: 80%;
+    font-size: 2rem;
+  }
+
+  #mostrarResultados {
+    width: 80%;
+    height: 7rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  #digitos {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 8rem 8rem 8rem 8rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 700px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
+  #calculadora {
+    width: 80%;
+    font-size: 2rem;
+  }
+
+  #mostrarResultados {
+    width: 80%;
+    height: 7rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  #digitos {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 8rem 8rem 8rem 8rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
+    font-size: 2rem;
   }
 }
-@media all and (max-width: 900px) {
-  .styleForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 400px) {
+  #calculadora {
+    width: 70%;
+    font-size: 2rem;
   }
-  #caixaMsg {
-    width: 30rem;
-    height: 10rem;
-    margin-top: 1rem;
+
+  #mostrarResultados {
+    width: 70%;
+    height: 6rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  #digitos {
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem 6rem;
+    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
+    font-size: 1.8rem;
   }
 }
