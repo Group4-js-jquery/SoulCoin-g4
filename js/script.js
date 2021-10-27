@@ -30,7 +30,7 @@ $('#iconeMuitoMaior').click(function () {
 
 //a calculadora aparece quando clica no botão toggle e desaparece após clicar no mesmo botão
 $('#toggleCalculadora').click(function () {
-  $('#apareceCalculadora').toggle();
+  $('#apareceCalculadora').fadeToggle(3000);
 });
 //setando a variável que é mostrada no visor como vazia, ela será concatenada conforme o usuário digite
 //inicializando as variáveis
