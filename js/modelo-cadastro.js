@@ -19,7 +19,7 @@ function consultaCep() {
   let cepDigitado = document.getElementById('cep');
 
   if (cepDigitado.value == '') {
-    cepDigitado.style.backgroundColor = 'blue';
+    console.log("cep não digitado")
   } else {
     let cepProcurado = cepDigitado.value.replace('-', '');
     console.log(cepProcurado);
@@ -42,6 +42,7 @@ function consultaCep() {
 }
 
 function validacaoCompleta() {
+  let valida = 0;
   //If para verificar se o campo nome do formulário fale está vazio ou com menos de dois caracteres.
   if (document.fale.nome.value.length < 3) {
     $('#mensagemCaixa').text('Nome inválido');
@@ -55,6 +56,7 @@ function validacaoCompleta() {
     //Caixa trazendo a informação de que o campo não foi preenchido corretamente
     //Focus para setar para a caica de texto que não foi preenchida corretamente
     //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.
+    valida = 0;
     return false;
   }
 
@@ -73,6 +75,7 @@ function validacaoCompleta() {
       document.fale.cpf.focus();
     });
     //Sem o return false, entra numa repetição de caixa de alert e perde a função do focus.
+    valida = 0;
     return false;
   }
 
@@ -84,6 +87,7 @@ function validacaoCompleta() {
       $('#caixaAlerta').css('display', 'none');
       document.fale.dataNasc.focus();
     });
+    valida = 0;
     return false;
   }
 
@@ -96,6 +100,7 @@ function validacaoCompleta() {
       $('#caixaAlerta').css('display', 'none');
       document.fale.email.focus();
     });
+    valida = 0;
 
     return false;
   }
@@ -109,25 +114,28 @@ function validacaoCompleta() {
       $('#caixaAlerta').css('display', 'none');
       document.fale.mensagem.focus();
     });
+    valida = 0;
+
     return false;
   }
 
-  {
+  if (valida == 0) {
     $('#mensagemCaixa').text(
-      'Olá' +
+      'Olá ' +
         document.fale.nome.value +
         ', seu cadastro foi realizado. O email para login é (' +
         document.fale.email.value +
-        ') e a sua senha é(' +
+        ') e a sua senha é (' +
         document.fale.cpf.value +
-        ')'
+        ').'
     );
     $('#caixaAlerta').css('display', 'block');
 
     $('#botaoOk').click(function () {
       $('#caixaAlerta').css('display', 'none');
+      $('.inputForm').val('');
     });
-    alert('OLá');
+    return false;
   }
 }
 

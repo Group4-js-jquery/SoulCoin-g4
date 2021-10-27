@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/modelo-cadastro.js" defer></script>
+    <!-- <script src="js/modelo-cadastro.js" defer></script> -->
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
     <link rel="stylesheet" href="css/modelo_id.css" />
@@ -60,6 +60,7 @@
       <div id="btnProx"></div>
       </div>
     </section>
+    <p id="paragCadastro">Você está dando os primeiros passos para iniciar seus investimentos.</p>
     <!-- COMEÇO FORMULÁRIO -->
     <section class="Cadastro">
       <fieldset>
@@ -68,7 +69,6 @@
           class="styleForm"
           action=""
           name="fale"
-          onsubmit="return validacaoCompleta();"
         >
           <!-- LINHA DE INPUT NOME -->
           <label for="nome" class="linhaForm"
@@ -196,25 +196,29 @@
               id="uf"
               placeholder="UF"
           /></label>
-
-          <label class="linhaForm"
-            >Menssagem: <span class="required">* </span>
+        <label class="linhaForm" id="linhaMensagem"
+            ><p id= "tituloMsg">Mensagem:<span class="required">* </span></p>
             <textarea
+            id="caixaMsg"
               class="inputForm"
               name="mensagem"
               cols="35"
               rows="8"
-              placeholder="Descreva suas expectativas, dúvidas ou sugestões"
+              placeholder="Dúvidas ou sugestões"
             ></textarea>
           </label>
-          <button class="btnForm" type="text" name="enviar">Enviar</button>
-          <button class="btnForm" type="reset" name="limpar">Limpar</button>
-          <span class="required">* Campos de preenchimento obrigatório</span>
+          
+    
+        <div id="caixaBotoes" class="linhaForm">
+          <button id="bt1" class="btnForm" type="text" name="enviar" onclick="return validacaoCompleta();">Enviar</button>
+          <button id="bt2" class="btnForm" type="reset" name="limpar">Limpar</button>
+      </div>
+      <span class="required">* Campos de preenchimento obrigatório</span>
         </form>
       </fieldset>
     </section>
     <!-- FIM FORMULÁRIO -->
-
+   
     <!-- COMEÇO CAIXA DE ALERTA -->
     <div id="caixaAlerta">
       <div id="faixa">
@@ -228,5 +232,29 @@
     <!-- FIM CAIXA DE ALERTA -->
 
     </main>
+    <footer>
+      <div>
+        <nav>
+          <!-- linka com a página Index/Objetivo -->
+          <a href="#p1">Quem somos nós</a>
+          <!-- linka com a página Index/Objetivo-->
+          <a href="modelo.html#p2">Objetivo e Meta</a>
+          <!-- linka com a página de formulário -->
+          <a href="modelo-formulario.html">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+    <script type="text/javascript" src="js/modelo-cadastro.js"></script>
   </body>
+  
 </html>
