@@ -30,7 +30,7 @@ $('#iconeMuitoMaior').click(function () {
 
 //a calculadora aparece quando clica no botão toggle e desaparece após clicar no mesmo botão
 $('#toggleCalculadora').click(function () {
-  $('#apareceCalculadora').toggle();
+  $('#apareceCalculadora').fadeToggle(3000);
 });
 //setando a variável que é mostrada no visor como vazia, ela será concatenada conforme o usuário digite
 //inicializando as variáveis
@@ -189,10 +189,12 @@ class SoulCoin {
       let imgEdit = document.createElement('img');
       imgEdit.src = 'img/edit.png';
       td_acoes.appendChild(imgEdit);
+      imgEdit.setAttribute('class', 'iconeSim');
 
       let imgDelete = document.createElement('img');
       imgDelete.src = 'img/del.png';
       td_acoes.appendChild(imgDelete);
+      imgDelete.setAttribute('class', 'iconeSim');
 
       imgDelete.setAttribute(
         'onclick',
@@ -250,9 +252,9 @@ class SoulCoin {
 
     novaOperacao.quantidade = document.getElementById('quantidadeMoeda').value;
     if (novaOperacao.operacao == 'Compra') {
-      novaOperacao.valor = cotacaoCompra.toFixed(4);
+      novaOperacao.valor = cotacaoCompra.toFixed(2);
     } else if (novaOperacao.operacao == 'Venda') {
-      novaOperacao.valor = cotacaoVenda.toFixed(4);
+      novaOperacao.valor = cotacaoVenda.toFixed(2);
     }
 
     novaOperacao.cotacao = cotacaoHoje;
@@ -309,7 +311,7 @@ class SoulCoin {
           this.arrayMoeda[m].valor = (
             Math.sqrt(Math.sqrt(Math.pow(this.arrayMoeda[m].quantidade, 3))) +
             this.arrayMoeda[m].quantidade * this.arrayMoeda[m].cotacao
-          ).toFixed(4);
+          ).toFixed(2);
         } else if (this.arrayMoeda[m].operacao == 'Venda') {
           this.arrayMoeda[m].valor = (
             Math.sqrt(Math.sqrt(Math.pow(this.arrayMoeda[m].quantidade, 3))) +
@@ -325,7 +327,7 @@ class SoulCoin {
               ) +
                 this.arrayMoeda[m].quantidade * this.arrayMoeda[m].cotacao) *
                 0.08)
-          ).toFixed(4);
+          ).toFixed(2);
         }
       }
     }

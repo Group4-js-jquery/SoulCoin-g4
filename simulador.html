@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlFont" class="normalFont">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--************************** Links para arquivos JS *************************-->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js" defer></script>
+  <!--************************** Link para arquivos CSS ***********************-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--**************************** Link para  ICONES ****************************-->
+  <link rel="stylesheet" href="assets/style.css" />
+  <!--**************************** Link para Libras ****************************-->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <title>SoulCoin - Simulação</title>
+</head>
+
+<body>
+  <!-- Botões de acessibilidade -->
+  <section id="acessibilidade">
+    <span class="iconAcessibilidade" id="iconeNormal">A</span>
+    <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+    <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+  </section>
+  <!-- ******************************HEADER PADRÃO*******************************-->
+  <header>
+    <a href="index.html">
+      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+    </a>
+    <nav>
+      <ul>
+        <!-- simulação do investimento -->
+        <li><a href="cambio.html">Câmbio</a></li>
+        <!-- investimento -->
+        <li><a href="simulador.html">Simulação</a></li>
+        <!-- formulário para cadastro -->
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a id="botaoConta">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr />
+  <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <!-- ******************************CAIXA DE LOGIN*******************************-->
+  <section id="apareceLogin">
+    <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
+       e um input de botão com tpe submit, para Acessar a conta-->
+    <div class="showLogin">
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required/>
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="password" minlength="8" required />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </div>
+  </section>
+  <!-- ******************************INÍCIO DA MAIN*******************************-->
+  <main>
+    <!-- Criado uma div com a class tradingView onde mostrará valores das moedas, de maneira atual através da API acessada pelo link abaixo -->
+    <div class="tradingView" style="margin: 3rem 0;">
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+          "symbols": [
+            { "description": "USD / BRL", "proName": "FX_IDC:USDBRL" },
+            { "description": "EUR / BRL", "proName": "FX_IDC:EURBRL" },
+            { "description": "GBP / BRL", "proName": "FX_IDC:GBPBRL" },
+            { "description": "CAD / BRL", "proName": "FX_IDC:CADBRL" },
+            { "description": "AUD / BRL", "proName": "FX_IDC:AUDBRL" }
+          ],
+            "colorTheme": "dark",
+            "isTransparent": false,
+            "showSymbolLogo": true,
+            "locale": "br"
+        }
+      </script>
+    </div>
+    <!-- Criado uma div com o id bodyFake onde contem as opções de inputs para Compra e Venda, como também o input de quantidadedeMoeda.
+    Esta div permitirá ao usuário realizar as operações desejáveis -->
+    <div id="bodyFake">
+      <section>
+        <h2 class="titulo">Minhas SoulCoins</h2>
+      </section>
+
+      <section class="cardSim">
+        <!-- div contendo o input tipoOperacao, permitirá escolher entre Compra ou Venda da Moeda -->
+        <div class="linhaDeInput">
+          <label>Operação</label>
+          <select class="inputSim" type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
+            <option value="">Escolha Uma Opção</option>
+            <option value="Compra">Compra</option>
+            <option value="Venda">Venda</option>
+          </select>
+        </div>
+        <!-- div contendo o input quantidadeMoeda, permitirá digitar a quantidade de moedas a comprar ou vender -->
+        <div class="linhaDeInput">
+          <label>Quantidade</label>
+          <input class="inputSim" type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
+        </div>
+        <!-- div contendo os botões que poderá salvar ou cancelar as informações digitas e escolhidas nos inputs anteriores -->
+        <div id="btnCenter">
+
+          <button class="buttonSim" id="btnS" onclick="novaOperacao.salvar()">Salvar</button>
+          <button class="buttonSim" onclick="novaOperacao.cancelar()">Cancelar</button>
+
+        </div>
+      </section>
+
+      <!-- Esta Seção com a class conteúdo, desenvolvemos uma tabela onde serão inseridos os as operações escolhidas pelo usuário, ou seja receberá as informações de cada operação em formato de linha, completando sempre após o acionar do botão salvar -->
+      <section class="conteudo">
+        <table border=1>
+          <thead>
+            <th>ID</th>
+            <th>Operação</th>
+            <th>Quantidade</th>
+            <th>Valor R$</th>
+            <th>Cotação R$</th>
+            <th>Alterações</th>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+  </main>
+  <hr />
+  <!-- ******************************FOOTER PADRÃO*******************************-->
+  <footer>
+    <div>
+      <nav>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="index.html#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="index.html#meta">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="cadastro.html">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

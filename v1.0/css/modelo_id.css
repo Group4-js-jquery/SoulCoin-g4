@@ -111,15 +111,3 @@ form {
   height: 5rem;
   width: 30rem;
 }
-#dadosEndereco{
-    font-size: 1.3em;
-}
-#fone{
-    padding-top: 1em;
-}
-#email{
-   padding-top: 0.5em; 
-}
-input{
-    font-size: 0.7em;
-}

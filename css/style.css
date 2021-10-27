@@ -360,22 +360,23 @@ footer section a:hover {
 } */
 
 .linhaDeInput {
-  display: grid; /* para colocar um abaixo do outro*/
+  /* display: grid; para colocar um abaixo do outro */
   margin-bottom: 0.1rem;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: black;
   font-weight: bolder;
 }
 
 .inputSim {
-  width: 80%;
+  /* width: 80%;*/
   width: 70rem;
   padding-left: 1rem;
   margin-left: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
   border: 1px solid #707070;
   border-radius: 0.5rem;
-  outline: 0; /* para tirar a bordar quando recebe o focus*/
+  outline: 0;
+  margin-bottom: 1rem;
 }
 
 #tipoOperacao {
@@ -394,7 +395,7 @@ footer section a:hover {
   font-weight: bolder;
   transition: all ease 0.5s;
   cursor: pointer;
-  margin: 0 2rem;
+  margin: 1rem 2rem 0;
 }
 
 .buttonSim:hover {
@@ -427,6 +428,9 @@ td {
   font-weight: bolder;
 }
 
+.iconeSim {
+  width: 30%;
+}
 /* FIM MODELO SIMULADOR */
 
 /* COMEÇO MODELO CADASTRO */
@@ -534,13 +538,14 @@ form {
 
 /* COMEÇO - estilização da caixa de alerta formulário */
 #caixaAlerta {
+  box-sizing: content-box;
   display: none;
   background-color: #707070;
   width: 50rem;
   height: 22rem;
   position: absolute;
-  bottom: -400px;
-  left: 40%;
+  bottom: -800px;
+  left: 35%;
   border: groove 5px #ff8c00;
   border-radius: 5px;
 }
@@ -725,12 +730,11 @@ form {
   #bodyFake {
     width: 80rem;
   }
-  table th,
-  td {
-    font-size: 2rem;
-  }
   .inputSim {
-    width: 60rem;
+    width: 50rem;
+  }
+  #tipoOperacao {
+    margin-left: 4.2rem;
   }
 }
 
@@ -762,27 +766,7 @@ form {
     /* conversão do font-size para 13px, para uso da acessibilidade */
     font-size: 69%;
   }
-  #bodyFake {
-    width: 58rem;
-  }
-  .titulo {
-    margin-top: 2rem;
-    font-size: 3rem;
-  }
-  .linhaDeInput {
-    font-size: 2.7rem;
-  }
-  .inputSim {
-    font-size: 1.5rem;
-    width: 40rem;
-  }
-  #tipoOperacao {
-    margin-left: 3.5rem;
-  }
-  table th,
-  td {
-    font-size: 1.5rem;
-  }
+
   button {
     width: 10rem;
     height: 4rem;
@@ -797,6 +781,35 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
+  }
+  #bodyFake {
+    width: 58rem;
+  }
+  .titulo {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  .linhaDeInput {
+    font-size: 2rem;
+  }
+  .inputSim {
+    font-size: 1.75rem;
+    width: 30rem;
+  }
+  table th,
+  td {
+    font-size: 1.75rem;
+  }
+  .buttonSim {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.75rem;
+  }
+  #tipoOperacao {
+    margin-left: 3.5rem;
+  }
+  .iconeSim {
+    width: 35%;
   }
 }
 
@@ -840,27 +853,7 @@ form {
     padding-left: 20px;
     padding-right: 20px;
   }
-  #bodyFake {
-    width: 30rem;
-  }
-  .titulo {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-  .linhaDeInput {
-    font-size: 2rem;
-  }
-  .inputSim {
-    font-size: 1rem;
-    width: 18rem;
-  }
-  #tipoOperacao {
-    margin-left: 3rem;
-  }
-  table th,
-  td {
-    font-size: 1rem;
-  }
+
   button {
     width: 7.5rem;
     height: 3rem;
@@ -900,29 +893,41 @@ form {
     grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
     font-size: 2rem;
   }
-}
-
-@media (max-width: 700px) {
-  #calculadora {
-    width: 80%;
+  #bodyFake {
+    width: 30rem;
+  }
+  .titulo {
+    margin-top: 1rem;
     font-size: 2rem;
   }
-
-  #mostrarResultados {
-    width: 80%;
-    height: 7rem;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  .linhaDeInput {
+    font-size: 1.2rem;
   }
-
-  #digitos {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 8rem 8rem 8rem 8rem;
-    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
-    font-size: 2rem;
+  .inputSim {
+    font-size: 1.2rem;
+    width: 17rem;
+    margin-left: 1rem;
+  }
+  #tipoOperacao {
+    margin-left: 2.3rem;
+  }
+  table th,
+  td {
+    font-size: 1rem;
+  }
+  .buttonSim {
+    width: 7.5rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+  tbody th td img {
+    font-size: 50rem;
+  }
+  .iconeSim {
+    width: 40%;
   }
 }
+
 @media (max-width: 400px) {
   #calculadora {
     width: 70%;

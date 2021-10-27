@@ -35,7 +35,7 @@
     <nav>
       <ul>
         <!-- simulação do investimento -->
-        <li><a href="calculadora.html">Câmbio</a></li>
+        <li><a href="cambio.html">Câmbio</a></li>
         <!-- investimento -->
         <li><a href="simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
@@ -59,23 +59,24 @@
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <!-- **************************CAIXA DE LOGIN*******************************--> 
+  <!-- ******************************CAIXA DE LOGIN*******************************-->
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
-    <form id="login">
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
-      </div>
-      <div>
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="password" minlength="8" required />
-      </div>
-      <input id="fecharLogin" type="submit" value="Acessar Conta" />
-    </form>
+    <div class="showLogin">
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required/>
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="password" minlength="8" required />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </div>
   </section>
-
   <section class="mainSection" id="apresentacao">
     <!-- Seção contendo Apresentação do slogan da Marca e imagens relacionadas -->
       <h1>A Moeda que <span>Valoriza </span>a sua Vida!</h1>

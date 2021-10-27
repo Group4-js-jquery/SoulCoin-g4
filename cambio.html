@@ -23,7 +23,7 @@
     </section>
     <!-- ******************************HEADER PADRÃO*******************************-->
     <header>
-      <a href="modelo.html">
+      <a href="index.html">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
       </a>
       <nav>
@@ -53,26 +53,29 @@
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
     <!-- ******************************CAIXA DE LOGIN*******************************-->
+    <!-- ******************************CAIXA DE LOGIN*******************************-->
     <section id="apareceLogin">
       <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
-      <form id="login">
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" />
-        </div>
-        <div>
-          <label for="pass">Password:</label>
-          <input
-            type="password"
-            id="pass"
-            name="password"
-            minlength="8"
-            required
-          />
-        </div>
-        <input id="fecharLogin" type="submit" value="Acessar Conta" />
-      </form>
+      <div class="showLogin">
+        <form id="login">
+          <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div>
+            <label for="pass">Password:</label>
+            <input
+              type="password"
+              id="pass"
+              name="password"
+              minlength="8"
+              required
+            />
+          </div>
+          <input id="fecharLogin" type="submit" value="Acessar Conta" />
+        </form>
+      </div>
     </section>
     <!-- ******************************INÍCIO DA MAIN*******************************-->
     <!-- conteúdo principal -->
@@ -196,9 +199,9 @@
       <div>
         <nav>
           <!-- linka com a página Index/Objetivo -->
-          <a href="index.html">Quem somos nós</a>
+          <a href="index.html#p1">Quem somos nós</a>
           <!-- linka com a página Index/Objetivo-->
-          <a href="index.html">Objetivo e Meta</a>
+          <a href="index.html#meta">Objetivo e Meta</a>
           <!-- linka com a página de formulário -->
           <a href="cadastro.html">Atendimento</a>
         </nav>
