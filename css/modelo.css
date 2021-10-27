@@ -1,3 +1,6 @@
+/* COMUM A TODAS AS PÁGINAS */
+
+/* DECLARAÇÕES GLOBAIS */
 * {
   margin: 0;
   padding: 0;
@@ -20,27 +23,9 @@ body {
   padding-right: 100px;
   max-width: 1700px;
   width: 100vw;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 100vh; */
   font-size: 1.6rem;
   background-color: var(--colorGrey);
   color: aliceblue;
-}
-
-@media (max-width: 1024px) {
-  body {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 
 a {
@@ -86,6 +71,8 @@ hr {
   margin-top: 7rem;
 }
 
+/* PAGINA INDEX */
+
 #apresentacao {
   height: 600px;
   display: grid;
@@ -111,6 +98,7 @@ h1 {
   box-shadow: 25px 25px 10px var(--colorOrange);
 }
 
+<<<<<<< Updated upstream
 fieldset {
   font-size: 4rem;
   margin-top: 2.5%;
@@ -119,6 +107,8 @@ fieldset {
   margin-bottom: 3rem;
 }
 
+=======
+>>>>>>> Stashed changes
 #meta p {
   padding: 1.5rem;
   text-align: justify;
@@ -190,7 +180,7 @@ section .card #fotinhaEinsten {
   height: 250px;
 }
 section .card #fotinhaRauny {
-  background-image: url('../img/nickCarol.jpeg');
+  background-image: url('../img/nickRauny.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -203,6 +193,8 @@ section .card #fotinhaRauny {
   display: flex;
   justify-content: space-around;
 }
+
+/* ESTILIZAÇÃO ICONE DO FOOTER */
 
 .icon-assistant_photo_black_24dp,
 .icon-travel_explore_black_24dp,
@@ -258,7 +250,7 @@ footer section a:hover {
   }
 } */
 
-/* CALCULADORA */
+/* PÁGINA CALCULADORA */
 #apareceCalculadora {
   display: none;
   width: 100vw;
@@ -268,7 +260,6 @@ footer section a:hover {
   margin: 10% 20% 10% 30%;
 }
 #calculadora {
-  /* margin: 10rem 45rem 10rem 45rem; */
   width: 450px;
   height: 430px;
   font-size: 4rem;
@@ -313,4 +304,20 @@ footer section a:hover {
 .icon-add_circle_outline_black_24dp {
   cursor: pointer;
   font-size: 2.5rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1024px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

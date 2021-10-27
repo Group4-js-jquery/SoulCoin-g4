@@ -12,6 +12,14 @@
 }
 
 .styleForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.linhaForm {
+  margin: 1rem 0;
+  justify-self: center;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
@@ -20,6 +28,7 @@
 .linhaForm {
   margin: 1rem 0;
   justify-self: center;
+
 
 }
 
@@ -32,12 +41,59 @@
   margin: 1rem 0;
 }
 
-/* FIM - estilização do formulário */
-
 .required {
   color: #ff8c00;
   font-size: 2rem;
 }
+
+/* FIM - estilização do formulário */
+
+/* COMEÇO TAVA NA FOLHA MODELO ID */
+
+fieldset {
+  font-size: 5rem;
+  margin-top: 2.5%;
+  padding: 2%;
+  border-style: double;
+  border-width: medium;
+  border-color: #ff8c00;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  margin-bottom: 2rem;
+}
+
+#mensagem {
+  text-align: center;
+}
+
+.btn {
+  color: #707070;
+  background: #ff8c00;
+  border-radius: 3rem;
+  font-size: 2rem;
+  width: 11rem;
+}
+
+#botoesForm {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#msg {
+  border-radius: 3rem;
+}
+
+#btn1 {
+  height: 35%;
+  width: 8rem;
+}
+
+/* FIM TAVA NA FOLHA MODELO ID */
 
 /* COMEÇO - estilização da caixa de alerta formulário */
 #caixaAlerta {
@@ -88,11 +144,27 @@
   box-shadow: 2px 2px 2px 2px #ff8c00;
 }
 /* FIM - estilização da caixa de alerta formulário */
+
+
 #caixaBotoes{
+
   height: 10rem;
   align-self: center;
   grid-column: 1/3;
 }
+
+#linhaMensagem {
+  grid-column: 1/3;
+  align-self: center;
+  display: block;
+}
+#bt1,
+#bt2 {
+  width: 12rem;
+  height: 5rem;
+}
+#paragCadastro {
+  color: #ff8c00;
 #linhaMensagem{
   grid-column: 1/3;
   align-self: center;
@@ -108,6 +180,83 @@
   margin-top: 2rem;
   text-align: center;
 }
+
+#caixaMsg {
+  width: 60rem;
+  height: 10rem;
+  margin-top: 1rem;
+}
+#tituloMsg {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+/* estilização caixa login */
+
+#apareceLogin {
+  display: none;
+  margin-top: 2rem;
+}
+
+#login {
+  /* display: none; */
+  height: 20rem;
+  width: 50rem;
+  background-color: #ff8c00;
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 1rem;
+  opacity: 0.6;
+}
+
+#fecharLogin {
+  color: white;
+  background-color: #707070;
+  border-radius: 2rem;
+  height: 5rem;
+  width: 30rem;
+}
+
+/* estilização banner */
+
+#banner {
+  margin: auto;
+  margin-top: 3rem;
+  width: 100%;
+  height: 330px;
+  border: 1px solid black;
+  background-size: cover;
+}
+
+#btnAnte,
+#btnProx {
+  line-height: 200px;
+  font-size: 30px;
+  color: rgb(0, 0, 0, 5);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnAnte {
+  float: left;
+  margin-top: 6rem;
+}
+
+#btnProx {
+  float: right;
+  margin-top: 6rem;
+}
+
+#botoes {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+}
+
 #caixaMsg{
 width: 60rem;
 height: 10rem;
@@ -117,3 +266,4 @@ margin-top: 1rem;
   padding-bottom: 0;
   text-align: center;
 }
+
