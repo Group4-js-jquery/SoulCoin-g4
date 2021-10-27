@@ -269,11 +269,11 @@ footer section a:hover {
 /* PÁGINA CALCULADORA */
 #apareceCalculadora {
   display: none;
-  width: 100vw;
+  /* width: 100vw; */
   height: 50vh;
   background-color: var(--colorGrey);
   position: static;
-  margin: 10% 20% 10% 20%;
+  /* margin: 10% 20% 10% 20%; */
 }
 #calculadora {
   width: 600px;
@@ -442,12 +442,13 @@ td {
   color: #707070;
   /* margin-top: 2rem; */
   border: 2px groove #ff8c00;
-  border-radius: 2rem;
+  border-radius: 2rem 0 2rem;
   /* height: 70%; */
-  width: 25rem;
+  width: 30rem;
   align-items: center;
   display: block;
   text-align: center;
+  padding: 1.5rem;
 }
 
 .styleForm {
@@ -458,7 +459,7 @@ td {
 .linhaForm {
   margin: 1rem 0;
   justify-self: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 #linhaMensagem {
@@ -624,6 +625,11 @@ form {
   margin-top: 2rem;
 }
 
+.showLogin {
+  display: flex;
+  justify-content: center;
+}
+
 #login {
   /* display: none; */
   height: 20rem;
@@ -634,7 +640,7 @@ form {
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   border-radius: 1rem;
   opacity: 0.6;
 }
