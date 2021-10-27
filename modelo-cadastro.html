@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlFont" class="normalFont">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< Updated upstream
     <script src="js/modelo-cadastro.js" defer></script>
+=======
+    <!--************************** Links para arquivos JS *************************-->
+>>>>>>> Stashed changes
     <script src="js/jquery.js"></script>
-    <link rel="stylesheet" href="css/modelo.css" />
-    <link rel="stylesheet" href="css/modelo_id.css" />
-    <link rel="stylesheet" href="css/modelo-cadastro.css" />
-
-    <!-- ICONES -->
+    <script src="js/script.js" defer></script>
+    <!--************************** Link para arquivos CSS ***********************-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--**************************** Link para  ICONES ****************************-->
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Modelo SoulCoin</title>
+    <!--**************************** Link para Libras ****************************-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <title>SoulCoin - Cadastro</title>
   </head>
 
   <body>
+    <!-- Botões de acessibilidade -->
+    <section id="acessibilidade">
+      <span class="iconAcessibilidade" id="iconeNormal">A</span>
+      <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+      <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+    </section>
+    <!-- ******************************HEADER PADRÃO*******************************-->
     <header>
       <a href="modelo.html">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
@@ -23,18 +35,27 @@
       <nav>
         <ul>
           <!-- simulação do investimento -->
-          <li><a href="modelo-simulador.html">Câmbio</a></li>
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
           <!-- investimento -->
           <li><a href="modelo-simulador.html">Simulação</a></li>
           <!-- formulário para cadastro -->
-          <li><a href="modelo-formulario.html">Cadastro</a></li>
+          <li><a href="modelo-cadastro.html">Cadastro</a></li>
           <li><a id="botaoConta">Conta</a></li>
         </ul>
       </nav>
     </header>
     <hr />
-    <!-- Caixa do Login -->
+    <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <!-- ******************************CAIXA DE LOGIN*******************************-->
     <section id="apareceLogin">
+      <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
+       e um input de botão com tpe submit, para Acessar a conta-->
       <form id="login">
         <div>
           <label for="username">Username:</label>
@@ -53,6 +74,7 @@
         <input id="fecharLogin" type="submit" value="Acessar Conta" />
       </form>
     </section>
+    <!-- ******************************INÍCIO DA MAIN*******************************-->
     <main>
           <!-- **********************Carrocel de imagens*************************** -->
     <section id="banner">
@@ -104,7 +126,17 @@
               name="dataNasc"
             />
           </label>
-
+          <!-- LINHA DE INPUT - EMAIL -->
+          <label for="email" class="linhaForm"
+          >E-mail: <span class="required">* </span>
+          <input
+            class="inputForm"
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Seu melhor email"
+        /></label>
+          <!-- LINHA DE INPUT GÊNERO -->
           <label for="genero" class="linhaForm"
             >Qual sua opção de Gênero:
             <select class="inputForm" id="genero" name="opcaoGenero">
@@ -134,16 +166,7 @@
               maxlength="11"
               placeholder="(__) 9 xxxx-xxxx"
           /></label>
-          <!-- LINHA DE INPUT - EMAIL -->
-          <label for="email" class="linhaForm"
-            >E-mail: <span class="required">* </span>
-            <input
-              class="inputForm"
-              id="email"
-              type="email"
-              name="email"
-              placeholder="Seu melhor email"
-          /></label>
+
           <!-- **************************Endereço **************************-->
           <label for="cep" class="linhaForm"
             >CEP:<input
@@ -207,9 +230,17 @@
               placeholder="Descreva suas expectativas, dúvidas ou sugestões"
             ></textarea>
           </label>
+<<<<<<< Updated upstream
           <button class="btnForm" type="text" name="enviar">Enviar</button>
           <button class="btnForm" type="reset" name="limpar">Limpar</button>
           <span class="required">* Campos de preenchimento obrigatório</span>
+=======
+        <div id="caixaBotoes" class="linhaForm">
+          <button id="bt1" class="btnForm" type="text" name="enviar" onclick="return validacaoCompleta();">Enviar</button>
+          <button id="bt2" class="btnForm" type="reset" name="limpar">Limpar</button>
+      </div>
+      <span class="required">* Campos de preenchimento obrigatório</span>
+>>>>>>> Stashed changes
         </form>
       </fieldset>
     </section>
@@ -226,7 +257,31 @@
       </div>
     </div>
     <!-- FIM CAIXA DE ALERTA -->
-
     </main>
+<<<<<<< Updated upstream
+=======
+    <footer>
+      <div>
+        <nav>
+          <!-- linka com a página Index/Objetivo -->
+          <a href="modelo.html#p1">Quem somos nós</a>
+          <!-- linka com a página Index/Objetivo-->
+          <a href="modelo.html#meta">Objetivo e Meta</a>
+          <!-- linka com a página de formulário -->
+          <a href="modelo-cadastro.html">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+>>>>>>> Stashed changes
   </body>
 </html>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" id="htmlFont" class="normalFont">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< Updated upstream
   <script src="js/modelo.js" defer></script>
   <script src="js/js_simulador.js" defer></script>
   <script src="js/jquery.js" defer></script>
@@ -17,18 +17,40 @@
 </head>
 
 <body>
+=======
+  <!--************************** Links para arquivos JS *************************-->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js" defer></script>
+  <!--************************** Link para arquivos CSS ***********************-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--**************************** Link para  ICONES ****************************-->
+  <link rel="stylesheet" href="assets/style.css" />
+  <!--**************************** Link para Libras ****************************-->
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <title>SoulCoin - Simulação</title>
+</head>
+
+<body>
+    <!-- Botões de acessibilidade -->
+    <section id="acessibilidade">
+      <span class="iconAcessibilidade" id="iconeNormal">A</span>
+      <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+      <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+    </section>
+  <!-- ******************************HEADER PADRÃO*******************************-->
+>>>>>>> Stashed changes
   <header>
-    <a href="#home">
+    <a href="modelo.html">
       <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
     </a>
     <nav>
       <ul>
         <!-- simulação do investimento -->
-        <li><a href="modelo-simulador.html">Câmbio</a></li>
+        <li><a href="modelo-calculadora.html">Câmbio</a></li>
         <!-- investimento -->
         <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
-        <li><a href="modelo-formulario.html">Cadastro</a></li>
+        <li><a href="modelo-cadastro.html">Cadastro</a></li>
         <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
@@ -85,22 +107,36 @@
       <section>
         <h2 class="titulo">Minhas SoulCoins</h2>
       </section>
+<<<<<<< Updated upstream
       <section class="card">
         <div class="linhaDeInput">
           <label>Operação</label>
           <select type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
             <option value="Escolha Uma Opção">Escolha Uma Opção</option>
+=======
+      <section class="cardSim">
+        <!-- div contendo o input tipoOperacao, permitirá escolher entre Compra ou Venda da Moeda -->
+        <div class="linhaDeInput">
+          <label>Operação</label>
+          <select class="inputSim" type="text" id="tipoOperacao" placeholder="Escolha Uma Opção" required>
+            <option value="">Escolha Uma Opção</option>
+>>>>>>> Stashed changes
             <option value="Compra">Compra</option>
             <option value="Venda">Venda</option>
           </select>
         </div>
         <div class="linhaDeInput">
           <label>Quantidade</label>
-          <input type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
+          <input class="inputSim" type="number" id="quantidadeMoeda" placeholder="Quantidade de SoulCoin"></input>
         </div>
         <div id="btnCenter">
+<<<<<<< Updated upstream
           <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
           <button onclick="novaOperacao.cancelar()">Cancelar</button>
+=======
+          <button class="buttonSim" id="btnS" onclick="novaOperacao.salvar()">Salvar</button>
+          <button class="buttonSim" onclick="novaOperacao.cancelar()">Cancelar</button>
+>>>>>>> Stashed changes
         </div>
       </section>
       <section class="conteudo">
@@ -126,11 +162,11 @@
     <div>
       <nav>
         <!-- linka com a página Index/Objetivo -->
-        <a href="#p1">Quem somos nós</a>
+        <a href="modelo.html#p1">Quem somos nós</a>
         <!-- linka com a página Index/Objetivo-->
-        <a href="modelo.html#p2">Objetivo e Meta</a>
+        <a href="modelo.html#meta">Objetivo e Meta</a>
         <!-- linka com a página de formulário -->
-        <a href="modelo-formulario.html">Atendimento</a>
+        <a href="modelo-cadastro.html">Atendimento</a>
       </nav>
       <section>
         <a class="icon-facebook" href="#facebook"></a>

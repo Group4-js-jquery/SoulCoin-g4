@@ -1,36 +1,98 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 <html lang="en">
+=======
+<html lang="en" id="htmlFont" class="normalFont">
+>>>>>>> Stashed changes
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< Updated upstream
     <script src="js/modelo.js" defer></script>
     <script src="js/jquery.js"></script>
     <link rel="stylesheet" href="css/modelo.css" />
     <!-- ICONES -->
     <link rel="stylesheet" href="assets/style.css" />
     <title>Modelo SoulCoin</title>
+=======
+    <!--************************** Links para arquivos JS *************************-->
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js" defer></script>
+    <!--************************** Link para arquivos CSS ***********************-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--**************************** Link para  ICONES ****************************-->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!--**************************** Link para Libras ****************************-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <title>SoulCoin - Home</title>
+>>>>>>> Stashed changes
   </head>
   <body>
+<<<<<<< Updated upstream
+=======
+    <!-- Botões de acessibilidade -->
+    <section id="acessibilidade">
+      <span class="iconAcessibilidade" id="iconeNormal">A</span>
+      <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+      <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+    </section>
+    <!-- ******************************HEADER PADRÃO*******************************-->
+>>>>>>> Stashed changes
     <header>
-      <a href="#home">
+      <a href="modelo.html">
         <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
       </a>
       <nav>
         <ul>
           <!-- simulação do investimento -->
-          <li><a href="modelo-simulador.html">Câmbio</a></li>
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
           <!-- investimento -->
-          <li><a href="modelo-calculadora.html">Simulação</a></li>
+          <li><a href="modelo-simulador.html">Simulação</a></li>
           <!-- formulário para cadastro -->
-          <li><a href="modelo-formulario.html">Cadastro</a></li>
-          <li><a href="#minhaConta">Conta</a></li>
+          <li><a href="modelo-cadastro.html">Cadastro</a></li>
+          <li><a id="botaoConta">Conta</a></li>
         </ul>
       </nav>
     </header>
     <hr />
+<<<<<<< Updated upstream
     <main>
       <!-- conteúdo principal -->
+=======
+    <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <!-- ******************************CAIXA DE LOGIN*******************************-->
+    <section id="apareceLogin">
+      <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
+       e um input de botão com tpe submit, para Acessar a conta-->
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </section>
+    <!-- ******************************INÍCIO DA MAIN*******************************-->
+    <main>
+      <!-- Seção contendo Apresentação do slogan da Marca e imagens relacionadas -->
+>>>>>>> Stashed changes
       <section class="mainSection" id="apresentacao">
         <!-- <div id="roundH1"></div> -->
         <h1>A Moeda que <span>Valoriza </span>a sua Vida!</h1>
@@ -41,8 +103,13 @@
           />
         </figure>
       </section>
+<<<<<<< Updated upstream
+=======
+
+      <!-- Seção onde apresentamos o objetivo/meta da marcas -->
+>>>>>>> Stashed changes
       <section class="mainSection" id="meta">
-        <h2>Objetivo/Meta</h2>
+        <h2>História</h2>
         <hr />
         <p>
           Fundada em Outubro de 2020, a SoulCoin tem como seu objetivo principal
@@ -63,6 +130,7 @@
           mais, mas sim trazer significado na vida das pessoas.
         </p>
         <p>Abra a sua conta conosco.</p>
+<<<<<<< Updated upstream
     </section>
 
     <section class="mainSection" id="sobre">
@@ -107,16 +175,66 @@
         <div class="card">
           <div>
             <span id="fotinhaRauny"></span>
+=======
+      </section>
+      <!--Nesta seção apresentamos informações sobre os fundadores, dispondo-os em div para cada componente-->
+      <section class="mainSection" id="sobre">
+        <p id="p1"></p>
+        <h2>Quem somos nós?</h2>
+        <hr />
+        <div id="sobreDiv">
+          <!-- div com informações da componente Alice -->
+          <div class="card">
+            <div>
+              <span id="fotinhaAlice"></span>
+            </div>
+            <h3>Alice Braga da Silva, 24</h3>
+            <p>
+              Diretora de Tecnoloia em Processamento de Dados, formada em
+              Engenharia de Controle e Automação e Desenvolvedora Well Full
+              Stack. Nas horas vagas contribui com Juventude Apostólica de
+              Schoenstatt.
+            </p>
           </div>
-          <h3>Rauny Lima, 34</h3>
-          <p>
-            Diretor de Criação, formado em Publicidade e Cinema e
-            Desenvolvimento Web Full Stack. Professor de criação e roteiros em
-            Oficias Culturais na periferia de São Paulo.
-          </p>
+          <!-- div com informações da componente Carol -->
+          <div class="card">
+            <div>
+              <span id="fotinhaCarol"></span>
+            </div>
+            <h3>Caroline Korndorfer, 39</h3>
+            <p>
+              Diretora de Investimentos Financeiros, formada em Administração de
+              empresas e Gestão Financeira, além de ser Desenvolvedora Web Full
+              Stack. Voluntária na Rede Bem, confecionando de roupas de Inverno.
+            </p>
+          </div>
+          <!-- div com informações do componente Einstein -->
+          <div class="card">
+            <div>
+              <span id="fotinhaEinsten"></span>
+            </div>
+            <h3>Einsten Hellmeister Soares, 31</h3>
+            <p>
+              Diretor de Tecnologia da Informação, formada em Marketing e
+              Desenvolvimento Web Full Stack. Professor de Música no Projeto
+              Social Acorde Música.
+            </p>
+          </div>
+          <!-- div com informações do componente Rauny -->
+          <div class="card">
+            <div>
+              <span id="fotinhaRauny"></span>
+            </div>
+            <h3>Rauny Lima, 34</h3>
+            <p>
+              Diretor de Criação, formado em Publicidade e Cinema e
+              Desenvolvimento Web Full Stack. Professor de criação e roteiros em
+              Oficias Culturais na periferia de São Paulo.
+            </p>
+>>>>>>> Stashed changes
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <section class="mainSection" id="institucional">
       <h2>Institucional</h2>
@@ -126,6 +244,7 @@
           <div>
             <div class="icon-assistant_photo_black_24dp"></div>
           </div>
+<<<<<<< Updated upstream
           <h3>Missão</h3>
           <p>
             Nosso compromisso é com as pessoas e seus objetivos na vida.
@@ -149,15 +268,36 @@
         <div class="card" id="valores">
           <div>
             <div class="icon-auto_awesome_black_24dp"></div>
+=======
+          <!-- div com informações da Visão -->
+          <div class="card" id="visao">
+            <div>
+              <div class="icon-travel_explore_black_24dp"></div>
+            </div>
+            <h3>Visão</h3>
+            <p>
+              Ser reconhecida no internacionalmente como a empresa de
+              investimentos que mais valoriza as pessoas, através do nosso
+              atendimento, produtos e serviços personalizados focados nas
+              necessidades dos nossos clientes.
+            </p>
           </div>
-          <h3>Valores</h3>
-          <p>
-            Queremos garantir transparência e eficiência da nossa assessoria e
-            com isso oferecer serviços financeiros a favor dos nossos
-            clientes, para que eles possam investir e ter os melhores lucros,
-            realizar seus sonhos e ter uma vida ainda melhor.
-          </p>
+          <!-- div com informações da Valores -->
+          <div class="card" id="valores">
+            <div>
+              <div class="icon-auto_awesome_black_24dp"></div>
+            </div>
+            <h3>Valores</h3>
+            <p>
+              Queremos garantir transparência e eficiência da nossa assessoria e
+              com isso oferecer serviços financeiros a favor dos nossos
+              clientes, para que eles possam investir e ter os melhores lucros,
+              realizar seus sonhos e ter uma vida ainda melhor.
+            </p>
+>>>>>>> Stashed changes
+          </div>
         </div>
+<<<<<<< Updated upstream
       </div>
     </section>
   </main>
@@ -177,14 +317,33 @@
         <a class="icon-facebook" href="#facebook"></a>
         <a class="icon-instagram" href="instagram"></a>
         <a class="icon-linkedin2" href="#linkedin"></a>
+=======
+>>>>>>> Stashed changes
       </section>
-    </div>
-    <address>
-      Encontrou algum problema?
-      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
-    </address>
-    <p>&copy; Todos os direitos reservados.</p>
-  </footer>
-</body>
-
+    </main>
+    <hr />
+    <!-- ******************************FOOTER PADRÃO*******************************-->
+    <footer>
+      <div>
+        <nav>
+          <!-- linka com a página Index/Objetivo -->
+          <a href="modelo.html#p1">Quem somos nós</a>
+          <!-- linka com a página Index/Objetivo-->
+          <a href="modelo.html#meta">Objetivo e Meta</a>
+          <!-- linka com a página de formulário -->
+          <a href="modelo-cadastro.html">Atendimento</a>
+        </nav>
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

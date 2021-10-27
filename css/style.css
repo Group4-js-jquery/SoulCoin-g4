@@ -1,0 +1,795 @@
+/* COMUM A TODAS AS PÁGINAS */
+
+/* DECLARAÇÕES GLOBAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode';
+}
+
+.normalFont {
+  /* conversão do font-size para 10px, mais fácil de lidar no responsivo */
+  font-size: 62.5%;
+}
+.largeFont {
+  /* conversão do font-size para 11.5px, para uso da acessibilidade */
+  font-size: 71.875%;
+}
+.largerFont {
+  /* conversão do font-size para 13px, para uso da acessibilidade */
+  font-size: 81.25%;
+}
+
+:root {
+  /* paleta de cores */
+  --colorOrange: #ff8c00;
+  --colorGrey: #707070;
+}
+
+body {
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  max-width: 1700px;
+  width: 100vw;
+  background-color: var(--colorGrey);
+  color: aliceblue;
+}
+
+#acessibilidade {
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.iconAcessibilidade {
+  font-size: 2.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: black;
+  margin: 0 5px 0 5px;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorOrange);
+  cursor: pointer;
+  transition: 1s;
+}
+
+a:hover {
+  color: aliceblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#logotipo {
+  width: 200px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-row: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 160px;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 5rem;
+}
+
+hr {
+  border: 3px solid var(--colorOrange);
+}
+
+.mainSection {
+  margin-top: 7rem;
+}
+
+/* PAGINA INDEX */
+
+#apresentacao {
+  height: 600px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: 100%;
+  text-align: center;
+  margin-top: 200px;
+}
+
+#apresentacao h1,
+span {
+  font-size: 9rem;
+  /* coloquei uma cor clara aleatoria */
+  color: aliceblue;
+  text-align: left;
+}
+h1 {
+  font-size: 6rem;
+}
+
+#apresentacao figure img {
+  width: 85%;
+  box-shadow: 25px 25px 10px var(--colorOrange);
+}
+
+#meta p {
+  padding: 1.5rem;
+  text-align: justify;
+  text-indent: 3rem;
+}
+
+#sobre h2 {
+  text-align: right;
+}
+
+#sobreDiv {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: 100% 100%;
+}
+
+section h2 {
+  width: 100%;
+  font-size: 4rem;
+}
+section p {
+  font-size: 2.4rem;
+}
+
+.card {
+  padding: 2%;
+}
+.card div {
+  margin: 1.5rem 0 1.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.card p {
+  padding: 1.5rem;
+  text-align: justify;
+}
+
+section .card h3 {
+  font-size: 3rem;
+}
+
+section .card #fotinhaAlice {
+  background-image: url('../img/nickAlice.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaCarol {
+  background-image: url('../img/nickCarol.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaEinsten {
+  background-image: url('../img/nickEinsten.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+section .card #fotinhaRauny {
+  background-image: url('../img/nickRauny.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 0.5rem solid var(--colorOrange);
+  width: 250px;
+  height: 250px;
+}
+
+#institucionalDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ESTILIZAÇÃO ICONE DO FOOTER */
+
+.icon-assistant_photo_black_24dp,
+.icon-travel_explore_black_24dp,
+.icon-auto_awesome_black_24dp {
+  font-size: 8rem;
+  color: var(--colorOrange);
+}
+
+footer {
+  text-align: center;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+}
+footer div nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+footer div section {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+footer a,
+address,
+p {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+footer section a:hover {
+  text-decoration: none;
+}
+
+/* section .card p {
+  font-size: 2.4rem;
+} */
+/* @media screen and (max-width: 750px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row: 100%;
+  }
+} */
+
+/* PÁGINA CALCULADORA */
+#apareceCalculadora {
+  display: none;
+  width: 100vw;
+  height: 50vh;
+  background-color: var(--colorGrey);
+  position: static;
+  margin: 10% 20% 10% 20%;
+}
+#calculadora {
+  width: 600px;
+  /* height: 430px; */
+  font-size: rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-color: #999898;
+  border: 5px groove #ff8c00;
+  border-radius: 3rem;
+}
+
+#mostrarResultados {
+  margin: auto;
+  text-align: right;
+  width: 25rem;
+  height: 10rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#digitos {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem 10rem;
+  grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem;
+  font-size: 3rem;
+}
+#num0 {
+  grid-column: 1/3;
+}
+
+.cientifica,
+.normal,
+#mostrarResultados {
+  font-size: 2rem;
+
+  color: aliceblue;
+  background-color: #707070;
+  border: 3px groove #ff8c00;
+  border-radius: 2rem;
+}
+
+.icon-add_circle_outline_black_24dp {
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+.icon-add_circle_outline_black_24dp:hover {
+  color: #ff8c00;
+}
+
+/* FIM MODELO */
+
+/* COMEÇO MODELO SIMULADOR */
+
+/* estilização página simulação */
+
+.titulo {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+#bodyFake {
+  margin: 0 auto;
+  width: 100rem;
+}
+
+.cardSim {
+  background-color: #c0c0c0;
+  border: 0.1rem solid #c0c0c0;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#btnCenter {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* #tipoOperacao, #quantidadeMoeda {
+    width: 70rem;
+} */
+
+.linhaDeInput {
+  display: grid; /* para colocar um abaixo do outro*/
+  margin-bottom: 0.1rem;
+  font-size: 3.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.inputSim {
+  width: 80%;
+  width: 70rem;
+  padding-left: 1rem;
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  outline: 0; /* para tirar a bordar quando recebe o focus*/
+}
+
+#tipoOperacao {
+  margin-left: 4rem;
+}
+
+.buttonSim {
+  width: 12rem;
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 0;
+  background-color: #ff8c00;
+  color: aliceblue;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  margin: 0 2rem;
+}
+
+.buttonSim:hover {
+  background-color: #707070;
+}
+.conteudo {
+  margin-top: 1.5rem;
+}
+table {
+  border-collapse: collapse;
+  border: 0.1rem solid #707070;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+table th {
+  background-color: #ff8c00;
+}
+
+table th,
+td {
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#tbody {
+  background-color: #c0c0c0;
+  color: black;
+  font-weight: bolder;
+}
+
+/* FIM MODELO SIMULADOR */
+
+/* COMEÇO MODELO CADASTRO */
+
+/* COMEÇO - estilização do formulário */
+.inputForm {
+  color: #707070;
+  /* margin-top: 2rem; */
+  border: 2px groove #ff8c00;
+  border-radius: 2rem;
+  /* height: 70%; */
+  width: 25rem;
+  align-items: center;
+  display: block;
+  text-align: center;
+}
+
+.styleForm {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row: auto;
+}
+.linhaForm {
+  margin: 1rem 0;
+  justify-self: center;
+  font-size: 2.5rem;
+}
+
+#linhaMensagem {
+  grid-column: 1/3;
+  text-align: center;
+}
+#linhaMensagem textarea {
+  text-align: center;
+  display: inline;
+}
+.btnForm {
+  color: #707070;
+  background: #ff8c00;
+  border-radius: 3rem;
+  font-size: 2rem;
+  width: 9rem;
+  margin: 1rem 0;
+  justify-self: center;
+}
+
+.btnForm:hover {
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.required {
+  color: #ff8c00;
+  font-size: 2rem;
+}
+
+/* FIM - estilização do formulário */
+
+/* COMEÇO TAVA NA FOLHA MODELO ID */
+
+fieldset {
+  margin-top: 2.5%;
+  padding: 2%;
+  border-style: double;
+  border-width: medium;
+  border-color: #ff8c00;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  margin-bottom: 2rem;
+}
+
+#mensagem {
+  text-align: center;
+}
+
+.btn {
+  color: #707070;
+  background: #ff8c00;
+  border-radius: 3rem;
+  font-size: 2rem;
+  width: 11rem;
+}
+
+#botoesForm {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#msg {
+  border-radius: 3rem;
+}
+
+#btn1 {
+  height: 35%;
+  width: 8rem;
+}
+
+/* FIM TAVA NA FOLHA MODELO ID */
+
+/* COMEÇO - estilização da caixa de alerta formulário */
+#caixaAlerta {
+  display: none;
+  background-color: #707070;
+  width: 50rem;
+  height: 22rem;
+  position: absolute;
+  bottom: -400px;
+  left: 40%;
+  border: groove 5px #ff8c00;
+  border-radius: 5px;
+}
+
+#caixaMensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#faixa {
+  width: 100%;
+  height: 5rem;
+  border-bottom: 3px solid #ff8c00;
+}
+#cabecalhoCaixa {
+  font-size: 2.5rem;
+  text-align: center;
+  color: aliceblue;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+#mensagemCaixa {
+  padding: 2rem;
+  color: aliceblue;
+}
+#botaoOk {
+  font-size: 1.8rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #ff8c00;
+  color: aliceblue;
+}
+/* dá pra mudar o hover de acordo com nosso estilo, esse foi só um que fiz pra diferenciar */
+#botaoOk:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #ff8c00;
+}
+/* FIM - estilização da caixa de alerta formulário */
+#caixaBotoes {
+  height: 10rem;
+  align-self: center;
+  grid-column: 1/3;
+}
+#linhaMensagem {
+  grid-column: 1/3;
+  align-self: center;
+  display: block;
+}
+#bt1,
+#bt2 {
+  width: 12rem;
+  height: 5rem;
+}
+#paragCadastro {
+  color: #ff8c00;
+  font-size: 7rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+#caixaMsg {
+  width: 60rem;
+  height: 10rem;
+  margin-top: 1rem;
+}
+#tituloMsg {
+  padding-bottom: 0;
+  text-align: center;
+}
+
+/* estilização caixa login */
+
+#apareceLogin {
+  display: none;
+  margin-top: 2rem;
+}
+
+#login {
+  /* display: none; */
+  height: 20rem;
+  width: 50rem;
+  background-color: #ff8c00;
+  font-size: 4rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 1rem;
+  opacity: 0.6;
+}
+
+#fecharLogin {
+  color: white;
+  background-color: #707070;
+  border-radius: 2rem;
+  height: 5rem;
+  width: 30rem;
+}
+
+#fecharLogin:hover {
+  cursor: pointer;
+  color: #ff8c00;
+}
+/* estilização banner */
+
+#banner {
+  margin: auto;
+  margin-top: 3rem;
+  width: 100%;
+  height: 330px;
+  border: 1px solid black;
+  background-size: cover;
+}
+
+#btnAnte,
+#btnProx {
+  line-height: 200px;
+  font-size: 30px;
+  color: rgb(0, 0, 0, 5);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btnAnte {
+  float: left;
+  margin-top: 6rem;
+}
+
+#btnProx {
+  float: right;
+  margin-top: 6rem;
+}
+
+#botoes {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+}
+
+/* FIM MODELO CADASTRO */
+
+/* responsivo página simulação */
+
+@media (max-width: 1440px) {
+  #bodyFake {
+    width: 80rem;
+  }
+  table th,
+  td {
+    font-size: 2rem;
+  }
+  .inputSim {
+    width: 60rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #bodyFake {
+    width: 58rem;
+  }
+  .titulo {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  .linhaDeInput {
+    font-size: 2.7rem;
+  }
+  .inputSim {
+    font-size: 1.5rem;
+    width: 40rem;
+  }
+  #tipoOperacao {
+    margin-left: 3.5rem;
+  }
+  table th,
+  td {
+    font-size: 1.5rem;
+  }
+  button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #bodyFake {
+    width: 30rem;
+  }
+  .titulo {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .linhaDeInput {
+    font-size: 2rem;
+  }
+  .inputSim {
+    font-size: 1rem;
+    width: 18rem;
+  }
+  #tipoOperacao {
+    margin-left: 3rem;
+  }
+  table th,
+  td {
+    font-size: 1rem;
+  }
+  button {
+    width: 7.5rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+/* RESPONSIVO modelo*/
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 60%;
+  }
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 900px) {
+  .styleForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #caixaMsg {
+    width: 30rem;
+    height: 10rem;
+    margin-top: 1rem;
+  }
+}

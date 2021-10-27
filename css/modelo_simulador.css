@@ -1,166 +1,178 @@
+/* estilização página simulação */
+
 .titulo {
-    margin-top: 3rem;
-    text-align: center;
-    font-size: 4rem;
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 4rem;
 }
 
-#bodyFake{
-    margin: 0 auto;
-    width: 100rem;
+#bodyFake {
+  margin: 0 auto;
+  width: 100rem;
 }
 
-.card{
-    background-color: #C0C0C0;
-    border: 0.1rem solid #C0C0C0;
-    padding: 2rem;
-    margin-top: 1.5rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.cardSim {
+  background-color: #c0c0c0;
+  border: 0.1rem solid #c0c0c0;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #btnCenter {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* #tipoOperacao, #quantidadeMoeda {
     width: 70rem;
 } */
 
-.linhaDeInput{
-    display:grid; /* para colocar um abaixo do outro*/
-    margin-bottom: 0.1rem;
-    font-size: 3.5rem;
-    color: black;
-    font-weight: bolder;
+.linhaDeInput {
+  display: grid; /* para colocar um abaixo do outro*/
+  margin-bottom: 0.1rem;
+  font-size: 3.5rem;
+  color: black;
+  font-weight: bolder;
 }
 
-select, input{
-    width: 80%;
-    width: 70rem;
-    padding-left: 1rem;
-    margin-left: 1.5rem;
-    font-size: 2rem;
-    border: 1px solid #707070;
-    border-radius: 0.5rem;
-    outline: 0; /* para tirar a bordar quando recebe o focus*/
+select,
+input {
+  width: 80%;
+  width: 70rem;
+  padding-left: 1rem;
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  border: 1px solid #707070;
+  border-radius: 0.5rem;
+  outline: 0; /* para tirar a bordar quando recebe o focus*/
 }
 
 select {
-    margin-left: 4rem;
+  margin-left: 4rem;
 }
 
-button{
-    width: 12rem;
-    height: 5rem;
-    font-size: 2rem;
-    text-align: center;
-    border:0;
-    background-color:  #ff8c00;;
-    color: aliceblue;
-    border-radius: 0.5rem;
-    font-weight: bolder;
-    transition: all ease 0.5s;
-    cursor: pointer;
-    margin: 0 2rem ;
+button {
+  width: 12rem;
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 0;
+  background-color: #ff8c00;
+  color: aliceblue;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  margin: 0 2rem;
 }
 
-button:hover{
-    background-color: #707070;
+button:hover {
+  background-color: #707070;
 }
-.conteudo{
-    margin-top: 1.5rem;
+.conteudo {
+  margin-top: 1.5rem;
 }
-table{
-    border-collapse: collapse;
-    border: 0.1rem solid #707070;
-    width: 100%;
-    margin-bottom: 5rem;
-}
-
-table th{
-    background-color: #ff8c00;
+table {
+  border-collapse: collapse;
+  border: 0.1rem solid #707070;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
-table th, td{
-    padding: 0.1rem 0.5rem;
-    text-align: center;
-    font-size: 2.5rem;
+table th {
+  background-color: #ff8c00;
+}
+
+table th,
+td {
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 #tbody {
-    background-color: #C0C0C0;
-    color: black;
-    font-weight: bolder;
+  background-color: #c0c0c0;
+  color: black;
+  font-weight: bolder;
 }
 
+/* responsivo página simulação */
+
 @media (max-width: 1440px) {
-    #bodyFake{
+  #bodyFake {
     width: 80rem;
-    }
-    table th, td{
-        font-size: 2rem;
-    }
-    select, input{
+  }
+  table th,
+  td {
+    font-size: 2rem;
+  }
+  select,
+  input {
     width: 60rem;
-    }
+  }
 }
 
 @media (max-width: 1024px) {
-    #bodyFake{
+  #bodyFake {
     width: 58rem;
-    }
-    .titulo {
-        margin-top: 2rem;
-        font-size: 3rem;
-    }
-    .linhaDeInput{
-        font-size: 2.7rem;
-    }
-    select, input{
-        font-size: 1.5rem;
-        width: 40rem;
-    }
-    select{
-        margin-left: 3.5rem;
-    }
-    table th, td{
-        font-size: 1.5rem;
-    }
-    button{
-        width: 10rem;
-        height: 4rem;
-        font-size: 1.5rem;
-    }
+  }
+  .titulo {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  .linhaDeInput {
+    font-size: 2.7rem;
+  }
+  select,
+  input {
+    font-size: 1.5rem;
+    width: 40rem;
+  }
+  select {
+    margin-left: 3.5rem;
+  }
+  table th,
+  td {
+    font-size: 1.5rem;
+  }
+  button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 700px) {
-    #bodyFake{
+  #bodyFake {
     width: 30rem;
-    }
-    .titulo {
-        margin-top: 1rem;
-        font-size: 2rem;
-    }
-    .linhaDeInput{
-        font-size: 2rem;
-    }
-    select, input{
-        font-size: 1rem;
-        width: 18rem;
-    }
-    select{
-        margin-left: 3rem;
-    }
-    table th, td{
-        font-size: 1rem;
-    }
-    button{
-        width: 7.5rem;
-        height: 3rem;
-        font-size: 1rem;
-    }
+  }
+  .titulo {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  .linhaDeInput {
+    font-size: 2rem;
+  }
+  select,
+  input {
+    font-size: 1rem;
+    width: 18rem;
+  }
+  select {
+    margin-left: 3rem;
+  }
+  table th,
+  td {
+    font-size: 1rem;
+  }
+  button {
+    width: 7.5rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
 }
