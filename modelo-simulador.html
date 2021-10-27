@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--************************** Links para arquivos JS *************************-->
-  <script src="js/modelo.js" defer></script>
   <script src="js/jquery.js"></script>
   <script src="js/js_simulador.js" defer></script>   
   <!--************************** Lilnks para arquivos CSS ***********************-->
@@ -69,31 +68,16 @@
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
         {
           "symbols": [
-            {
-              "description": "EUR / BRL",
-              "proName": "FX_IDC:EURBRL"
-            },
-            { 
-              "description": "GBP / BRL",
-              "proName": "FX_IDC:GBPBRL"
-            },
-            {
-              "description": "CAD / BRL",
-              "proName": "FX_IDC:CADBRL"
-            },
-            {
-              "description": "AUD / BRL",
-              "proName": "FX_IDC:AUDBRL"
-            },
-            {
-              "description": "USD / BRL",
-              "proName": "FX_IDC:USDBRL"
-            }
+            { "description": "EUR / BRL",  "proName": "FX_IDC:EURBRL" },
+            { "description": "GBP / BRL", "proName": "FX_IDC:GBPBRL" },
+            { "description": "CAD / BRL", "proName": "FX_IDC:CADBRL" },
+            { "description": "AUD / BRL", "proName": "FX_IDC:AUDBRL" },
+            { "description": "USD / BRL", "proName": "FX_IDC:USDBRL" }
           ],            
             "colorTheme": "dark",
-              "isTransparent": false,
-                "showSymbolLogo": true,
-                  "locale": "br"
+            "isTransparent": false,
+            "showSymbolLogo": true,
+            "locale": "br"
         }
       </script>
     </div>
@@ -120,7 +104,7 @@
         </div>
         <!-- div contendo os botões que poderá salvar ou cancelar as informações digitas e escolhidas nos inputs anteriores -->
         <div id="btnCenter">
-          <button id="btn1" onclick="novaOperacao.salvar()">Salvar</button>
+          <button id="btnS" onclick="novaOperacao.salvar()">Salvar</button>
           <button onclick="novaOperacao.cancelar()">Cancelar</button>
         </div>
       </section>
