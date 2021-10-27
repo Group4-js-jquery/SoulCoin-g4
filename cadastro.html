@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlFont" class="normalFont">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--************************** Links para arquivos JS *************************-->
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js" defer></script>
+  <!--************************** Link para arquivos CSS ***********************-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!--**************************** Link para  ICONES ****************************-->
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>SoulCoin - Cadastro</title>
+</head>
+
+<body>
+  <!-- Botões de acessibilidade -->
+  <section id="acessibilidade">
+    <span class="iconAcessibilidade" id="iconeNormal">A</span>
+    <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+    <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+  </section>
+  <!-- ******************************HEADER PADRÃO*******************************-->
+  <header>
+    <a href="modelo.html">
+      <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+    </a>
+    <nav>
+      <ul>
+        <!-- simulação do investimento -->
+        <li><a href="cambio.html">Câmbio</a></li>
+        <!-- investimento -->
+        <li><a href="simulador.html">Simulação</a></li>
+        <!-- formulário para cadastro -->
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a id="botaoConta">Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr />
+  <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+    <!-- adicionando o botão que faz comunicação com o puglin do Vlibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  <!-- ******************************CAIXA DE LOGIN*******************************-->
+  <section id="apareceLogin">
+    <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
+       e um input de botão com tpe submit, para Acessar a conta-->
+    <div class="showLogin">
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required/>
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="password" minlength="8" required />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </div>
+  </section>
+  <!-- ******************************INÍCIO DA MAIN*******************************-->
+  <main>
+    <!-- **********************Carrocel de imagens*************************** -->
+    <section id="banner">
+      <div id="btnAnte"></div>
+      <div id="btnProx"></div>
+      </div>
+    </section>
+    <p id="paragCadastro">Você está dando os primeiros passos para iniciar seus investimentos.</p>
+    <!-- COMEÇO FORMULÁRIO -->
+    <section class="Cadastro">
+      <fieldset>
+        <legend>
+          <h2>Preencha com seus dados:</h2>
+        </legend>
+        <form class="styleForm" action="" name="fale">
+          <!-- LINHA DE INPUT NOME -->
+          <label for="nome" class="linhaForm">Nome: <span class="required">* </span>
+            <input class="inputForm" id="nome" type="text" name="nome" placeholder="Como quer ser chamado?" /></label>
+          <!-- LINHA DE INPUT CPF -->
+
+          <label for="cpfform" class="linhaForm">Informe seu CPF: <span class="required">* </span><input
+              class="inputForm" id="cpfform" type="text" name="cpf" size="12" maxlength="11"
+              placeholder="000.000.000-00" /></label>
+          <!-- LINHA DE INPUT DATA DE NASCIMENTO -->
+          <label for="dataNasc" class="linhaForm">Data de nascimento: <span class="required">* </span><input
+              class="inputForm" type="date" id="dataNasc" maxlength="10" name="dataNasc" />
+          </label>
+          <!-- LINHA DE INPUT - EMAIL -->
+          <label for="email" class="linhaForm">E-mail: <span class="required">* </span>
+            <input class="inputForm" id="email" type="email" name="email" placeholder="Seu melhor email" /></label>
+          <!-- LINHA DE INPUT GÊNERO -->
+          <label for="genero" class="linhaForm">Qual sua opção de Gênero:
+            <select class="inputForm" id="genero" name="opcaoGenero">
+              <option>Escolha sua opção de Gênero:</option>
+              <option value="homem">Masculino</option>
+              <option value="mulher">Feminino</option>
+              <option value="outros">Outros</option>
+            </select>
+          </label>
+          <!-- **************************Fone*************** -->
+          <label for="fone" class="linhaForm">Telefone:<input class="inputForm" id="fone" name="fone" size="12"
+              maxlength="11" placeholder="(__) xxxx-xxxx" /></label>
+          <!-- **************************Celular*************** -->
+          <label for="celular" class="linhaForm">Celular:<input class="inputForm" id="celular" name="celular" size="12"
+              maxlength="11" placeholder="(__) 9 xxxx-xxxx" /></label>
+
+          <!-- **************************Endereço **************************-->
+          <label for="cep" class="linhaForm">CEP:<input class="inputForm" type="text" maxlength="9" id="cep"
+              placeholder="00000-000" onblur="consultaCep()" /></label>
+          <label for="logradouro" class="linhaForm">Logradouro:<input class="inputForm" type="text" id="logradouro"
+              placeholder="Rua" /></label>
+          <label for="numero" class="linhaForm">Número:<input class="inputForm" type="text" id="numero"
+              placeholder="Número" /></label>
+          <label for="complemento" class="linhaForm">Complemento:<input class="inputForm" type="text" id="complemento"
+              placeholder="Complemento" /></label>
+          <label for="bairro" class="linhaForm">Bairro:<input class="inputForm" type="text" id="bairro"
+              placeholder="Bairro" /></label>
+          <label for="localidade" class="linhaForm">Cidade:<input class="inputForm" type="text" id="localidade"
+              placeholder="Cidade" /></label>
+          <label for="uf" class="linhaForm">Estado:<input class="inputForm" type="text" id="uf"
+              placeholder="UF" /></label>
+          <label class="linhaForm" id="linhaMensagem">
+            <p id="tituloMsg">Mensagem:<span class="required">* </span></p>
+            <textarea id="caixaMsg" class="inputForm" name="mensagem" cols="35" rows="8"
+              placeholder="Dúvidas ou sugestões"></textarea>
+          </label>
+          <div id="caixaBotoes" class="linhaForm">
+            <button id="bt1" class="btnForm" type="text" name="enviar"
+              onclick="return validacaoCompleta(); ">Enviar</button>
+            <button id="bt2" class="btnForm" type="reset" name="limpar">Limpar</button>
+          </div>
+          <span class="required">* Campos de preenchimento obrigatório</span>
+
+        </form>
+      </fieldset>
+    </section>
+    <!-- FIM FORMULÁRIO -->
+
+    <!-- COMEÇO CAIXA DE ALERTA -->
+    <div id="caixaAlerta">
+      <div id="faixa">
+        <p class="caixaPop" id="cabecalhoCaixa">Aviso</p>
+      </div>
+      <div class="container" id="caixaMensagem">
+        <p class="caixaPop" id="mensagemCaixa">Aqui vai a mensagem!</p>
+        <button id="botaoOk">Fechar</button>
+      </div>
+    </div>
+    <!-- FIM CAIXA DE ALERTA -->
+  </main>
+
+  <footer>
+    <div>
+      <nav>
+        <!-- linka com a página Index/Objetivo -->
+        <a href="index.html#p1">Quem somos nós</a>
+        <!-- linka com a página Index/Objetivo-->
+        <a href="index.html#meta">Objetivo e Meta</a>
+        <!-- linka com a página de formulário -->
+        <a href="cadastro.html">Atendimento</a>
+      </nav>
+      <section>
+        <a class="icon-facebook" href="#facebook"></a>
+        <a class="icon-instagram" href="instagram"></a>
+        <a class="icon-linkedin2" href="#linkedin"></a>
+      </section>
+    </div>
+    <address>
+      Encontrou algum problema?
+      <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+    </address>
+    <p>&copy; Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>
