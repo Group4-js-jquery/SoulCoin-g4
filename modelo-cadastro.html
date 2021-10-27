@@ -53,17 +53,19 @@
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
-    <form id="login">
-      <div>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
-      </div>
-      <div>
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="password" minlength="8" required />
-      </div>
-      <input id="fecharLogin" type="submit" value="Acessar Conta" />
-    </form>
+    <div class="showLogin">
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input type="password" id="pass" name="password" minlength="8" required />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </div>
   </section>
   <!-- ******************************INÍCIO DA MAIN*******************************-->
   <main>
@@ -132,11 +134,6 @@
             <textarea id="caixaMsg" class="inputForm" name="mensagem" cols="35" rows="8"
               placeholder="Dúvidas ou sugestões"></textarea>
           </label>
-
-          <button class="btnForm" type="text" name="enviar">Enviar</button>
-          <button class="btnForm" type="reset" name="limpar">Limpar</button>
-          <span class="required">* Campos de preenchimento obrigatório</span>
-
           <div id="caixaBotoes" class="linhaForm">
             <button id="bt1" class="btnForm" type="text" name="enviar"
               onclick="return validacaoCompleta(); ">Enviar</button>

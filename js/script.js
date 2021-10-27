@@ -598,7 +598,7 @@ setInterval(() => troca(1), 5000);
 $(document).ready(function () {
   $('#botaoConta').click(function () {
     // no seletor p, de parágrafo... mostre e esconda o texto com o toggle.
-    $('#apareceLogin').toggle();
+    $('#apareceLogin').fadeToggle(2000);
   });
 });
 
