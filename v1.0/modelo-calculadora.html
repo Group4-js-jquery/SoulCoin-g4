@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlFont" class="normalFont">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--************************** Links para arquivos JS *************************-->
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js" defer></script>
+    <!--************************** Link para arquivos CSS ***********************-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--**************************** Link para  ICONES ****************************-->
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>SoulCoin - Câmbio</title>
+  </head>
+
+  <body>
+    <!-- Botões de acessibilidade -->
+    <section id="acessibilidade">
+      <span class="iconAcessibilidade" id="iconeNormal">A</span>
+      <span class="iconAcessibilidade" id="iconeMaior">A+</span>
+      <span class="iconAcessibilidade" id="iconeMuitoMaior">A++</span>
+    </section>
+    <!-- ******************************HEADER PADRÃO*******************************-->
+    <header>
+      <a href="modelo.html">
+        <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
+      </a>
+      <nav>
+        <ul>
+          <!-- simulação do investimento -->
+          <li><a href="modelo-calculadora.html">Câmbio</a></li>
+          <!-- investimento -->
+          <li><a href="modelo-simulador.html">Simulação</a></li>
+          <!-- formulário para cadastro -->
+          <li><a href="modelo-cadastro.html">Cadastro</a></li>
+          <li><a id="botaoConta">Conta</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+
+    <!-- Inserindo o PLugin de Libras, buscando acessiblidade -->
+    <!-- adicionando o botão que faz comunicação com o puglin do Vlibras -->
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- ******************************CAIXA DE LOGIN*******************************-->
+    <section id="apareceLogin">
+      <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
+       e um input de botão com tpe submit, para Acessar a conta-->
+      <form id="login">
+        <div>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div>
+          <label for="pass">Password:</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            minlength="8"
+            required
+          />
+        </div>
+        <input id="fecharLogin" type="submit" value="Acessar Conta" />
+      </form>
+    </section>
+    <!-- ******************************INÍCIO DA MAIN*******************************-->
+    <!-- conteúdo principal -->
+    <main>
+      <section class="mainSection">
+        <!-- título da página -->
+        <h1>Tente converter você mesmo</h1>
+        <!-- breve resumo da história da moeda -->
+        <p>
+          A SoulCoin é uma criptomoeda descentralizada, sendo um dinheiro
+          eletrônico para transações ponto a ponto. Além disso, permite
+          transações financeiras sem intermediários.
+        </p>
+        <p>
+          Seu valor é calculado através de uma complexa função. Envolve índices
+          financeiros, taxas voláteis atreladas ao horário de brasília,
+          considerações do perfil do investidor e muito mais. Nossos
+          colaboradoes e consultores estão em constante evolução, preservando e
+          perseverando os interesses do consumidor final.
+        </p>
+        <p>
+          Disponibilizamos em nosso site algumas funções para melhor atende-lo.
+          Utilize nossa calculadora
+          <span
+            class="icon-add_circle_outline_black_24dp"
+            id="toggleCalculadora"
+          ></span
+          >, ela está disponível no modelo tradicional ou científico. Além
+          disso, disponibilizamos um
+          <a href="modelo-simulador.html">simulador dinâmico</a> de
+          investimentos.
+        </p>
+      </section>
+
+      <!-- section da calculadora que é inicializada com display none, ao apertar o botão #toggleCalculadora ele é apresentado ao cliente -->
+      <section id="apareceCalculadora">
+        <!-- div utilizada para aplicar o display flex e manter a estilização -->
+        <div class="centerCalculadora">
+          <div id="calculadora">
+            <!-- input que será usado como visor da calculadora -->
+            <input type="text" id="mostrarResultados" disabled />
+            <!-- div utilizada para aplicar display grid nos digitos da calculadora, definidos como input type button -->
+            <!-- na calculadora tem-se botões númericos onde há entrada de valores, botões operadores onde é definido o tipo de cálculo que será feito -->
+            <!-- os digitos são divididos em duas classes: normal que irá aparecer no uso das duas calculadoras e cientifica que será habilitada apenas quando o usuário necessitar -->
+            <!-- os inputs foram declarados de acordo com a ordem de flow do grid -->
+            <div id="digitos">
+              <input
+                id="calcNormal"
+                class="cientifica"
+                type="button"
+                value="normal"
+              />
+              <input
+                class="cientifica"
+                type="button"
+                value="x²"
+                id="potencia2"
+              />
+              <input
+                class="cientifica"
+                type="button"
+                value="x³"
+                id="potencia3"
+              />
+              <input class="cientifica" type="button" value="raiz" id="raiz" />
+              <input
+                class="normal"
+                type="button"
+                value="cientifica"
+                id="calcCientifica"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="%"
+                id="porcentagem"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="/"
+                id="divisao"
+              />
+              <input
+                class="normal operador"
+                type="button"
+                value="x"
+                id="multiplicacao"
+              />
+              <input class="normal" type="button" value="7" id="num7" />
+              <input class="normal" type="button" value="8" id="num8" />
+              <input class="normal" type="button" value="9" id="num9" />
+              <input
+                class="normal operador"
+                type="button"
+                value="-"
+                id="subtracao"
+              />
+              <input class="normal" type="button" value="4" id="num4" />
+              <input class="normal" type="button" value="5" id="num5" />
+              <input class="normal" type="button" value="6" id="num6" />
+              <input
+                class="normal operador"
+                type="button"
+                value="+"
+                id="soma"
+              />
+              <input class="normal" type="button" value="1" id="num1" />
+              <input class="normal" type="button" value="2" id="num2" />
+              <input class="normal" type="button" value="3" id="num3" />
+              <input class="normal" type="button" value="C" id="limpar" />
+              <input class="normal" type="button" value="0" id="num0" />
+              <input class="normal" type="button" value="." id="ponto" />
+              <input class="normal" type="button" value="=" id="igual" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <footer>
+      <div>
+        <nav>
+          <!-- linka com a página Index/Objetivo -->
+          <a href="modelo.html#p1">Quem somos nós</a>
+          <!-- linka com a página Index/Objetivo-->
+          <a href="modelo.html#meta">Objetivo e Meta</a>
+          <!-- linka com a página de formulário -->
+          <a href="modelo-cadastro.html">Atendimento</a>
+        </nav>
+        <!-- icones de facebook, instagram e linkedin -->
+        <section>
+          <a class="icon-facebook" href="#facebook"></a>
+          <a class="icon-instagram" href="instagram"></a>
+          <a class="icon-linkedin2" href="#linkedin"></a>
+        </section>
+      </div>
+      <!-- canal de contato caso tenha algum problema na página -->
+      <address>
+        Encontrou algum problema?
+        <a href="mailto:webFullStack@soulcoin.com">Contate-nos.</a>
+      </address>
+      <p>&copy; Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

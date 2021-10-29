@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en" id="htmlFont" class="normalFont">
@@ -30,17 +29,17 @@
   <!-- ******************************HEADER PADRÃO*******************************-->
 
   <header>
-    <a href="index.html">
+    <a href="modelo.html">
       <img src="img/LOGO-OFICIAL.png" alt="SoulCoin Logo" id="logotipo" />
     </a>
     <nav>
       <ul>
         <!-- simulação do investimento -->
-        <li><a href="cambio.html">Câmbio</a></li>
+        <li><a href="modelo-calculadora.html">Câmbio</a></li>
         <!-- investimento -->
-        <li><a href="simulador.html">Simulação</a></li>
+        <li><a href="modelo-simulador.html">Simulação</a></li>
         <!-- formulário para cadastro -->
-        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="modelo-cadastro.html">Cadastro</a></li>
         <li><a id="botaoConta">Conta</a></li>
       </ul>
     </nav>
@@ -60,24 +59,23 @@
     <script>
       new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-  <!-- ******************************CAIXA DE LOGIN*******************************-->
+    <!-- **************************CAIXA DE LOGIN*******************************--> 
   <section id="apareceLogin">
     <!-- Criação do Form de login contendo dois inputs de acesso(Username e Password)
        e um input de botão com tpe submit, para Acessar a conta-->
-    <div class="showLogin">
-      <form id="login">
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required/>
-        </div>
-        <div>
-          <label for="pass">Password:</label>
-          <input type="password" id="pass" name="password" minlength="8" required />
-        </div>
-        <input id="fecharLogin" type="submit" value="Acessar Conta" />
-      </form>
-    </div>
+    <form id="login">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+      </div>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" minlength="8" required />
+      </div>
+      <input id="fecharLogin" type="submit" value="Acessar Conta" />
+    </form>
   </section>
+
   <section class="mainSection" id="apresentacao">
     <!-- Seção contendo Apresentação do slogan da Marca e imagens relacionadas -->
       <h1>A Moeda que <span>Valoriza </span>a sua Vida!</h1>
@@ -109,7 +107,7 @@
       principais moedas em circulação mundial. Nossa meta não é só lucrar
       mais, mas sim trazer significado na vida das pessoas.
     </p>
-    <p><a href="simulador.html">Invista agora conosco.</a></p>
+    <p>Abra a sua conta conosco.</p>
 
   </section>
   <!--Nesta seção apresentamos informações sobre os fundadores, dispondo-os em div para cada componente-->
@@ -231,11 +229,11 @@
     <div>
       <nav>
         <!-- linka com a página Index/Objetivo -->
-        <a href="index.html#p1">Quem somos nós</a>
+        <a href="modelo.html#p1">Quem somos nós</a>
         <!-- linka com a página Index/Objetivo-->
-        <a href="index.html#meta">Objetivo e Meta</a>
+        <a href="modelo.html#meta">Objetivo e Meta</a>
         <!-- linka com a página de formulário -->
-        <a href="cadastro.html">Atendimento</a>
+        <a href="modelo-cadastro.html">Atendimento</a>
       </nav>
       <section>
         <a class="icon-facebook" href="#facebook"></a>

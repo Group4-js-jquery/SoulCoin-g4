@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 //////////////////// DEFINIÇÕES DOS SCRIPTS DE TODAS AS PÁGINAS
 
 // ////////////////////////// COMUM A TODAS AS PÁGINAS - BOTÕES DE ACESSIBILIDADE
@@ -222,6 +221,7 @@ class SoulCoin {
   cancelar() {
     document.getElementById('tipoOperacao').value = '';
     document.getElementById('quantidadeMoeda').value = '';
+
     document.getElementById('btnS').innerText = 'Calcular';
     this.testeBtn = 0;
     $('#tipoOperacao').attr('disabled', false);
@@ -612,4 +612,3 @@ $('#fecharLogin').click(function () {
   }
 });
 // ********************FIM Conta*************************
->>>>>>> Stashed changes

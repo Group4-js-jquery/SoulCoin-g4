@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 /* COMUM A TODAS AS PÁGINAS */
 
 /* DECLARAÇÕES GLOBAIS */
@@ -757,6 +756,7 @@ form {
   }
   nav {
     margin-right: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -961,4 +961,3 @@ form {
     font-size: 1.8rem;
   }
 }
->>>>>>> Stashed changes

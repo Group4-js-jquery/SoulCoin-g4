@@ -1,17 +1,10 @@
 .inputsForm {
-
   color: #707070;
   margin-top: 2rem;
   border-radius: 2rem;
   height: 70%;
   width: 25rem;
   align-items: flex-end;
-} 
-
-#genero {
-  margin-top: 2rem;
-  border-radius: 2rem;
-  height: 35%;
 }
 
 fieldset {
@@ -50,10 +43,6 @@ form {
 
 #msg {
   border-radius: 3rem;
-}
-
-#dataNasc {
-  height: 35%;
 }
 
 #btn1 {
@@ -95,31 +84,30 @@ form {
   left: 50%;
 }
 
-#login{
+#apareceLogin {
+  display: none;
+  margin-top: 2rem;
+}
+
+#login {
   /* display: none; */
   height: 20rem;
-  width:50rem;
+  width: 50rem;
   background-color: #ff8c00;
   font-size: 4rem;
   text-align: center;
   align-items: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 1rem;
   opacity: 0.6;
- 
 }
-#apareceLogin{
-  display:none;
-  margin-top: 2rem;
-}
-#fecharLogin{
+
+#fecharLogin {
   color: white;
   background-color: #707070;
   border-radius: 2rem;
   height: 5rem;
   width: 30rem;
 }
-
-
