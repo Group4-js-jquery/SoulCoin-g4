@@ -116,7 +116,8 @@
         <!-- div contendo os botões que poderá salvar ou cancelar as informações digitas e escolhidas nos inputs anteriores -->
         <div id="btnCenter">
 
-          <button class="buttonSim" id="btnS" onclick="novaOperacao.salvar()">Salvar</button>
+
+          <button class="buttonSim" id="btnS" onclick="novaOperacao.salvar()">Calcular</button>
           <button class="buttonSim" onclick="novaOperacao.cancelar()">Cancelar</button>
 
         </div>
@@ -127,11 +128,11 @@
         <table border=1>
           <thead>
             <th>ID</th>
-            <th>Operação</th>
-            <th>Quantidade</th>
+            <th class="tipo"><span>Operação</span></th>
+            <th class="qtde"><span>Quantidade</span></th>
             <th>Valor R$</th>
             <th>Cotação R$</th>
-            <th>Alterações</th>
+            <th>Alterar</th>
           </thead>
           <tbody id="tbody">
           </tbody>

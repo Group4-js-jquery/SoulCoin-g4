@@ -1,3 +1,4 @@
+
 /* COMUM A TODAS AS PÁGINAS */
 
 /* DECLARAÇÕES GLOBAIS */
@@ -60,6 +61,7 @@ a {
   color: var(--colorOrange);
   cursor: pointer;
   transition: 1s;
+  padding: 1rem;
 }
 
 a:hover {
@@ -88,6 +90,7 @@ nav ul {
 nav ul li {
   list-style: none;
   font-size: 5rem;
+  margin-right: 1rem;
 }
 
 hr {
@@ -330,12 +333,12 @@ footer section a:hover {
 .titulo {
   margin-top: 3rem;
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 #bodyFake {
   margin: 0 auto;
-  width: 100rem;
+  width: 90%;
 }
 
 .cardSim {
@@ -355,38 +358,32 @@ footer section a:hover {
   justify-content: space-around;
 }
 
-/* #tipoOperacao, #quantidadeMoeda {
-    width: 70rem;
-} */
-
 .linhaDeInput {
-  /* display: grid; para colocar um abaixo do outro */
   margin-bottom: 0.1rem;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: black;
   font-weight: bolder;
 }
 
 .inputSim {
-  /* width: 80%;*/
-  width: 70rem;
+  width: 80rem;
   padding-left: 1rem;
   margin-left: 1.5rem;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   border: 1px solid #707070;
   border-radius: 0.5rem;
   outline: 0;
-  margin-bottom: 1rem;
+  margin: 1.5rem 1.5rem 1.5rem;
 }
 
 #tipoOperacao {
-  margin-left: 4rem;
+  margin-left: 4.75rem;
 }
 
 .buttonSim {
-  width: 12rem;
+  width: 15rem;
   height: 5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   border: 0;
   background-color: #ff8c00;
@@ -395,14 +392,14 @@ footer section a:hover {
   font-weight: bolder;
   transition: all ease 0.5s;
   cursor: pointer;
-  margin: 1rem 2rem 0;
+  margin: 1rem 3rem 0;
 }
 
 .buttonSim:hover {
   background-color: #707070;
 }
 .conteudo {
-  margin-top: 1.5rem;
+  margin-top: 5rem;
 }
 table {
   border-collapse: collapse;
@@ -415,8 +412,7 @@ table th {
   background-color: #ff8c00;
 }
 
-table th,
-td {
+table th, td, .tipo span, .qtde span {
   padding: 0.1rem 0.5rem;
   text-align: center;
   font-size: 2.5rem;
@@ -727,14 +723,14 @@ form {
     box-shadow: 25px 25px 10px var(--colorOrange);
   }
 
-  #bodyFake {
-    width: 80rem;
-  }
   .inputSim {
-    width: 50rem;
+    width: 60rem;
   }
   #tipoOperacao {
     margin-left: 4.2rem;
+  }
+  nav {
+    margin-right: 10rem;
   }
 }
 
@@ -750,6 +746,16 @@ form {
   .largerFont {
     /* conversão do font-size para 13px, para uso da acessibilidade */
     font-size: 71.5%;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  nav {
+    margin-right: 0;
   }
 }
 
@@ -782,28 +788,25 @@ form {
     flex-direction: column;
     margin-top: 5rem;
   }
-  #bodyFake {
-    width: 58rem;
-  }
   .titulo {
     margin-top: 2rem;
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
   .linhaDeInput {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
   .inputSim {
-    font-size: 1.75rem;
-    width: 30rem;
+    font-size: 2.25rem;
+    width: 40rem;
   }
   table th,
-  td {
-    font-size: 1.75rem;
+  td, .tipo span, .qtde span {
+    font-size: 2.25rem;
   }
   .buttonSim {
-    width: 10rem;
+    width: 13rem;
     height: 4rem;
-    font-size: 1.75rem;
+    font-size: 2.25rem;
   }
   #tipoOperacao {
     margin-left: 3.5rem;
@@ -828,17 +831,12 @@ form {
   header a {
     align-self: center;
     justify-self: center;
+
   }
   #logotipo {
     width: 160px;
   }
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0;
-  }
+  
   footer div {
     flex-direction: column;
   }
@@ -893,38 +891,53 @@ form {
     grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem;
     font-size: 2rem;
   }
-  #bodyFake {
-    width: 30rem;
-  }
   .titulo {
-    margin-top: 1rem;
-    font-size: 2rem;
+    margin: 1rem;
+    font-size: 3.5rem;
   }
+  .cardSim {
+    display: grid;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
   .linhaDeInput {
-    font-size: 1.2rem;
+    font-size: 2.5rem;
   }
   .inputSim {
-    font-size: 1.2rem;
-    width: 17rem;
-    margin-left: 1rem;
+    font-size: 2rem;
+    width: 30rem;
+    margin-left: 0;
   }
   #tipoOperacao {
-    margin-left: 2.3rem;
+    margin-left: 2.5rem;
   }
-  table th,
-  td {
-    font-size: 1rem;
+  table th, td, .tipo span, .qtde span {
+    font-size: 2rem;
+
   }
+  .qtde span, .tipo span {
+    display: none;
+  }
+  .qtde:after {
+    content: "Qtde.";
+  }
+  .tipo:after {
+    content: "Tipo";
+  }
+
   .buttonSim {
-    width: 7.5rem;
+    width: 10rem;
     height: 3rem;
-    font-size: 1rem;
+    font-size: 1.75rem;
+    margin: 1rem;
   }
+
   tbody th td img {
     font-size: 50rem;
   }
   .iconeSim {
-    width: 40%;
+    width: 35%;
   }
 }
 
