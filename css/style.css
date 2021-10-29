@@ -1,4 +1,3 @@
-
 /* COMUM A TODAS AS PÁGINAS */
 
 /* DECLARAÇÕES GLOBAIS */
@@ -799,8 +798,7 @@ form {
     font-size: 2.25rem;
     width: 40rem;
   }
-  table th,
-  td, .tipo span, .qtde span {
+  table th, td, .tipo span, .qtde span {
     font-size: 2.25rem;
   }
   .buttonSim {
@@ -831,12 +829,10 @@ form {
   header a {
     align-self: center;
     justify-self: center;
-
   }
   #logotipo {
     width: 160px;
   }
-  
   footer div {
     flex-direction: column;
   }
@@ -932,7 +928,6 @@ form {
     font-size: 1.75rem;
     margin: 1rem;
   }
-
   tbody th td img {
     font-size: 50rem;
   }
