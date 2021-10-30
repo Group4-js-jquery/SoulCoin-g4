@@ -411,7 +411,10 @@ table th {
   background-color: #ff8c00;
 }
 
-table th, td, .tipo span, .qtde span {
+table th,
+td,
+.tipo span,
+.qtde span {
   padding: 0.1rem 0.5rem;
   text-align: center;
   font-size: 2.5rem;
@@ -493,6 +496,7 @@ fieldset {
   border-style: double;
   border-width: medium;
   border-color: #ff8c00;
+  border-radius: 20px;
 }
 
 form {
@@ -798,7 +802,10 @@ form {
     font-size: 2.25rem;
     width: 40rem;
   }
-  table th, td, .tipo span, .qtde span {
+  table th,
+  td,
+  .tipo span,
+  .qtde span {
     font-size: 2.25rem;
   }
   .buttonSim {
@@ -908,18 +915,21 @@ form {
   #tipoOperacao {
     margin-left: 2.5rem;
   }
-  table th, td, .tipo span, .qtde span {
+  table th,
+  td,
+  .tipo span,
+  .qtde span {
     font-size: 2rem;
-
   }
-  .qtde span, .tipo span {
+  .qtde span,
+  .tipo span {
     display: none;
   }
   .qtde:after {
-    content: "Qtde.";
+    content: 'Qtde.';
   }
   .tipo:after {
-    content: "Tipo";
+    content: 'Tipo';
   }
 
   .buttonSim {
